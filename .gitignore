@@ -1,0 +1,14 @@
+*.patch
+*.pyc
+*.log
+*.so
+*.so.old
+*.swp
+octave-core
+*.class
+*.classpath
+*.project
+*.pydevproject
+*.settings
+*.jar
+
