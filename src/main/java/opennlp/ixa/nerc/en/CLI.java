@@ -27,18 +27,19 @@ import org.apache.commons.io.FilenameUtils;
 
 public class CLI {
 
-   /**
+  /**
    * 
-   * The args array is processed via a CommandLineParser from org.apache.commons.cli 
-   * API. It provides CLI facilities using the options created in OptionsCLI.createOptions(). 
-   *
+   * The args array is processed via a CommandLineParser from
+   * org.apache.commons.cli API. It provides CLI facilities using the options
+   * created in OptionsCLI.createOptions().
+   * 
    * 
    * @param args
    * @throws IOException
    */
-  
+
   public static void main(String[] args) throws IOException {
-   
+
     Path infile = null;
     Path outfile = null;
     Path indir = null;
@@ -62,69 +63,77 @@ public class CLI {
       OptionsCLI.printCliHelp("Please use one of the following options: ");
     }
 
-    if (cmd.hasOption("plain") == false && cmd.hasOption("i") && cmd.getOptionValue("o") == null) {
+    if (cmd.hasOption("plain") == false && cmd.hasOption("i")
+        && cmd.getOptionValue("o") == null) {
       infile = Paths.get(cmd.getOptionValue("i"));
-      outfile = Paths.get(FilenameUtils.removeExtension(cmd
-          .getOptionValue("i")) + ".xml");
+      outfile = Paths
+          .get(FilenameUtils.removeExtension(cmd.getOptionValue("i")) + ".xml");
       Annotate.nerc2kaf(infile, outfile);
       System.out.println();
       System.out.println("Wrote KAF formatted annotation to " + outfile);
     }
-    
-    if (cmd.hasOption("plain") && cmd.hasOption("i") && cmd.getOptionValue("o") == null) {
+
+    if (cmd.hasOption("plain") && cmd.hasOption("i")
+        && cmd.getOptionValue("o") == null) {
       infile = Paths.get(cmd.getOptionValue("i"));
-      outfile = Paths.get(FilenameUtils.removeExtension(cmd
-          .getOptionValue("i")) + ".nerc");
+      outfile = Paths
+          .get(FilenameUtils.removeExtension(cmd.getOptionValue("i")) + ".nerc");
       Annotate.nercFiles(infile, outfile);
       System.out.println();
-      System.out.println("Wrote Apache OpenNLP formatted annotation to " + outfile);
+      System.out.println("Wrote Apache OpenNLP formatted annotation to "
+          + outfile);
     }
 
-    if (cmd.hasOption("plain") == false && cmd.hasOption("o") && cmd.getOptionValue("i") != null) {
+    if (cmd.hasOption("plain") == false && cmd.hasOption("o")
+        && cmd.getOptionValue("i") != null) {
       infile = Paths.get(cmd.getOptionValue("i"));
       outfile = Paths.get(cmd.getOptionValue("o"));
-      Annotate.nerc2kaf(infile,outfile);
+      Annotate.nerc2kaf(infile, outfile);
       System.out.println();
       System.out.println("Wrote KAF formatted annotation to " + outfile);
     }
-    
-    if (cmd.hasOption("plain") && cmd.hasOption("o") && cmd.getOptionValue("i") != null) {
+
+    if (cmd.hasOption("plain") && cmd.hasOption("o")
+        && cmd.getOptionValue("i") != null) {
       infile = Paths.get(cmd.getOptionValue("i"));
       outfile = Paths.get(cmd.getOptionValue("o"));
-      Annotate.nercFiles(infile,outfile);
+      Annotate.nercFiles(infile, outfile);
       System.out.println();
-      System.out.println("Wrote Apache OpenNLP formatted annotation to " + outfile);
+      System.out.println("Wrote Apache OpenNLP formatted annotation to "
+          + outfile);
     }
 
     if (cmd.hasOption("o") && cmd.getOptionValue("i") == null) {
       System.out.println();
       OptionsCLI.printCliHelp("Please use one of the following options.");
     }
-    
+
     if (cmd.hasOption("indir")) {
-     indir = Paths.get(cmd.getOptionValue("indir"));
-     DirRecursiveWalk fileVisitor = new DirRecursiveWalk();
-     Files.walkFileTree(indir, fileVisitor);
+      indir = Paths.get(cmd.getOptionValue("indir"));
+      DirRecursiveWalk fileVisitor = new DirRecursiveWalk();
+      Files.walkFileTree(indir, fileVisitor);
     }
-    
-    if (cmd.hasOption("plain") == false && cmd.hasOption("stdin"))  {
-        BufferedReader stdInReader = new BufferedReader(new InputStreamReader(
+
+    if (cmd.hasOption("plain") == false && cmd.hasOption("stdin")) {
+      BufferedReader stdInReader = new BufferedReader(new InputStreamReader(
           System.in));
-      BufferedWriter w = new BufferedWriter(new OutputStreamWriter(System.out, "UTF-8"));
+      BufferedWriter w = new BufferedWriter(new OutputStreamWriter(System.out,
+          "UTF-8"));
       String line = null;
       KAF kaf = new KAF();
       while ((line = stdInReader.readLine()) != null) {
-        Annotate.annotateNERC(line,kaf);
+        Annotate.annotateNERC(line, kaf);
         w.write(kaf.toString());
         w.flush();
       }
       w.close();
     }
-    
-    if (cmd.hasOption("plain") && cmd.hasOption("stdin"))  {
+
+    if (cmd.hasOption("plain") && cmd.hasOption("stdin")) {
       BufferedReader stdInReader = new BufferedReader(new InputStreamReader(
           System.in));
-      BufferedWriter w = new BufferedWriter(new OutputStreamWriter(System.out, "UTF-8"));
+      BufferedWriter w = new BufferedWriter(new OutputStreamWriter(System.out,
+          "UTF-8"));
       String line = null;
       while ((line = stdInReader.readLine()) != null) {
         List<NameSample> stdInNames = Annotate.annotateNERC(line);
@@ -135,7 +144,7 @@ public class CLI {
       }
       w.close();
     }
-    
+
     if (args.length == 0) {
       OptionsCLI.printCliHelp("Please use one of the following options.");
     }
