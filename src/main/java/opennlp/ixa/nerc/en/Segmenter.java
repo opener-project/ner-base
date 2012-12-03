@@ -14,24 +14,26 @@ import opennlp.tools.sentdetect.SentenceModel;
 
 /**
  *  English Sentence Segmentation using Apache OpenNLP
- *  Model trained by Rodrigo Agerri (IXA NLP Group)
+ *  Model provided by
+ *  http://opennlp.sourceforge.net/models-1.5/
+ *
  * @author ragerri
  *
  */
 public class Segmenter {
-	
+
 	private SentenceModel segModel;
-    private SentenceDetector sentDetector; 
-	
-	
+        private SentenceDetector sentDetector;
+
+
 	/**
 	 * The Segmenter constructor loads an Apache OpenNLP sentence segmentation model,
-	 * it initializes and sentenceDetector using such a model. 
+	 * it initializes and sentenceDetector using such a model.
 	 */
 	public Segmenter()  {
 
 		 Path modelIn = Paths.get("models/en-sent.bin");
-		 
+
 		 FileInputStream trainedModel = null;
 		try {
 			trainedModel = new FileInputStream(modelIn.toString());
@@ -41,7 +43,7 @@ public class Segmenter {
 		}
 		 //System.out.format("Sentence Model used: %s%n",modelIn.toString());
 		 //System.out.println();
-		 
+
 		try {
 		      segModel = new SentenceModel(trainedModel);
 
@@ -55,9 +57,9 @@ public class Segmenter {
 	        }
 	      }
 	    }
-		
+
 		sentDetector = new SentenceDetectorME(segModel);
-		
+
 	}
 
 	/**
@@ -67,7 +69,7 @@ public class Segmenter {
 	public String[] segmentSentence(String line) {
 		 String sentences[] = sentDetector.sentDetect(line);
 		 return sentences;
-		
+
 	}
-	
+
 }

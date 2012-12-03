@@ -6,8 +6,13 @@ This module provides a simple wrapper that uses Apache OpenNLP
 programatically to recognize and classify Named Entities (NERC)
 in running text.
 
-The segmentation, tokenization and NERC models have been trained using
-CoNLL 2003 data and are provided by the IXA NLP Group (ixa.si.ehu.es), University of the Basque Country.
+The English segmentation and tokenization models are distributed here:
+
+http://opennlp.sourceforge.net/models-1.5/
+
+The English NERC models have been trained using
+CoNLL 2003 data and are provided by the IXA NLP Group (ixa.si.ehu.es),
+University of the Basque Country.
 
 Version 1.0 of nerc-en is being developed as part of the 7th Framework OpeNER European Project.
 
@@ -20,7 +25,7 @@ The contents of the module are the following:
 bin/	     		directory containing a binary to run nerc-en module from the Command Line
 formatter.xml		Apache OpenNLP code formatter for Eclipse SDK
 INSTALL			Instructions to install and run the module
-models/			trained models for sentence segmentation, tokenization and NERC in English
+models/			Trained models for sentence segmentation, tokenization and NERC in English
 pom.xml			maven pom file which deals with everything related to compilation and execution of the module
 README			This README
 src/			java source code of the module

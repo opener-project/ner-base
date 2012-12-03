@@ -6,7 +6,7 @@
 	<packaging>jar</packaging>
 	<version>1.0</version>
 	<name>nerc-en</name>
-	<description>This Named Entity Recognition module for Spanish is entirely based on Apache OpenNLP API.
+	<description>This Named Entity Recognition module for English is entirely based on Apache OpenNLP API.
         All the models used by this module have been trained by the IXA NLP Group of the University of the
         Basque Country (ixa.si.ehu.es)
         </description>

@@ -12,25 +12,25 @@ import opennlp.tools.tokenize.TokenizerModel;
 
 /**
  * A simple tokenizer based on Apache OpenNLP.
- * 
- * Model trained by Rodrigo Agerri (IXA NLP Group)
- * 
+ *
+ * Model provided by http://opennlp.sourceforge.net/models-1.5/
+ *
  * @author ragerri
  *
  */
 public class TokTokenizer {
 	private TokenizerModel tokModel;
-    private TokenizerME tokDetector; 
-	
-	
+    private TokenizerME tokDetector;
+
+
 	/**
 	 * This constructor loads a tokenization model, it initializes and creates a tokDetector using
-	 * such a model. 
+	 * such a model.
 	 */
 	public TokTokenizer()  {
 
 		 Path modelIn = Paths.get("models/en-token.bin");
-		 
+
 		 FileInputStream trainedModel = null;
 		try {
 			trainedModel = new FileInputStream(modelIn.toString());
@@ -40,7 +40,7 @@ public class TokTokenizer {
 		}
 		 //System.out.format("Tokenizer Model used: %s%n",modelIn.toString());
 		 //System.out.println();
-		 
+
 		try {
 		      tokModel = new TokenizerModel(trainedModel);
 
@@ -54,9 +54,9 @@ public class TokTokenizer {
 	        }
 	      }
 	    }
-		
+
 		tokDetector = new TokenizerME(tokModel);
-		
+
 	}
 
 	/**
@@ -66,6 +66,6 @@ public class TokTokenizer {
 	public String[] toker(String sentence) {
 		 String tokens[] = tokDetector.tokenize(sentence);
 		 return tokens;
-		
-	}	
+
+	}
 }
