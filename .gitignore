@@ -1,3 +1,17 @@
+*.patch
+*.pyc
+*.log
+*.so
+*.so.old
+*.swp
+octave-core
+*.class
+*.classpath
+*.project
+*.pydevproject
+*.settings
+*.jar
+
 tmp/*
 .DS_Store
 .idea/
@@ -6,31 +20,4 @@ pkg/
 Gemfile.lock
 .rvmrc
 
-*.py[co]
 *~
-
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
-.coverage
-.tox
-
-#Translations
-*.mo
-
-#Mr Developer
-.mr.developer.cfg
