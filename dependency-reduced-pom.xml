@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>opennlp.ixa.nerc.en</groupId>
+  <artifactId>nerc-en</artifactId>
+  <name>nerc-en</name>
+  <version>1.0</version>
+  <description>This Named Entity Recognition module for English is entirely based on Apache OpenNLP API.
+        All the models used by this module have been trained by the IXA NLP Group of the University of the
+        Basque Country (ixa.si.ehu.es)</description>
+  <url>http://maven.apache.org</url>
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+  <developers>
+    <developer>
+      <id>ragerri</id>
+      <name>Rodrigo Agerri</name>
+      <email>rodrigo.agerri@ehu.es</email>
+    </developer>
+  </developers>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer>
+                  <manifestEntries>
+                    <Main-Class>opennlp.ixa.nerc.en.CLI</Main-Class>
+                  </manifestEntries>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <configuration>
+          <mainClass>opennlp.ixa.nerc.en.CLI</mainClass>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+      </plugin>
+    </plugins>
+  </build>
+  <repositories>
+    <repository>
+      <id>org.apache.opennlp</id>
+      <url>https://repository.apache.org/content/groups/snapshots</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+</project>
+

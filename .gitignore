@@ -1,4 +1,13 @@
+tmp/*
+.DS_Store
+.idea/
+*.swp
+pkg/
+Gemfile.lock
+.rvmrc
+
 *.py[co]
+*~
 
 # Packages
 *.egg
