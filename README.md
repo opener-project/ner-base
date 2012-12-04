@@ -1,2 +1,3 @@
-EHU-named-entity-rc-lite_EN
-===========================
+EHU-ner-lite_EN_kernel
+======================
+
