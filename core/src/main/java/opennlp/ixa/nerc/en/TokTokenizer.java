@@ -1,10 +1,7 @@
 package opennlp.ixa.nerc.en;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.InputStream;
 
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
@@ -27,17 +24,7 @@ public class TokTokenizer {
    */
   public TokTokenizer() {
 
-    Path modelIn = Paths.get("models/en-token.bin");
-
-    FileInputStream trainedModel = null;
-    try {
-      trainedModel = new FileInputStream(modelIn.toString());
-    } catch (FileNotFoundException e1) {
-      // TODO Auto-generated catch block
-      e1.printStackTrace();
-    }
-    // System.out.format("Tokenizer Model used: %s%n",modelIn.toString());
-    // System.out.println();
+   InputStream trainedModel = getClass().getResourceAsStream("/en-token.bin");
 
     try {
       tokModel = new TokenizerModel(trainedModel);

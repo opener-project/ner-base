@@ -1,4 +1,0 @@
-#!/bin/bash
-
-mvn -e -q exec:java -Dexec.mainClass="opennlp.ixa.nerc.en.CLI" -Dexec.args="$*"
-

@@ -1,10 +1,7 @@
 package opennlp.ixa.nerc.en;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.InputStream;
 
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
@@ -31,17 +28,7 @@ public class NERC {
    */
   public NERC() {
 
-    Path modelIn = Paths.get("models/en-nerc-500-4-testa.bin");
-
-    FileInputStream trainedModel = null;
-    try {
-      trainedModel = new FileInputStream(modelIn.toString());
-    } catch (FileNotFoundException e1) {
-      // TODO Auto-generated catch block
-      e1.printStackTrace();
-    }
-    // System.out.format("NERC model used: %s%n",modelIn.toString());
-    // System.out.println();
+    InputStream trainedModel = getClass().getResourceAsStream("/en-nerc-500-4-testa.bin");
 
     try {
       nercModel = new TokenNameFinderModel(trainedModel);

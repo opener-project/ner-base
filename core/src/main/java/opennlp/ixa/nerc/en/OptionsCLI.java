@@ -24,7 +24,7 @@ public class OptionsCLI {
 
     // these are boolean options. They do not need arguments to be passed
     Option stdin = new Option("stdin", false,
-        "will read from stdin and print to stdout");
+        "will read from stdin and print to stdout in KAF format");
     Option plain = new Option("plain", false,
         "will output annotated text in Apache OpenNLP format; default output is KAF");
     Option help = new Option("help", false, "will print usage to console");
@@ -78,9 +78,6 @@ public class OptionsCLI {
     System.out.println();
     formatter.printHelp("java -jar target/nerc-en-1.0.jar", createOptions());
     System.out.println();
-    System.out.println("## Or you can also use execute it via Maven: ");
-    System.out.println();
-    formatter.printHelp("bin/nerc-en", createOptions());
     System.exit(-1);
   }
 

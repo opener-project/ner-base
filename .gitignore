@@ -4,20 +4,10 @@
 *.so
 *.so.old
 *.swp
-octave-core
+target
 *.class
 *.classpath
 *.project
 *.pydevproject
 *.settings
-*.jar
 
-tmp/*
-.DS_Store
-.idea/
-*.swp
-pkg/
-Gemfile.lock
-.rvmrc
-
-*~

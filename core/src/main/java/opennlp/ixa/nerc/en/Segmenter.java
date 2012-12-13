@@ -1,10 +1,7 @@
 package opennlp.ixa.nerc.en;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.InputStream;
 
 import opennlp.tools.sentdetect.SentenceDetector;
 import opennlp.tools.sentdetect.SentenceDetectorME;
@@ -28,18 +25,8 @@ public class Segmenter {
    */
   public Segmenter() {
 
-    Path modelIn = Paths.get("models/en-sent.bin");
-
-    FileInputStream trainedModel = null;
-    try {
-      trainedModel = new FileInputStream(modelIn.toString());
-    } catch (FileNotFoundException e1) {
-      // TODO Auto-generated catch block
-      e1.printStackTrace();
-    }
-    // System.out.format("Sentence Model used: %s%n",modelIn.toString());
-    // System.out.println();
-
+   InputStream trainedModel = getClass().getResourceAsStream("/en-sent.bin");
+   
     try {
       segModel = new SentenceModel(trainedModel);
 

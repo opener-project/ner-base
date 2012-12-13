@@ -35,6 +35,7 @@
                 <transformer>
                   <manifestEntries>
                     <Main-Class>opennlp.ixa.nerc.en.CLI</Main-Class>
+                    <Class-Path>../models/models.jar</Class-Path>
                   </manifestEntries>
                 </transformer>
               </transformers>
