@@ -120,11 +120,13 @@ public class CLI {
       BufferedWriter w = new BufferedWriter(new OutputStreamWriter(System.out,
           "UTF-8"));
       String line = null;
-      KAF kaf = new KAF();
       while ((line = stdInReader.readLine()) != null) {
-        Annotate.annotateNERC(line, kaf);
+    	if (line.length() > 1) {
+    	KAF kaf = new KAF();
+    	Annotate.annotateNERC(line, kaf);
         w.write(kaf.toString());
         w.flush();
+      }
       }
       w.close();
     }
