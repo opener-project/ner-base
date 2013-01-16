@@ -115,7 +115,6 @@ public class CLI {
     }
 
     if (cmd.hasOption("plain") == false && cmd.hasOption("stdin")) {
-<<<<<<< HEAD
         BufferedReader stdInReader = new BufferedReader(new InputStreamReader(
             System.in));
         BufferedWriter w = new BufferedWriter(new OutputStreamWriter(System.out,
@@ -125,27 +124,10 @@ public class CLI {
         while ((line = stdInReader.readLine()) != null) {
       	Annotate.annotateNERC(line, kaf);
         }
-=======
-      BufferedReader stdInReader = new BufferedReader(new InputStreamReader(
-          System.in));
-      BufferedWriter w = new BufferedWriter(new OutputStreamWriter(System.out,
-          "UTF-8"));
-      String line = null;
-      while ((line = stdInReader.readLine()) != null) {
-    	if (line.length() > 1) {
-    	KAF kaf = new KAF();
-    	Annotate.annotateNERC(line, kaf);
->>>>>>> ea0a31e242891a6467324f88b507e24a545f81ad
         w.write(kaf.toString());
         w.flush();
         w.close();
       }
-<<<<<<< HEAD
-=======
-      }
-      w.close();
-    }
->>>>>>> ea0a31e242891a6467324f88b507e24a545f81ad
 
     if (cmd.hasOption("plain") && cmd.hasOption("stdin")) {
       BufferedReader stdInReader = new BufferedReader(new InputStreamReader(
