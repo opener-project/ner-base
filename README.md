@@ -74,7 +74,7 @@ You should now see that your jdk is 1.7
 Download MAVEN 3 from
 
 ````shell
-wget http://www.apache.org/dyn/closer.cgi/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.tar.gz
+wget http://ftp.udc.es/apache/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.tar.gz
 ````
 
 Now you need to configure the PATH. For Bash Shell:
