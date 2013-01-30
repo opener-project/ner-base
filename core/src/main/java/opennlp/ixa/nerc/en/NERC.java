@@ -28,7 +28,7 @@ public class NERC {
    */
   public NERC() {
 
-    InputStream trainedModel = getClass().getResourceAsStream("/en-nerc-500-4-testa.bin");
+    InputStream trainedModel = getClass().getResourceAsStream("/en-500-0-testa-perceptron.bin");
 
     try {
       nercModel = new TokenNameFinderModel(trainedModel);

@@ -32,10 +32,17 @@ public class DirRecursiveWalk extends SimpleFileVisitor<Path> {
       System.out.println(">> SUCCESS!! Wrote KAF annotation to "
           + outfile.toString());
     } else {
-      System.out
-          .format(
-              ">> FAILED!! Extension of %s is not txt. Is this a plain text file? ",
+      Path outfile = Paths.get(FilenameUtils.removeExtension(file.toString())
+    	          + ".nerc");
+      //Annotate.nerc2kaf(file, outfile);
+      Annotate.nercFiles(file, outfile);
+      System.out.println();
+      System.out.format(
+              ">> WARNING!! Extension of %s is not txt. Is this a plain text file? ",
               file);
+      System.out.println();
+      System.out.println(">> SUCCESS (hopefully)!! Wrote NER annotation to "
+          + outfile.toString());
       System.out.println();
     }
     return FileVisitResult.CONTINUE;
