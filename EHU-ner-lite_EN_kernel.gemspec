@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.version       = Opener::Kernel::EHU::NER::Lite::EN::VERSION
   gem.authors       = ["sb-olr","sparkboxx"]
   gem.email         = ["sujit@olery.com", "wilco@olery.com"]
-  gem.description   = %q{NER kernel for italian lite version}
+  gem.description   = %q{NER kernel for english lite version}
   gem.summary       = %q{Use this gem in a component}
   gem.homepage      = "http://opener-project.github.com/"
 
