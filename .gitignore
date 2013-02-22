@@ -11,3 +11,10 @@ target
 *.pydevproject
 *.settings
 
+tmp/*
+.DS_Store
+.idea/
+pkg/
+Gemfile.lock
+*.swp
+
