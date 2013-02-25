@@ -147,45 +147,40 @@
         </term>
         <term tid="t3">
             <span>
-                <target id="w36"/>
+                <target id="w38"/>
             </span>
         </term>
         <term tid="t4">
             <span>
-                <target id="w38"/>
+                <target id="w39"/>
             </span>
         </term>
         <term tid="t5">
             <span>
-                <target id="w39"/>
+                <target id="w51"/>
             </span>
         </term>
         <term tid="t6">
             <span>
-                <target id="w51"/>
+                <target id="w52"/>
             </span>
         </term>
         <term tid="t7">
             <span>
-                <target id="w52"/>
+                <target id="w75"/>
             </span>
         </term>
         <term tid="t8">
             <span>
-                <target id="w75"/>
+                <target id="w117"/>
             </span>
         </term>
         <term tid="t9">
             <span>
-                <target id="w117"/>
-            </span>
-        </term>
-        <term tid="t10">
-            <span>
                 <target id="w126"/>
             </span>
         </term>
-        <term tid="t11">
+        <term tid="t10">
             <span>
                 <target id="w127"/>
             </span>
@@ -200,48 +195,41 @@
                 </span>
             </references>
         </entity>
-        <entity eid="e2" type="misc">
+        <entity eid="e2" type="location">
             <references>
                 <span>
                     <target id="t3"/>
+                    <target id="t4"/>
                 </span>
             </references>
         </entity>
-        <entity eid="e3" type="location">
+        <entity eid="e3" type="organization">
             <references>
                 <span>
-                    <target id="t4"/>
                     <target id="t5"/>
+                    <target id="t6"/>
                 </span>
             </references>
         </entity>
         <entity eid="e4" type="misc">
             <references>
                 <span>
-                    <target id="t6"/>
                     <target id="t7"/>
                 </span>
             </references>
         </entity>
-        <entity eid="e5" type="misc">
+        <entity eid="e5" type="location">
             <references>
                 <span>
                     <target id="t8"/>
                 </span>
             </references>
         </entity>
-        <entity eid="e6" type="person">
+        <entity eid="e6" type="location">
             <references>
                 <span>
                     <target id="t9"/>
-                </span>
-            </references>
-        </entity>
-        <entity eid="e7" type="location">
-            <references>
-                <span>
                     <target id="t10"/>
-                    <target id="t11"/>
                 </span>
             </references>
         </entity>
