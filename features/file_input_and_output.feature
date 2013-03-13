@@ -9,5 +9,5 @@ Feature: Using files as input and output
     Then the output should match the fixture "<output_file>"
   Examples:
     | input_file            | output_file                                  |
-    | input.txt             | output.kaf                                   |
+    | input.kaf             | output.kaf                                   |
 
