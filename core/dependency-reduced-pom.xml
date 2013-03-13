@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>opennlp.ixa.nerc.en</groupId>
-  <artifactId>nerc-en</artifactId>
-  <name>nerc-en</name>
+  <groupId>ehu</groupId>
+  <artifactId>ehu-opennlp-nerc-en</artifactId>
+  <name>ehu-opennlp-nerc-en</name>
   <version>1.0</version>
-  <description>This Named Entity Recognition module for English is entirely based on Apache OpenNLP API.
-        All the models used by this module have been trained by the IXA NLP Group of the University of the
-        Basque Country (ixa.si.ehu.es)</description>
+  <description>English Named Entity Recognition module based on Apache OpenNLP API.
+	All models have been trained by the IXA NLP Group of the University of the
+	Basque Country (ixa.si.ehu.es).</description>
   <url>http://maven.apache.org</url>
   <prerequisites>
     <maven>3.0</maven>
@@ -34,11 +34,13 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>opennlp.ixa.nerc.en.CLI</Main-Class>
-                    <Class-Path>../models/models.jar</Class-Path>
+                    <Main-Class>ehu.opennlp.nerc.en.CLI</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>
+              <artifactSet>
+                <excludes />
+              </artifactSet>
             </configuration>
           </execution>
         </executions>
@@ -48,7 +50,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.2.1</version>
         <configuration>
-          <mainClass>opennlp.ixa.nerc.en.CLI</mainClass>
+          <mainClass>ehu.opennlp.nerc.en.CLI</mainClass>
         </configuration>
       </plugin>
       <plugin>
@@ -58,6 +60,10 @@
     </plugins>
   </build>
   <repositories>
+    <repository>
+      <id>opener</id>
+      <url>file://${project.basedir}</url>
+    </repository>
     <repository>
       <id>org.apache.opennlp</id>
       <url>https://repository.apache.org/content/groups/snapshots</url>

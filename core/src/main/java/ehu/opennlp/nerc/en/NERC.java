@@ -1,4 +1,4 @@
-package opennlp.ixa.nerc.en;
+package ehu.opennlp.nerc.en;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,11 +8,11 @@ import opennlp.tools.namefind.TokenNameFinderModel;
 import opennlp.tools.util.Span;
 
 /**
- * Simple Named Entity Recognition module based on Apache OpenNLP.
+ * Simple NER tagging module based on Apache OpenNLP.
  * 
  * English model trained by IXA NLP Group.
  * 
- * @author ragerri 2012/10/30
+ * @author ragerri 2012/11/30
  * 
  */
 
@@ -28,7 +28,8 @@ public class NERC {
    */
   public NERC() {
 
-    InputStream trainedModel = getClass().getResourceAsStream("/en-500-0-testa-perceptron.bin");
+    InputStream trainedModel = getClass().getResourceAsStream(
+        "/en-testa-perceptron.bin");
 
     try {
       nercModel = new TokenNameFinderModel(trainedModel);

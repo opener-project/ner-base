@@ -47,21 +47,17 @@ oof
 4. Push to the branch (`git push origin features/my-new-feature`)
 5. If you're confident, merge your changes into master.
 
-IXA NERC-EN module
+IXA EHU-OPENNLP-NERC-EN module
 ==================
 
 This module provides a simple wrapper that uses Apache OpenNLP
 programatically to recognize and classify Named Entities (NERC)
 in running text.
 
-The segmentation and tokenization models are provided by
+The NERC model have been trained using the English CoNLL 2003 data and are provided
+by the IXA NLP Group (ixa.si.ehu.es), University of the Basque Country (F1 84.80).
 
-http://opennlp.sourceforge.net/models-1.5/
-
-The NERC models have been trained using the English CoNLL 2003 data and are provided
-by the IXA NLP Group (ixa.si.ehu.es), University of the Basque Country.
-
-Version 1.0 of nerc-en is being developed as part of the 7th Framework OpeNER European Project.
+Version 1.0 of ehu-opennlp-nerc-en is being developed as part of the 7th Framework OpeNER European Project.
 
 
 Contents
@@ -73,7 +69,7 @@ The contents of the module are the following:
 
     + formatter.xml           Apache OpenNLP code formatter for Eclipse SDK
     + INSTALL                 Instructions to install and run the module
-    + models/                 trained models for sentence segmentation, tokenization and NERC in English
+    + opener/                 trained models for sentence segmentation, tokenization and NERC in English
     + pom.xml                 maven pom file which deals with everything related to compilation and execution of the module
     + src/                    java source code of the module
     + Furthermore, the installation process, as described in the README.md, will generate another directory:
@@ -83,28 +79,28 @@ The contents of the module are the following:
 - README.md: This README
 
 
-INSTALLING Version 1.0 of Apache OpenNLP nerc-en module
+INSTALLING Version 1.0 of ehu-opennlp-nerc-en module
 =======================================================
 
 Installing the nerc-en module requires the following steps:
 
-If you already have installed in your machine JDK7 and MAVEN 3, please go to step 3
+If you already have installed in your machine JDK6 and MAVEN 3, please go to step 3
 directly. Otherwise, follow these steps:
 
-1. Install JDK 1.7
+1. Install JDK 1.6
 -------------------
 
-If you do not install JDK 1.7 in a default location, you will probably need to configure the PATH in .bashrc or .bash_profile:
+If you do not install JDK 1.6 in a default location, you will probably need to configure the PATH in .bashrc or .bash_profile:
 
 ````shell
-export JAVA_HOME=/yourpath/local/java7
+export JAVA_HOME=/yourpath/local/java6
 export PATH=${JAVA_HOME}/bin:${PATH}
 ````
 
 If you use tcsh you will need to specify it in your .login as follows:
 
 ````shell
-setenv JAVA_HOME /usr/java/java17
+setenv JAVA_HOME /usr/java/java16
 setenv PATH ${JAVA_HOME}/bin:${PATH}
 ````
 
@@ -114,7 +110,7 @@ If you re-login into your shell and run the command
 java -version
 ````
 
-You should now see that your jdk is 1.7
+You should now see that your jdk is 1.6
 
 2. Install MAVEN 3
 ------------------
@@ -165,22 +161,24 @@ cd EHU-ner-lite_EN_kernel/core
 -----------------------------
 
 ````shell
-mvn install
+mvn clean install
 ````
 
 This step will create a directory called target/ which contains various directories and files.
 Most importantly, there you will find the module executable:
 
-nerc-en-1.0.jar
+ehu-opennlp-nerc-en-1.0.jar
+
+This executable contains every dependency the module needs, so it is completely portable as long
+as you have a JVM 1.6 installed.
+
+The program takes KAF documents (with <wf> and <term> elements) as standard input and outputs KAF.
 
 To run the program execute:
 
 ````shell
-java -jar $PATH/target/nerc-en-1.0.jar -help
+cat wfterms.kaf | java -jar $PATH/target/ixa-opennlp-ehu-en-1.0.jar
 ````
-
-and the available options to execute the program will be displayed.
-
 
 GENERATING JAVADOC
 ==================
