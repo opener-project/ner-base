@@ -21,7 +21,7 @@ public class KAF {
    */
   public String getTimestamp() {
     Date date = new Date();
-    SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-DD'T'hh:mm:ssZ");
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-DD'T'kk:mm:ssZ");
     String formattedDate = sdf.format(date);
     return formattedDate;
   }
