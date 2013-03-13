@@ -177,7 +177,7 @@ The program takes KAF documents (with <wf> and <term> elements) as standard inpu
 To run the program execute:
 
 ````shell
-cat wfterms.kaf | java -jar $PATH/target/ixa-opennlp-ehu-en-1.0.jar
+cat wfterms.kaf | java -jar $PATH/target/ehu-opennlp-nerc-en-1.0.jar
 ````
 
 GENERATING JAVADOC
@@ -189,7 +189,7 @@ You can also generate the javadoc of the module by executing:
 mvn javadoc:jar
 ````
 
-Which will create a jar file core/target/nerc-en-1.0-javadoc.jar
+Which will create a jar file core/target/ehu-opennlp-nerc-en-1.0-javadoc.jar
 
 
 
