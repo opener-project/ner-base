@@ -3,4 +3,7 @@ $:.unshift(File.dirname(__FILE__) + '/../lib') unless $:.include?(File.dirname(_
 
 require 'EHU-ner-lite_EN_kernel'
 
-puts `#{KERNEL_CORE}`
+kernel = Opener::Kernel::EHU::NER::Lite::EN.new
+command = "#{kernel.command(:input=>ARGV[0], :arguments=>ARGV[1..-1])}"
+
+puts `#{command}`

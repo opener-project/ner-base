@@ -3,11 +3,10 @@ Given /^the fixture file "(.*?)"$/ do |filename|
   @filename = filename
 end
 
-Given /^I put it through the kernel$/ do
-  @tmp_filename = "output_#{rand(1000)}_#{@filename}"
-  @output = tmp_file(@tmp_filename)
-  
-  `cat #{@input} | java -jar #{KERNEL_CORE} -stdin > #{@output}`
+Given /^I put them through the kernel$/ do
+  tmp_filename = "output_#{rand(1000)}_#{@filename}"
+  @output = tmp_file(tmp_filename)
+  `#{kernel.command(:input=>@input, :test=>true)} > #{@output}`
 end
 
 Then /^the output should match the fixture "(.*?)"$/ do |filename|
@@ -17,9 +16,15 @@ Then /^the output should match the fixture "(.*?)"$/ do |filename|
 end
 
 def fixture_file(filename)
-  File.expand_path("../../../features/fixtures/#{filename}", __FILE__)
+  File.absolute_path("features/fixtures/", kernel_root) + "/#{filename}"
 end
 
 def tmp_file(filename)
-  File.expand_path("../../../tmp/#{filename}", __FILE__)
+  tmp_dir = File.expand_path("tmp", kernel_root)
+  if File.directory?(tmp_dir)
+    return tmp_dir + "/" + filename
+  else
+    Tempfile.new(filename).path
+  end
 end
+
