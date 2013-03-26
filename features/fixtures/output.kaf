@@ -8,7 +8,7 @@
       <lp name="ixa-opennlp-pos-en" timestamp="2013-03-72T01:00:29+0000" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-opennlp-nerc-en" timestamp="2013-03-72T17:26:46+0000" version="1.0" />
+      <lp name="ehu-opennlp-nerc-en" timestamp="2013-03-85T13:02:14+0100" version="1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
@@ -146,793 +146,793 @@
     <wf wid="w132" sent="5">.</wf>
   </text>
   <terms>
-    <term tid="1" pos="IN" lemma="" type="">
+    <term tid="1" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--After-->
         <target id="1" />
       </span>
     </term>
-    <term tid="2" pos="CD" lemma="" type="">
+    <term tid="2" pos="CD" morphofeat="" lemma="" type="">
       <span>
         <!--three-->
         <target id="2" />
       </span>
     </term>
-    <term tid="3" pos="VBD" lemma="" type="">
+    <term tid="3" pos="VBD" morphofeat="" lemma="" type="">
       <span>
         <!--failed-->
         <target id="3" />
       </span>
     </term>
-    <term tid="4" pos="NNS" lemma="" type="">
+    <term tid="4" pos="NNS" morphofeat="" lemma="" type="">
       <span>
         <!--attempts-->
         <target id="4" />
       </span>
     </term>
-    <term tid="5" pos="," lemma="" type="">
+    <term tid="5" pos="," morphofeat="" lemma="" type="">
       <span>
         <!--,-->
         <target id="5" />
       </span>
     </term>
-    <term tid="6" pos="NNP" lemma="" type="">
+    <term tid="6" pos="NNP" morphofeat="" lemma="" type="">
       <span>
         <!--North-->
         <target id="6" />
       </span>
     </term>
-    <term tid="7" pos="NNP" lemma="" type="">
+    <term tid="7" pos="NNP" morphofeat="" lemma="" type="">
       <span>
         <!--Korea-->
         <target id="7" />
       </span>
     </term>
-    <term tid="8" pos="," lemma="" type="">
+    <term tid="8" pos="," morphofeat="" lemma="" type="">
       <span>
         <!--,-->
         <target id="8" />
       </span>
     </term>
-    <term tid="9" pos="IN" lemma="" type="">
+    <term tid="9" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--though-->
         <target id="9" />
       </span>
     </term>
-    <term tid="10" pos="VBG" lemma="" type="">
+    <term tid="10" pos="VBG" morphofeat="" lemma="" type="">
       <span>
         <!--struggling-->
         <target id="10" />
       </span>
     </term>
-    <term tid="11" pos="TO" lemma="" type="">
+    <term tid="11" pos="TO" morphofeat="" lemma="" type="">
       <span>
         <!--to-->
         <target id="11" />
       </span>
     </term>
-    <term tid="12" pos="VB" lemma="" type="">
+    <term tid="12" pos="VB" morphofeat="" lemma="" type="">
       <span>
         <!--feed-->
         <target id="12" />
       </span>
     </term>
-    <term tid="13" pos="PRP$" lemma="" type="">
+    <term tid="13" pos="PRP$" morphofeat="" lemma="" type="">
       <span>
         <!--its-->
         <target id="13" />
       </span>
     </term>
-    <term tid="14" pos="NNS" lemma="" type="">
+    <term tid="14" pos="NNS" morphofeat="" lemma="" type="">
       <span>
         <!--people-->
         <target id="14" />
       </span>
     </term>
-    <term tid="15" pos="," lemma="" type="">
+    <term tid="15" pos="," morphofeat="" lemma="" type="">
       <span>
         <!--,-->
         <target id="15" />
       </span>
     </term>
-    <term tid="16" pos="VBZ" lemma="" type="">
+    <term tid="16" pos="VBZ" morphofeat="" lemma="" type="">
       <span>
         <!--is-->
         <target id="16" />
       </span>
     </term>
-    <term tid="17" pos="RB" lemma="" type="">
+    <term tid="17" pos="RB" morphofeat="" lemma="" type="">
       <span>
         <!--now-->
         <target id="17" />
       </span>
     </term>
-    <term tid="18" pos="CD" lemma="" type="">
+    <term tid="18" pos="CD" morphofeat="" lemma="" type="">
       <span>
         <!--one-->
         <target id="18" />
       </span>
     </term>
-    <term tid="19" pos="IN" lemma="" type="">
+    <term tid="19" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--of-->
         <target id="19" />
       </span>
     </term>
-    <term tid="20" pos="DT" lemma="" type="">
+    <term tid="20" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--the-->
         <target id="20" />
       </span>
     </term>
-    <term tid="21" pos="JJ" lemma="" type="">
+    <term tid="21" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--few-->
         <target id="21" />
       </span>
     </term>
-    <term tid="22" pos="NNS" lemma="" type="">
+    <term tid="22" pos="NNS" morphofeat="" lemma="" type="">
       <span>
         <!--countries-->
         <target id="22" />
       </span>
     </term>
-    <term tid="23" pos="TO" lemma="" type="">
+    <term tid="23" pos="TO" morphofeat="" lemma="" type="">
       <span>
         <!--to-->
         <target id="23" />
       </span>
     </term>
-    <term tid="24" pos="VB" lemma="" type="">
+    <term tid="24" pos="VB" morphofeat="" lemma="" type="">
       <span>
         <!--have-->
         <target id="24" />
       </span>
     </term>
-    <term tid="25" pos="RB" lemma="" type="">
+    <term tid="25" pos="RB" morphofeat="" lemma="" type="">
       <span>
         <!--successfully-->
         <target id="25" />
       </span>
     </term>
-    <term tid="26" pos="VBN" lemma="" type="">
+    <term tid="26" pos="VBN" morphofeat="" lemma="" type="">
       <span>
         <!--launched-->
         <target id="26" />
       </span>
     </term>
-    <term tid="27" pos="DT" lemma="" type="">
+    <term tid="27" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--a-->
         <target id="27" />
       </span>
     </term>
-    <term tid="28" pos="NN" lemma="" type="">
+    <term tid="28" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--satellite-->
         <target id="28" />
       </span>
     </term>
-    <term tid="29" pos="IN" lemma="" type="">
+    <term tid="29" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--into-->
         <target id="29" />
       </span>
     </term>
-    <term tid="30" pos="NN" lemma="" type="">
+    <term tid="30" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--space-->
         <target id="30" />
       </span>
     </term>
-    <term tid="31" pos="IN" lemma="" type="">
+    <term tid="31" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--from-->
         <target id="31" />
       </span>
     </term>
-    <term tid="32" pos="PRP$" lemma="" type="">
+    <term tid="32" pos="PRP$" morphofeat="" lemma="" type="">
       <span>
         <!--its-->
         <target id="32" />
       </span>
     </term>
-    <term tid="33" pos="JJ" lemma="" type="">
+    <term tid="33" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--own-->
         <target id="33" />
       </span>
     </term>
-    <term tid="34" pos="NN" lemma="" type="">
+    <term tid="34" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--soil-->
         <target id="34" />
       </span>
     </term>
-    <term tid="35" pos="." lemma="" type="">
+    <term tid="35" pos="." morphofeat="" lemma="" type="">
       <span>
         <!--.-->
         <target id="35" />
       </span>
     </term>
-    <term tid="36" pos="NNP" lemma="" type="">
+    <term tid="36" pos="NNP" morphofeat="" lemma="" type="">
       <span>
         <!--Bitter-->
         <target id="36" />
       </span>
     </term>
-    <term tid="37" pos="JJ" lemma="" type="">
+    <term tid="37" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--rival-->
         <target id="37" />
       </span>
     </term>
-    <term tid="38" pos="NNP" lemma="" type="">
+    <term tid="38" pos="NNP" morphofeat="" lemma="" type="">
       <span>
         <!--South-->
         <target id="38" />
       </span>
     </term>
-    <term tid="39" pos="NNP" lemma="" type="">
+    <term tid="39" pos="NNP" morphofeat="" lemma="" type="">
       <span>
         <!--Korea-->
         <target id="39" />
       </span>
     </term>
-    <term tid="40" pos="VBZ" lemma="" type="">
+    <term tid="40" pos="VBZ" morphofeat="" lemma="" type="">
       <span>
         <!--is-->
         <target id="40" />
       </span>
     </term>
-    <term tid="41" pos="RB" lemma="" type="">
+    <term tid="41" pos="RB" morphofeat="" lemma="" type="">
       <span>
         <!--not-->
         <target id="41" />
       </span>
     </term>
-    <term tid="42" pos="IN" lemma="" type="">
+    <term tid="42" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--on-->
         <target id="42" />
       </span>
     </term>
-    <term tid="43" pos="DT" lemma="" type="">
+    <term tid="43" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--the-->
         <target id="43" />
       </span>
     </term>
-    <term tid="44" pos="NN" lemma="" type="">
+    <term tid="44" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--list-->
         <target id="44" />
       </span>
     </term>
-    <term tid="45" pos="," lemma="" type="">
+    <term tid="45" pos="," morphofeat="" lemma="" type="">
       <span>
         <!--,-->
         <target id="45" />
       </span>
     </term>
-    <term tid="46" pos="IN" lemma="" type="">
+    <term tid="46" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--although-->
         <target id="46" />
       </span>
     </term>
-    <term tid="47" pos="PRP" lemma="" type="">
+    <term tid="47" pos="PRP" morphofeat="" lemma="" type="">
       <span>
         <!--it-->
         <target id="47" />
       </span>
     </term>
-    <term tid="48" pos="VBZ" lemma="" type="">
+    <term tid="48" pos="VBZ" morphofeat="" lemma="" type="">
       <span>
         <!--has-->
         <target id="48" />
       </span>
     </term>
-    <term tid="49" pos="VBN" lemma="" type="">
+    <term tid="49" pos="VBN" morphofeat="" lemma="" type="">
       <span>
         <!--tried-->
         <target id="49" />
       </span>
     </term>
-    <term tid="50" pos="." lemma="" type="">
+    <term tid="50" pos="." morphofeat="" lemma="" type="">
       <span>
         <!--.-->
         <target id="50" />
       </span>
     </term>
-    <term tid="51" pos="JJ" lemma="" type="">
+    <term tid="51" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--North-->
         <target id="51" />
       </span>
     </term>
-    <term tid="52" pos="JJ" lemma="" type="">
+    <term tid="52" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--Korean-->
         <target id="52" />
       </span>
     </term>
-    <term tid="53" pos="NN" lemma="" type="">
+    <term tid="53" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--space-->
         <target id="53" />
       </span>
     </term>
-    <term tid="54" pos="NNS" lemma="" type="">
+    <term tid="54" pos="NNS" morphofeat="" lemma="" type="">
       <span>
         <!--officials-->
         <target id="54" />
       </span>
     </term>
-    <term tid="55" pos="VBP" lemma="" type="">
+    <term tid="55" pos="VBP" morphofeat="" lemma="" type="">
       <span>
         <!--insist-->
         <target id="55" />
       </span>
     </term>
-    <term tid="56" pos="DT" lemma="" type="">
+    <term tid="56" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--the-->
         <target id="56" />
       </span>
     </term>
-    <term tid="57" pos="NN" lemma="" type="">
+    <term tid="57" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--rocket-->
         <target id="57" />
       </span>
     </term>
-    <term tid="58" pos="VBZ" lemma="" type="">
+    <term tid="58" pos="VBZ" morphofeat="" lemma="" type="">
       <span>
         <!--is-->
         <target id="58" />
       </span>
     </term>
-    <term tid="59" pos="VBN" lemma="" type="">
+    <term tid="59" pos="VBN" morphofeat="" lemma="" type="">
       <span>
         <!--meant-->
         <target id="59" />
       </span>
     </term>
-    <term tid="60" pos="TO" lemma="" type="">
+    <term tid="60" pos="TO" morphofeat="" lemma="" type="">
       <span>
         <!--to-->
         <target id="60" />
       </span>
     </term>
-    <term tid="61" pos="VB" lemma="" type="">
+    <term tid="61" pos="VB" morphofeat="" lemma="" type="">
       <span>
         <!--send-->
         <target id="61" />
       </span>
     </term>
-    <term tid="62" pos="DT" lemma="" type="">
+    <term tid="62" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--a-->
         <target id="62" />
       </span>
     </term>
-    <term tid="63" pos="NN" lemma="" type="">
+    <term tid="63" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--satellite-->
         <target id="63" />
       </span>
     </term>
-    <term tid="64" pos="IN" lemma="" type="">
+    <term tid="64" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--into-->
         <target id="64" />
       </span>
     </term>
-    <term tid="65" pos="NN" lemma="" type="">
+    <term tid="65" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--orbit-->
         <target id="65" />
       </span>
     </term>
-    <term tid="66" pos="WDT" lemma="" type="">
+    <term tid="66" pos="WDT" morphofeat="" lemma="" type="">
       <span>
         <!--that-->
         <target id="66" />
       </span>
     </term>
-    <term tid="67" pos="MD" lemma="" type="">
+    <term tid="67" pos="MD" morphofeat="" lemma="" type="">
       <span>
         <!--can-->
         <target id="67" />
       </span>
     </term>
-    <term tid="68" pos="VB" lemma="" type="">
+    <term tid="68" pos="VB" morphofeat="" lemma="" type="">
       <span>
         <!--study-->
         <target id="68" />
       </span>
     </term>
-    <term tid="69" pos="NNS" lemma="" type="">
+    <term tid="69" pos="NNS" morphofeat="" lemma="" type="">
       <span>
         <!--crops-->
         <target id="69" />
       </span>
     </term>
-    <term tid="70" pos="CC" lemma="" type="">
+    <term tid="70" pos="CC" morphofeat="" lemma="" type="">
       <span>
         <!--and-->
         <target id="70" />
       </span>
     </term>
-    <term tid="71" pos="NN" lemma="" type="">
+    <term tid="71" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--weather-->
         <target id="71" />
       </span>
     </term>
-    <term tid="72" pos="NNS" lemma="" type="">
+    <term tid="72" pos="NNS" morphofeat="" lemma="" type="">
       <span>
         <!--patterns-->
         <target id="72" />
       </span>
     </term>
-    <term tid="73" pos="." lemma="" type="">
+    <term tid="73" pos="." morphofeat="" lemma="" type="">
       <span>
         <!--.-->
         <target id="73" />
       </span>
     </term>
-    <term tid="74" pos="CC" lemma="" type="">
+    <term tid="74" pos="CC" morphofeat="" lemma="" type="">
       <span>
         <!--But-->
         <target id="74" />
       </span>
     </term>
-    <term tid="75" pos="JJ" lemma="" type="">
+    <term tid="75" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--Western-->
         <target id="75" />
       </span>
     </term>
-    <term tid="76" pos="NNS" lemma="" type="">
+    <term tid="76" pos="NNS" morphofeat="" lemma="" type="">
       <span>
         <!--experts-->
         <target id="76" />
       </span>
     </term>
-    <term tid="77" pos="VBP" lemma="" type="">
+    <term tid="77" pos="VBP" morphofeat="" lemma="" type="">
       <span>
         <!--note-->
         <target id="77" />
       </span>
     </term>
-    <term tid="78" pos="IN" lemma="" type="">
+    <term tid="78" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--that-->
         <target id="78" />
       </span>
     </term>
-    <term tid="79" pos="DT" lemma="" type="">
+    <term tid="79" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--the-->
         <target id="79" />
       </span>
     </term>
-    <term tid="80" pos="NN" lemma="" type="">
+    <term tid="80" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--technology-->
         <target id="80" />
       </span>
     </term>
-    <term tid="81" pos="VBN" lemma="" type="">
+    <term tid="81" pos="VBN" morphofeat="" lemma="" type="">
       <span>
         <!--involved-->
         <target id="81" />
       </span>
     </term>
-    <term tid="82" pos="IN" lemma="" type="">
+    <term tid="82" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--in-->
         <target id="82" />
       </span>
     </term>
-    <term tid="83" pos="DT" lemma="" type="">
+    <term tid="83" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--a-->
         <target id="83" />
       </span>
     </term>
-    <term tid="84" pos="NN" lemma="" type="">
+    <term tid="84" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--satellite-->
         <target id="84" />
       </span>
     </term>
-    <term tid="85" pos="NN" lemma="" type="">
+    <term tid="85" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--launch-->
         <target id="85" />
       </span>
     </term>
-    <term tid="86" pos="VBZ" lemma="" type="">
+    <term tid="86" pos="VBZ" morphofeat="" lemma="" type="">
       <span>
         <!--is-->
         <target id="86" />
       </span>
     </term>
-    <term tid="87" pos="JJ" lemma="" type="">
+    <term tid="87" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--similar-->
         <target id="87" />
       </span>
     </term>
-    <term tid="88" pos="TO" lemma="" type="">
+    <term tid="88" pos="TO" morphofeat="" lemma="" type="">
       <span>
         <!--to-->
         <target id="88" />
       </span>
     </term>
-    <term tid="89" pos="DT" lemma="" type="">
+    <term tid="89" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--that-->
         <target id="89" />
       </span>
     </term>
-    <term tid="90" pos="VBD" lemma="" type="">
+    <term tid="90" pos="VBD" morphofeat="" lemma="" type="">
       <span>
         <!--needed-->
         <target id="90" />
       </span>
     </term>
-    <term tid="91" pos="TO" lemma="" type="">
+    <term tid="91" pos="TO" morphofeat="" lemma="" type="">
       <span>
         <!--to-->
         <target id="91" />
       </span>
     </term>
-    <term tid="92" pos="VB" lemma="" type="">
+    <term tid="92" pos="VB" morphofeat="" lemma="" type="">
       <span>
         <!--develop-->
         <target id="92" />
       </span>
     </term>
-    <term tid="93" pos="DT" lemma="" type="">
+    <term tid="93" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--a-->
         <target id="93" />
       </span>
     </term>
-    <term tid="94" pos="RB" lemma="" type="">
+    <term tid="94" pos="RB" morphofeat="" lemma="" type="">
       <span>
         <!--very-->
         <target id="94" />
       </span>
     </term>
-    <term tid="95" pos="JJ" lemma="" type="">
+    <term tid="95" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--long-range-->
         <target id="95" />
       </span>
     </term>
-    <term tid="96" pos="NN" lemma="" type="">
+    <term tid="96" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--missile-->
         <target id="96" />
       </span>
     </term>
-    <term tid="97" pos="." lemma="" type="">
+    <term tid="97" pos="." morphofeat="" lemma="" type="">
       <span>
         <!--.-->
         <target id="97" />
       </span>
     </term>
-    <term tid="98" pos="DT" lemma="" type="">
+    <term tid="98" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--The-->
         <target id="98" />
       </span>
     </term>
-    <term tid="99" pos="NN" lemma="" type="">
+    <term tid="99" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--launch-->
         <target id="99" />
       </span>
     </term>
-    <term tid="100" pos="IN" lemma="" type="">
+    <term tid="100" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--of-->
         <target id="100" />
       </span>
     </term>
-    <term tid="101" pos="DT" lemma="" type="">
+    <term tid="101" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--a-->
         <target id="101" />
       </span>
     </term>
-    <term tid="102" pos="NN" lemma="" type="">
+    <term tid="102" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--rocket-->
         <target id="102" />
       </span>
     </term>
-    <term tid="103" pos="JJ" lemma="" type="">
+    <term tid="103" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--similar-->
         <target id="103" />
       </span>
     </term>
-    <term tid="104" pos="IN" lemma="" type="">
+    <term tid="104" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--in-->
         <target id="104" />
       </span>
     </term>
-    <term tid="105" pos="NN" lemma="" type="">
+    <term tid="105" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--design-->
         <target id="105" />
       </span>
     </term>
-    <term tid="106" pos="TO" lemma="" type="">
+    <term tid="106" pos="TO" morphofeat="" lemma="" type="">
       <span>
         <!--to-->
         <target id="106" />
       </span>
     </term>
-    <term tid="107" pos="CD" lemma="" type="">
+    <term tid="107" pos="CD" morphofeat="" lemma="" type="">
       <span>
         <!--one-->
         <target id="107" />
       </span>
     </term>
-    <term tid="108" pos="NN" lemma="" type="">
+    <term tid="108" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--capable-->
         <target id="108" />
       </span>
     </term>
-    <term tid="109" pos="IN" lemma="" type="">
+    <term tid="109" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--of-->
         <target id="109" />
       </span>
     </term>
-    <term tid="110" pos="VBG" lemma="" type="">
+    <term tid="110" pos="VBG" morphofeat="" lemma="" type="">
       <span>
         <!--carrying-->
         <target id="110" />
       </span>
     </term>
-    <term tid="111" pos="DT" lemma="" type="">
+    <term tid="111" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--an-->
         <target id="111" />
       </span>
     </term>
-    <term tid="112" pos="JJ" lemma="" type="">
+    <term tid="112" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--atomic-tipped-->
         <target id="112" />
       </span>
     </term>
-    <term tid="113" pos="NN" lemma="" type="">
+    <term tid="113" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--warhead-->
         <target id="113" />
       </span>
     </term>
-    <term tid="114" pos="RB" lemma="" type="">
+    <term tid="114" pos="RB" morphofeat="" lemma="" type="">
       <span>
         <!--as-->
         <target id="114" />
       </span>
     </term>
-    <term tid="115" pos="RB" lemma="" type="">
+    <term tid="115" pos="RB" morphofeat="" lemma="" type="">
       <span>
         <!--far-->
         <target id="115" />
       </span>
     </term>
-    <term tid="116" pos="IN" lemma="" type="">
+    <term tid="116" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--as-->
         <target id="116" />
       </span>
     </term>
-    <term tid="117" pos="NNP" lemma="" type="">
+    <term tid="117" pos="NNP" morphofeat="" lemma="" type="">
       <span>
         <!--California-->
         <target id="117" />
       </span>
     </term>
-    <term tid="118" pos="VBZ" lemma="" type="">
+    <term tid="118" pos="VBZ" morphofeat="" lemma="" type="">
       <span>
         <!--raises-->
         <target id="118" />
       </span>
     </term>
-    <term tid="119" pos="DT" lemma="" type="">
+    <term tid="119" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--the-->
         <target id="119" />
       </span>
     </term>
-    <term tid="120" pos="NNS" lemma="" type="">
+    <term tid="120" pos="NNS" morphofeat="" lemma="" type="">
       <span>
         <!--stakes-->
         <target id="120" />
       </span>
     </term>
-    <term tid="121" pos="IN" lemma="" type="">
+    <term tid="121" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--in-->
         <target id="121" />
       </span>
     </term>
-    <term tid="122" pos="DT" lemma="" type="">
+    <term tid="122" pos="DT" morphofeat="" lemma="" type="">
       <span>
         <!--the-->
         <target id="122" />
       </span>
     </term>
-    <term tid="123" pos="JJ" lemma="" type="">
+    <term tid="123" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--international-->
         <target id="123" />
       </span>
     </term>
-    <term tid="124" pos="NN" lemma="" type="">
+    <term tid="124" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--standoff-->
         <target id="124" />
       </span>
     </term>
-    <term tid="125" pos="IN" lemma="" type="">
+    <term tid="125" pos="IN" morphofeat="" lemma="" type="">
       <span>
         <!--over-->
         <target id="125" />
       </span>
     </term>
-    <term tid="126" pos="NNP" lemma="" type="">
+    <term tid="126" pos="NNP" morphofeat="" lemma="" type="">
       <span>
         <!--North-->
         <target id="126" />
       </span>
     </term>
-    <term tid="127" pos="NNP" lemma="" type="">
+    <term tid="127" pos="NNP" morphofeat="" lemma="" type="">
       <span>
         <!--Korea-->
         <target id="127" />
       </span>
     </term>
-    <term tid="128" pos="POS" lemma="" type="">
+    <term tid="128" pos="POS" morphofeat="" lemma="" type="">
       <span>
         <!--'s-->
         <target id="128" />
       </span>
     </term>
-    <term tid="129" pos="VBG" lemma="" type="">
+    <term tid="129" pos="VBG" morphofeat="" lemma="" type="">
       <span>
         <!--expanding-->
         <target id="129" />
       </span>
     </term>
-    <term tid="130" pos="JJ" lemma="" type="">
+    <term tid="130" pos="JJ" morphofeat="" lemma="" type="">
       <span>
         <!--atomic-->
         <target id="130" />
       </span>
     </term>
-    <term tid="131" pos="NN" lemma="" type="">
+    <term tid="131" pos="NN" morphofeat="" lemma="" type="">
       <span>
         <!--arsenal-->
         <target id="131" />
       </span>
     </term>
-    <term tid="132" pos="." lemma="" type="">
+    <term tid="132" pos="." morphofeat="" lemma="" type="">
       <span>
         <!--.-->
         <target id="132" />
