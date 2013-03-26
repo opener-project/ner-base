@@ -11,6 +11,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 import net.sourceforge.argparse4j.ArgumentParsers;
+import net.sourceforge.argparse4j.impl.Arguments;
 import net.sourceforge.argparse4j.inf.ArgumentParser;
 import net.sourceforge.argparse4j.inf.ArgumentParserException;
 import net.sourceforge.argparse4j.inf.Namespace;
@@ -58,10 +59,9 @@ public class CLI {
         .required(true)
         .help(
             "It is REQUIRED to choose a language to perform annotation with IXA-OpenNLP");
-    // parser.addArgument("-f","--format").choices("kaf","plain").setDefault("kaf").help("output annotation in plain native "
-    // +
-    // "Apache OpenNLP format or in KAF format. The default is KAF");
-
+    
+    parser.addArgument("-t","--timestamp").action(Arguments.storeTrue()).help("flag to make timestamp static for continous " +
+        "integration testing");
     /*
      * Parse the command line arguments
      */
@@ -112,8 +112,15 @@ public class CLI {
       // add already contained header plus this module linguistic
       // processor
       annotator.addKafHeader(lingProc, kaf);
-      kaf.addlps("entities", "ehu-opennlp-nerc-"+lang, kaf.getTimestamp(), "1.0");
+      
+      if (parsedArguments.getBoolean("timestamp") == true) {
+        kaf.addlps("entities", "ehu-opennlp-nerc-"+lang, "now", "1.0");
+      }
+      else { 
+        kaf.addlps("entities", "ehu-opennlp-nerc-"+lang, kaf.getTimestamp(), "1.0");
 
+      }
+      
       // annotate NEs to KAF
       annotator.annotateNEsToKAF(sentences, termList, kaf);
 
