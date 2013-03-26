@@ -10,6 +10,11 @@ import java.io.OutputStreamWriter;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import net.sourceforge.argparse4j.ArgumentParsers;
+import net.sourceforge.argparse4j.inf.ArgumentParser;
+import net.sourceforge.argparse4j.inf.ArgumentParserException;
+import net.sourceforge.argparse4j.inf.Namespace;
+
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.output.Format;
@@ -37,13 +42,53 @@ public class CLI {
    * @throws JDOMException
    */
   public static void main(String[] args) throws IOException, JDOMException {
+    
+    Namespace parsedArguments = null;
+
+    // create Argument Parser
+    ArgumentParser parser = ArgumentParsers
+        .newArgumentParser("ehu-opennlp-nerc-en-1.0.jar")
+        .description(
+            "ehu-opennlp-nerc is a multilingual NERC module developed by IXA NLP Group based on Apache OpenNLP.\n");
+
+    // specify language
+    parser
+        .addArgument("-l", "--lang")
+        .choices("en", "es")
+        .required(true)
+        .help(
+            "It is REQUIRED to choose a language to perform annotation with IXA-OpenNLP");
+    // parser.addArgument("-f","--format").choices("kaf","plain").setDefault("kaf").help("output annotation in plain native "
+    // +
+    // "Apache OpenNLP format or in KAF format. The default is KAF");
+
+    /*
+     * Parse the command line arguments
+     */
+
+    // catch errors and print help
+    try {
+      parsedArguments = parser.parseArgs(args);
+    } catch (ArgumentParserException e) {
+      parser.handleError(e);
+      System.out
+          .println("Run java -jar target/ehu-opennlp-nerc-en-1.0.jar -help for details");
+      System.exit(1);
+    }
+
+    /*
+     * Load language and dictionary parameters and construct annotators, read
+     * and write kaf
+     */
+
+    String lang = parsedArguments.getString("lang");
 
     KAFReader kafReader = new KAFReader();
-    Annotate annotator = new Annotate();
+    Annotate annotator = new Annotate(lang);
     StringBuilder sb = new StringBuilder();
     BufferedReader breader = null;
     BufferedWriter bwriter = null;
-    KAF kaf = new KAF();
+    KAF kaf = new KAF(lang);
     try {
       breader = new BufferedReader(new InputStreamReader(System.in, "UTF-8"));
       bwriter = new BufferedWriter(new OutputStreamWriter(System.out, "UTF-8"));
@@ -67,7 +112,7 @@ public class CLI {
       // add already contained header plus this module linguistic
       // processor
       annotator.addKafHeader(lingProc, kaf);
-      kaf.addlps("entities", "ehu-opennlp-nerc-en", kaf.getTimestamp(), "1.0");
+      kaf.addlps("entities", "ehu-opennlp-nerc-"+lang, kaf.getTimestamp(), "1.0");
 
       // annotate NEs to KAF
       annotator.annotateNEsToKAF(sentences, termList, kaf);

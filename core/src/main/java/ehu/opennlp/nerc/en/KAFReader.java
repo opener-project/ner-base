@@ -32,7 +32,8 @@ public class KAFReader {
    * Read XML document using JDOM2 SAXBuilder and outputs the rootNode of the
    * XML document.
    * 
-   * @param InputStream in
+   * @param InputStream
+   *          in
    * @return Element rootNode of the XML Document
    * @throws JDOMException
    * @throws IOException
@@ -86,7 +87,7 @@ public class KAFReader {
     List<Element> termList = termsNode.getChildren("term");
     return termList;
   }
-  
+
   /**
    * From the list of <wf> elements, get the sentence Ids in a SortedSet.
    * 

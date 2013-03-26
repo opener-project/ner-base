@@ -52,7 +52,8 @@ public class KAF {
     public String pos;
     public String lemma;
     public String type;
-	public String spanString;
+    public String spanString;
+    public String morphofeat;
   }
 
   class Entity {
@@ -66,6 +67,7 @@ public class KAF {
    * Class members
    */
 
+  private String lang;
   ArrayList<LinguisticProcessor> lps;
   ArrayList<WordForm> wfs;
   ArrayList<Term> terms;
@@ -74,7 +76,8 @@ public class KAF {
   /*
    * Constructor: it initializes the class' member arrays
    */
-  public KAF() {
+  public KAF(String cmdOption) {
+    this.lang = cmdOption;
     this.lps = new ArrayList<LinguisticProcessor>();
     this.wfs = new ArrayList<WordForm>();
     this.terms = new ArrayList<Term>();
@@ -104,18 +107,20 @@ public class KAF {
   }
 
   public void addTerm(String id, String pos, String type, String lemma,
-      ArrayList<String> tokenIds, String spanString) {
+      ArrayList<String> tokenIds, String spanString, String morphofeat) {
     Term term = new Term();
     term.id = id;
-    term.pos = pos;
+    term.pos = pos; // kaf postag
     term.lemma = lemma;
     term.type = type;
     term.tokens = tokenIds;
     term.spanString = spanString;
+    term.morphofeat = morphofeat; // penn treebank postag
     this.terms.add(term);
   }
 
-  public void addEntity(String id, String type, ArrayList<String> termIds, String neString) {
+  public void addEntity(String id, String type, ArrayList<String> termIds,
+      String neString) {
     Entity entity = new Entity();
     entity.id = id;
     entity.type = type;
@@ -167,7 +172,7 @@ public class KAF {
     try {
 
       Element root = new Element("KAF");
-      root.setAttribute("lang", "en", Namespace.XML_NAMESPACE);
+      root.setAttribute("lang", this.lang, Namespace.XML_NAMESPACE);
       root.setAttribute("version", "v1.opener");
 
       Element header = new Element("kafHeader");
@@ -199,6 +204,7 @@ public class KAF {
         Element termElem = new Element("term");
         termElem.setAttribute("tid", term.id);
         termElem.setAttribute("pos", term.pos);
+        termElem.setAttribute("morphofeat", term.morphofeat);
         termElem.setAttribute("lemma", term.lemma);
         termElem.setAttribute("type", term.type);
         Element spanElem = new Element("span");

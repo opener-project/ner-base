@@ -82,7 +82,7 @@ The contents of the module are the following:
 INSTALLING Version 1.0 of ehu-opennlp-nerc-en module
 =======================================================
 
-Installing the nerc-en module requires the following steps:
+Installing the ehu-opennlp-nerc-en module requires the following steps:
 
 If you already have installed in your machine JDK6 and MAVEN 3, please go to step 3
 directly. Otherwise, follow these steps:
@@ -172,12 +172,15 @@ ehu-opennlp-nerc-en-1.0.jar
 This executable contains every dependency the module needs, so it is completely portable as long
 as you have a JVM 1.6 installed.
 
+6. USING ehu-opennlp-nerc
+-------------------------
+
 The program takes KAF documents (with <wf> and <term> elements) as standard input and outputs KAF.
 
 To run the program execute:
 
 ````shell
-cat wfterms.kaf | java -jar $PATH/target/ehu-opennlp-nerc-en-1.0.jar
+cat wfterms.kaf | java -jar $PATH/target/ehu-opennlp-nerc-en-1.0.jar -l $lang
 ````
 
 GENERATING JAVADOC

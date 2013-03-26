@@ -1,6 +1,7 @@
 package ehu.opennlp.nerc.en;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -21,13 +22,15 @@ public class Annotate {
 
   private NERC nameFinder;
 
-  public Annotate() {
-    nameFinder = new NERC();
+  public Annotate(String cmdOption) {
+    Models modelRetriever = new Models();
+    InputStream nerModel = modelRetriever.getNERModel(cmdOption);
+    nameFinder = new NERC(nerModel);
   }
 
   /**
-   * It reads the linguisticProcessor elements and adds them to
-   * the KAF document.
+   * It reads the linguisticProcessor elements and adds them to the KAF
+   * document.
    * 
    * @param lingProc
    * @param kaf
@@ -43,42 +46,45 @@ public class Annotate {
       }
     }
   }
-  
+
   /**
-   * From a termSpan Element in KAF returns the comment inside the Span Element. 
-   * This function is used to add the string corresponding to a term span as a 
-   * commment in the Span element of the <terms> layer.  
+   * From a termSpan Element in KAF returns the comment inside the Span Element.
+   * This function is used to add the string corresponding to a term span as a
+   * commment in the Span element of the <terms> layer.
    * 
-   * @param Element termSpan
+   * @param Element
+   *          termSpan
    * @return Comment spanComment
    */
-  private Comment getTermSpanComment(Element termSpan) { 
+  private Comment getTermSpanComment(Element termSpan) {
     Comment spanComment = null;
     List<Content> spanContent = termSpan.getContent();
     for (Object elem : spanContent) {
-      if (elem instanceof Comment) { 
+      if (elem instanceof Comment) {
         spanComment = (Comment) elem;
       }
     }
     return spanComment;
   }
-  
+
   /**
    * 
-   * It takes a NE span indexes and the tokens in a sentence and produces 
-   * the string to which the NE span corresponds to. This function is used 
-   * to get the NE textual representation from a Span. The NE string will then 
-   * be added to the span element in the <entities> layer of the KAF document. 
+   * It takes a NE span indexes and the tokens in a sentence and produces the
+   * string to which the NE span corresponds to. This function is used to get
+   * the NE textual representation from a Span. The NE string will then be added
+   * to the span element in the <entities> layer of the KAF document.
    * 
-   * @param Span reducedSpan
-   * @param String[] tokens
+   * @param Span
+   *          reducedSpan
+   * @param String
+   *          [] tokens
    * @return named entity string
    */
   private String getStringFromSpan(Span reducedSpan, String[] tokens) {
     StringBuilder sb = new StringBuilder();
-    for (int si = reducedSpan.getStart(); si <reducedSpan.getEnd(); si++) { 
-        sb.append(tokens[si]).append(" ");
-      }  
+    for (int si = reducedSpan.getStart(); si < reducedSpan.getEnd(); si++) {
+      sb.append(tokens[si]).append(" ");
+    }
     String neString = sb.toString();
     return neString;
   }
@@ -130,8 +136,8 @@ public class Annotate {
         int realTermCounter = v + noTerms;
         // get termId ArrayList from index of token in current sentence + number
         // of Terms in KAF so far
-        int tId = Integer.parseInt(termList.get(realTermCounter).getAttributeValue("tid")
-            .substring(1));
+        int tId = Integer.parseInt(termList.get(realTermCounter)
+            .getAttributeValue("tid").substring(1));
         String termId = Integer.toString(tId);
 
         // get span from term corresponding to token index in current sentence
@@ -151,9 +157,21 @@ public class Annotate {
         // get posId, lemma and type from term corresponding to token index in
         // current sentence
         String posId = termList.get(realTermCounter).getAttributeValue("pos");
-        String termLemma = termList.get(realTermCounter).getAttributeValue("lemma");
-        String termType = termList.get(realTermCounter).getAttributeValue("type");
-        kaf.addTerm(termId, posId, termType, termLemma, tokenIds,spanComment.getValue());
+        String termLemma = termList.get(realTermCounter).getAttributeValue(
+            "lemma");
+        String termType = termList.get(realTermCounter).getAttributeValue(
+            "type");
+        String morphFeatValue = termList.get(realTermCounter).getAttributeValue(
+            "morphofeat");
+        String morphFeat;
+        if (morphFeatValue == null) { 
+          morphFeat = ""; 
+        }
+        else {
+          morphFeat = morphFeatValue;
+        }
+        kaf.addTerm(termId, posId, termType, termLemma, tokenIds,
+            spanComment.getValue(), morphFeat);
       }
 
       // loop over the span of the NE
@@ -169,7 +187,7 @@ public class Annotate {
         }
         String neId = "e" + Integer.toString(noEntities + 1 + j);
         String type = reducedSpans[j].getType();
-        String neString = getStringFromSpan(reducedSpans[j],tokens);
+        String neString = getStringFromSpan(reducedSpans[j], tokens);
         kaf.addEntity(neId, type, neTerms, neString);
       }
     }

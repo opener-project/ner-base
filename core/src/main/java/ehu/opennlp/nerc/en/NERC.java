@@ -8,11 +8,11 @@ import opennlp.tools.namefind.TokenNameFinderModel;
 import opennlp.tools.util.Span;
 
 /**
- * Simple NER tagging module based on Apache OpenNLP.
+ * Simple Named Entity Recognition module based on Apache OpenNLP.
  * 
  * English model trained by IXA NLP Group.
  * 
- * @author ragerri 2012/11/30
+ * @author ragerri 2012/10/30
  * 
  */
 
@@ -26,10 +26,10 @@ public class NERC {
    * then it initializes the nercModel and finally it creates a nercDetector
    * using such model.
    */
-  public NERC() {
+  public NERC(InputStream trainedModel) {
 
-    InputStream trainedModel = getClass().getResourceAsStream(
-        "/en-testa-perceptron.bin");
+    // InputStream trainedModel =
+    // getClass().getResourceAsStream("/en-500-0-testa-perceptron.bin");
 
     try {
       nercModel = new TokenNameFinderModel(trainedModel);
