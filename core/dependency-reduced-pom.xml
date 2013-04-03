@@ -61,10 +61,6 @@
   </build>
   <repositories>
     <repository>
-      <id>opener</id>
-      <url>file://${project.basedir}</url>
-    </repository>
-    <repository>
       <id>org.apache.opennlp</id>
       <url>https://repository.apache.org/content/groups/snapshots</url>
     </repository>

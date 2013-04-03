@@ -8,7 +8,7 @@
 	<name>ehu-opennlp-nerc-en</name>
 	<description>English Named Entity Recognition module based on Apache OpenNLP API.
 	All models have been trained by the IXA NLP Group of the University of the
-	Basque Country (ixa.si.ehu.es). 
+	Basque Country (ixa.si.ehu.es).
 	</description>
 	<developers>
 		<developer>
@@ -26,10 +26,6 @@
 	<url>http://maven.apache.org</url>
 
 	<repositories>
-		<repository>
-		  <id>opener</id>
-		  <url>file://${project.basedir}</url>
-		</repository>
 		<repository>
 			<id>org.apache.opennlp</id>
 			<url>https://repository.apache.org/content/groups/snapshots</url>
@@ -69,11 +65,6 @@
 			<scope>compile</scope>
 		</dependency>
 
-		 <dependency>
-		  <groupId>opener</groupId>
-		  <artifactId>ner-en-model</artifactId>
-		  <version>1.0</version>
-		</dependency>
 	</dependencies>
 
 	<build>

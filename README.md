@@ -69,7 +69,6 @@ The contents of the module are the following:
 
     + formatter.xml           Apache OpenNLP code formatter for Eclipse SDK
     + INSTALL                 Instructions to install and run the module
-    + opener/                 trained models for sentence segmentation, tokenization and NERC in English
     + pom.xml                 maven pom file which deals with everything related to compilation and execution of the module
     + src/                    java source code of the module
     + Furthermore, the installation process, as described in the README.md, will generate another directory:
@@ -161,7 +160,7 @@ cd EHU-ner-lite_EN_kernel/core
 -----------------------------
 
 ````shell
-mvn clean install
+mvn clean package
 ````
 
 This step will create a directory called target/ which contains various directories and files.
@@ -171,6 +170,12 @@ ehu-opennlp-nerc-en-1.0.jar
 
 This executable contains every dependency the module needs, so it is completely portable as long
 as you have a JVM 1.6 installed.
+
+To install the module in the local maven repository, usually located in ~/.m2/, execute:
+
+````shell
+mvn clean install
+````
 
 6. USING ehu-opennlp-nerc
 -------------------------
