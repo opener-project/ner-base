@@ -8,7 +8,7 @@
       <lp name="ixa-opennlp-pos-en" timestamp="2013-03-72T01:00:29+0000" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-opennlp-nerc-en" timestamp="2013-04-99T16:39:57+0200" version="1.0" />
+      <lp name="ehu-opennlp-nerc-en" timestamp="now" version="1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
