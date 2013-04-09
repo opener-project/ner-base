@@ -136,9 +136,7 @@ public class Annotate {
         int realTermCounter = v + noTerms;
         // get termId ArrayList from index of token in current sentence + number
         // of Terms in KAF so far
-        int tId = Integer.parseInt(termList.get(realTermCounter)
-            .getAttributeValue("tid").substring(1));
-        String termId = Integer.toString(tId);
+        String termId = termList.get(realTermCounter).getAttributeValue("tid");
 
         // get span from term corresponding to token index in current sentence
         Element spanElem = termList.get(realTermCounter).getChild("span");
@@ -148,9 +146,7 @@ public class Annotate {
 
         // get wIds of target element from index of token in current sentence +
         // number of wfs in KAF so far
-        int wId = Integer.parseInt(targetElem.getAttributeValue("id")
-            .substring(1));
-        String wordId = Integer.toString(wId);
+        String wordId = targetElem.getAttributeValue("id");
         ArrayList<String> tokenIds = new ArrayList<String>();
         tokenIds.add(wordId);
 
