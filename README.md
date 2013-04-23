@@ -47,18 +47,18 @@ oof
 4. Push to the branch (`git push origin features/my-new-feature`)
 5. If you're confident, merge your changes into master.
 
-IXA EHU-OPENNLP-NERC-EN module
+
+IXA EHU-NERC module
 ==================
 
-This module provides a simple wrapper that uses Apache OpenNLP
-programatically to recognize and classify Named Entities (NERC)
-in running text.
+This module uses Apache OpenNLP programatically to perform Named Entity Recognition; it has been
+developed by the IXA NLP Group (ixa.si.ehu.es).
 
-The NERC model have been trained using the English CoNLL 2003 data and are provided
-by the IXA NLP Group (ixa.si.ehu.es), University of the Basque Country (F1 84.80).
++ Dutch and Spanish models trained using CoNLL 2002 dataset (75.92 F1 and 79.92 F1 respectively).
++ English and German models have been trained using CoNLL 2003 dataset (84.80 F1 and 61.48 F1 respectively).
++ Italian model trained using Evalita 2009 dataset (72.88 F1).
 
-Version 1.0 of ehu-opennlp-nerc-en is being developed as part of the 7th Framework OpeNER European Project.
-
+Developed as part of the 7th Framework OpeNER European Project.
 
 Contents
 ========
@@ -78,10 +78,10 @@ The contents of the module are the following:
 - README.md: This README
 
 
-INSTALLING Version 1.0 of ehu-opennlp-nerc-en module
-=======================================================
+INSTALLING Version 1.0 of ehu-nerc module
+=========================================
 
-Installing the ehu-opennlp-nerc-en module requires the following steps:
+Installing the ehu-nerc module requires the following steps:
 
 If you already have installed in your machine JDK6 and MAVEN 3, please go to step 3
 directly. Otherwise, follow these steps:
@@ -166,7 +166,7 @@ mvn clean package
 This step will create a directory called target/ which contains various directories and files.
 Most importantly, there you will find the module executable:
 
-ehu-opennlp-nerc-en-1.0.jar
+ehu-nerc-1.0.jar
 
 This executable contains every dependency the module needs, so it is completely portable as long
 as you have a JVM 1.6 installed.
@@ -185,7 +185,7 @@ The program takes KAF documents (with <wf> and <term> elements) as standard inpu
 To run the program execute:
 
 ````shell
-cat wfterms.kaf | java -jar $PATH/target/ehu-opennlp-nerc-en-1.0.jar -l $lang
+cat wfterms.kaf | java -jar $PATH/target/ehu-nerc-1.0.jar -l $lang
 ````
 
 GENERATING JAVADOC
@@ -197,7 +197,7 @@ You can also generate the javadoc of the module by executing:
 mvn javadoc:jar
 ````
 
-Which will create a jar file core/target/ehu-opennlp-nerc-en-1.0-javadoc.jar
+Which will create a jar file core/target/ehu-nerc-1.0-javadoc.jar
 
 
 

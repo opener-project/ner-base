@@ -1,4 +1,21 @@
-package ehu.opennlp.nerc.en;
+/*
+ *  Copyright 2013 Rodrigo Agerri
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
+
+package ehu.nerc;
+
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,8 +28,11 @@ import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.util.Span;
 
 import org.jdom2.Comment;
-import org.jdom2.Content;
 import org.jdom2.Element;
+import org.jdom2.JDOMException;
+
+import ehu.kaf.KAF;
+import ehu.kaf.KAFUtils;
 
 /**
  * @author ragerri
@@ -21,51 +41,15 @@ import org.jdom2.Element;
 public class Annotate {
 
   private NERC nameFinder;
+  private KAFUtils kafUtils;
 
   public Annotate(String cmdOption) {
     Models modelRetriever = new Models();
     InputStream nerModel = modelRetriever.getNERModel(cmdOption);
     nameFinder = new NERC(nerModel);
+    kafUtils = new KAFUtils();
   }
 
-  /**
-   * It reads the linguisticProcessor elements and adds them to the KAF
-   * document.
-   * 
-   * @param lingProc
-   * @param kaf
-   */
-  public void addKafHeader(List<Element> lingProc, KAF kaf) {
-    String layer = null;
-    for (int i = 0; i < lingProc.size(); i++) {
-      layer = lingProc.get(i).getAttributeValue("layer");
-      List<Element> lps = lingProc.get(i).getChildren("lp");
-      for (Element lp : lps) {
-        kaf.addlps(layer, lp.getAttributeValue("name"),
-            lp.getAttributeValue("timestamp"), lp.getAttributeValue("version"));
-      }
-    }
-  }
-
-  /**
-   * From a termSpan Element in KAF returns the comment inside the Span Element.
-   * This function is used to add the string corresponding to a term span as a
-   * commment in the Span element of the <terms> layer.
-   * 
-   * @param Element
-   *          termSpan
-   * @return Comment spanComment
-   */
-  private Comment getTermSpanComment(Element termSpan) {
-    Comment spanComment = null;
-    List<Content> spanContent = termSpan.getContent();
-    for (Object elem : spanContent) {
-      if (elem instanceof Comment) {
-        spanComment = (Comment) elem;
-      }
-    }
-    return spanComment;
-  }
 
   /**
    * 
@@ -107,11 +91,17 @@ public class Annotate {
    *          to KAF.
    * 
    * @return JDOM KAF document containing <wf>,<terms> and <entities> elements.
+ * @throws JDOMException 
    */
 
-  public void annotateNEsToKAF(
-      LinkedHashMap<String, List<String>> sentTokensMap,
-      List<Element> termList, KAF kaf) throws IOException {
+  public void annotateNEsToKAF(List<Element> wfs,
+      List<Element> termList, KAF kaf) throws IOException, JDOMException {
+	  
+	  
+      LinkedHashMap<String, List<String>> sentencesMap = kafUtils
+          .getSentencesMap(wfs);
+      LinkedHashMap<String, List<String>> sentTokensMap = kafUtils
+          .getSentsFromWfs(sentencesMap, wfs);
 
     for (Map.Entry<String, List<String>> sentence : sentTokensMap.entrySet()) {
       String sid = sentence.getKey();
@@ -121,13 +111,18 @@ public class Annotate {
       Span nameSpans[] = nameFinder.nercAnnotate(tokens);
       Span reducedSpans[] = NameFinderME.dropOverlappingSpans(nameSpans);
 
-      // Add tokens in the sentence to kaf object
+   // Add tokens in the sentence to kaf object
       int numTokensInKaf = kaf.getNumWfs();
-      int nextTokenInd = numTokensInKaf + 1;
+      int indexNumTokens = numTokensInKaf + 1;
       for (int i = 0; i < tokens.length; i++) {
-        String id = "w" + Integer.toString(nextTokenInd++);
+        int origWfCounter = i + numTokensInKaf;
+        int realWfCounter = i + indexNumTokens;
+        String offset = kafUtils.getWfOffset(wfs, origWfCounter);
+        String tokLength = kafUtils.getWfLength(wfs, origWfCounter);
+        String para = kafUtils.getWfPara(wfs, origWfCounter);
+        String id = "w" + Integer.toString(realWfCounter);
         String tokenStr = tokens[i];
-        kaf.addWf(id, sid, tokenStr);
+        kaf.addWf(id, sid, offset, tokLength, para, tokenStr);
       }
 
       // Read, link with tokens and add unmodified terms to KAF object
@@ -142,7 +137,7 @@ public class Annotate {
         Element spanElem = termList.get(realTermCounter).getChild("span");
         Element targetElem = spanElem.getChild("target");
         // get comment in Span Element
-        Comment spanComment = getTermSpanComment(spanElem);
+        Comment spanComment = kafUtils.getTermSpanComment(spanElem);
 
         // get wIds of target element from index of token in current sentence +
         // number of wfs in KAF so far
@@ -153,21 +148,12 @@ public class Annotate {
         // get posId, lemma and type from term corresponding to token index in
         // current sentence
         String posId = termList.get(realTermCounter).getAttributeValue("pos");
-        String termLemma = termList.get(realTermCounter).getAttributeValue(
-            "lemma");
-        String termType = termList.get(realTermCounter).getAttributeValue(
-            "type");
-        String morphFeatValue = termList.get(realTermCounter).getAttributeValue(
-            "morphofeat");
-        String morphFeat;
-        if (morphFeatValue == null) { 
-          morphFeat = ""; 
-        }
-        else {
-          morphFeat = morphFeatValue;
-        }
+        String termLemma = kafUtils.getTermLemma(termList, realTermCounter);
+        String termType =  kafUtils.getTermType(termList,realTermCounter);
+        String morphFeatValue = kafUtils.getTermMorphofeat(termList, realTermCounter);
+        
         kaf.addTerm(termId, posId, termType, termLemma, tokenIds,
-            spanComment.getValue(), morphFeat);
+            spanComment.getValue(), morphFeatValue);
       }
 
       // loop over the span of the NE
@@ -188,5 +174,5 @@ public class Annotate {
       }
     }
   }
-
+  
 }

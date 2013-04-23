@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ehu</groupId>
-	<artifactId>ehu-opennlp-nerc-en</artifactId>
+	<artifactId>ehu-nerc</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
-	<name>ehu-opennlp-nerc-en</name>
+	<name>ehu-nerc</name>
 	<description>English Named Entity Recognition module based on Apache OpenNLP API.
 	All models have been trained by the IXA NLP Group of the University of the
 	Basque Country (ixa.si.ehu.es).
@@ -26,10 +26,6 @@
 	<url>http://maven.apache.org</url>
 
 	<repositories>
-		<repository>
-			<id>org.apache.opennlp</id>
-			<url>https://repository.apache.org/content/groups/snapshots</url>
-		</repository>
 	</repositories>
 
 	<dependencies>
@@ -61,7 +57,7 @@
 		<dependency>
 			<groupId>org.apache.opennlp</groupId>
 			<artifactId>opennlp-tools</artifactId>
-			<version>1.5.3-SNAPSHOT</version>
+			<version>1.5.3</version>
 			<scope>compile</scope>
 		</dependency>
 
@@ -84,7 +80,7 @@
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<manifestEntries>
-										<Main-Class>ehu.opennlp.nerc.en.CLI</Main-Class>
+										<Main-Class>ehu.nerc.CLI</Main-Class>
 										<!-- <Class-Path>../models/models.jar</Class-Path> -->
 									</manifestEntries>
 								</transformer>
@@ -102,7 +98,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.2.1</version>
 				<configuration>
-					<mainClass>ehu.opennlp.nerc.en.CLI</mainClass>
+					<mainClass>ehu.nerc.CLI</mainClass>
 				</configuration>
 			</plugin>
 

@@ -1,4 +1,20 @@
-package ehu.opennlp.nerc.en;
+/*
+ * Copyright 2013 Rodrigo Agerri
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
+
+package ehu.kaf;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -13,6 +29,26 @@ import org.jdom2.Text;
 
 public class KAF {
 
+  /**
+   * It reads the linguisticProcessor elements and adds them to the KAF
+   * document.
+   * 
+   * @param lingProc
+   * @param kaf
+   */
+  public void addKafHeader(List<Element> lingProc, KAF kaf) {
+    String layer = null;
+    for (int i = 0; i < lingProc.size(); i++) {
+      layer = lingProc.get(i).getAttributeValue("layer");
+      List<Element> lps = lingProc.get(i).getChildren("lp");
+      for (Element lp : lps) {
+        kaf.addlps(layer, lp.getAttributeValue("name"),
+            lp.getAttributeValue("timestamp"), lp.getAttributeValue("version"));
+      }
+    }
+  }
+  
+  
   /**
    * 
    * Generates timestamp in UTC atomic format.
@@ -43,7 +79,10 @@ public class KAF {
   class WordForm {
     public String id;
     public String form;
+    public String offset;
+    public String length;
     public String sent;
+    public String para;
   }
 
   class Term {
@@ -98,16 +137,19 @@ public class KAF {
     this.lps.add(lp);
   }
 
-  public void addWf(String id, String sent, String form) {
+  public void addWf(String id, String sent, String offset, String tokLength, String para, String form) {
     WordForm wf = new WordForm();
     wf.id = id;
     wf.sent = sent;
+    wf.offset = offset;
+    wf.length = tokLength;
+    wf.para = para;
     wf.form = form;
     this.wfs.add(wf);
   }
 
   public void addTerm(String id, String pos, String type, String lemma,
-      ArrayList<String> tokenIds, String spanString, String morphofeat) {
+      ArrayList<String> tokenIds, String spanString, String posTag) {
     Term term = new Term();
     term.id = id;
     term.pos = pos; // kaf postag
@@ -115,7 +157,7 @@ public class KAF {
     term.type = type;
     term.tokens = tokenIds;
     term.spanString = spanString;
-    term.morphofeat = morphofeat; // penn treebank postag
+    term.morphofeat = posTag; // penn treebank postag
     this.terms.add(term);
   }
 
@@ -193,6 +235,9 @@ public class KAF {
         Element wfElem = new Element("wf");
         wfElem.setAttribute("wid", wf.id);
         wfElem.setAttribute("sent", wf.sent);
+        wfElem.setAttribute("offset", wf.offset);
+        wfElem.setAttribute("length", wf.length);
+        wfElem.setAttribute("para", wf.para);
         Text wfFormTxtNode = new Text(wf.form);
         wfElem.addContent(wfFormTxtNode);
         wfList.addContent(wfElem);

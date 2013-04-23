@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>ehu</groupId>
-  <artifactId>ehu-opennlp-nerc-en</artifactId>
-  <name>ehu-opennlp-nerc-en</name>
+  <artifactId>ehu-nerc</artifactId>
+  <name>ehu-nerc</name>
   <version>1.0</version>
   <description>English Named Entity Recognition module based on Apache OpenNLP API.
 	All models have been trained by the IXA NLP Group of the University of the
@@ -34,7 +34,7 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>ehu.opennlp.nerc.en.CLI</Main-Class>
+                    <Main-Class>ehu.nerc.CLI</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>
@@ -50,7 +50,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.2.1</version>
         <configuration>
-          <mainClass>ehu.opennlp.nerc.en.CLI</mainClass>
+          <mainClass>ehu.nerc.CLI</mainClass>
         </configuration>
       </plugin>
       <plugin>
@@ -59,12 +59,6 @@
       </plugin>
     </plugins>
   </build>
-  <repositories>
-    <repository>
-      <id>org.apache.opennlp</id>
-      <url>https://repository.apache.org/content/groups/snapshots</url>
-    </repository>
-  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
