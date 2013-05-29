@@ -219,6 +219,18 @@ public class KAFUtils {
     return spanComment;
   }
   
+  public String getTermSpanCommentValue(Comment spanComment) { 
+    String spanCommentValue = null;
+    if (spanComment.getValue() == null) { 
+        spanCommentValue = "";
+      }
+      else {
+        spanCommentValue = spanComment.getValue();
+      }
+      return spanCommentValue;
+}
+
+  
   /**
    * 
    * It takes a NE span indexes and the tokens in a sentence and produces the

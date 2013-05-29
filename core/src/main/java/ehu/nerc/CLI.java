@@ -130,10 +130,10 @@ public class CLI {
       // processor
       kaf.addKafHeader(lingProc, kaf);
       if (parsedArguments.getBoolean("timestamp") == true) {
-        kaf.addlps("entities", "ehu-pos-"+lang, "now", "1.0");
+        kaf.addlps("entities", "ehu-nerc-"+lang, "now", "1.0");
       }
       else { 
-        kaf.addlps("entities", "ehu-pos-" + lang, kaf.getTimestamp(), "1.0");
+        kaf.addlps("entities", "ehu-nerc-" + lang, kaf.getTimestamp(), "1.0");
       }
 
       // annotate NEs to KAF

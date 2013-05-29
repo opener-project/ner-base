@@ -138,7 +138,7 @@ public class Annotate {
         Element targetElem = spanElem.getChild("target");
         // get comment in Span Element
         Comment spanComment = kafUtils.getTermSpanComment(spanElem);
-
+        String spanCommentValue = kafUtils.getTermSpanCommentValue(spanComment);
         // get wIds of target element from index of token in current sentence +
         // number of wfs in KAF so far
         String wordId = targetElem.getAttributeValue("id");
@@ -153,7 +153,7 @@ public class Annotate {
         String morphFeatValue = kafUtils.getTermMorphofeat(termList, realTermCounter);
         
         kaf.addTerm(termId, posId, termType, termLemma, tokenIds,
-            spanComment.getValue(), morphFeatValue);
+            spanCommentValue, morphFeatValue);
       }
 
       // loop over the span of the NE
