@@ -18,14 +18,13 @@ package ehu.nerc;
 
 
 
+import ixa.kaflib.KAFDocument;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.List;
 
 import net.sourceforge.argparse4j.ArgumentParsers;
 import net.sourceforge.argparse4j.impl.Arguments;
@@ -33,13 +32,9 @@ import net.sourceforge.argparse4j.inf.ArgumentParser;
 import net.sourceforge.argparse4j.inf.ArgumentParserException;
 import net.sourceforge.argparse4j.inf.Namespace;
 
-import org.jdom2.Element;
 import org.jdom2.JDOMException;
-import org.jdom2.output.Format;
-import org.jdom2.output.XMLOutputter;
 
-import ehu.kaf.KAF;
-import ehu.kaf.KAFReader;
+
 
 /**
  * IXA  NERC using Apache OpenNLP.
@@ -104,44 +99,27 @@ public class CLI {
      */
 
     String lang = parsedArguments.getString("lang");
-    KAFReader kafReader = new KAFReader();
     Annotate annotator = new Annotate(lang);
-    StringBuilder sb = new StringBuilder();
     BufferedReader breader = null;
     BufferedWriter bwriter = null;
-    KAF kaf = new KAF(lang);
     try {
       breader = new BufferedReader(new InputStreamReader(System.in, "UTF-8"));
       bwriter = new BufferedWriter(new OutputStreamWriter(System.out, "UTF-8"));
-      String line;
-      while ((line = breader.readLine()) != null) {
-        sb.append(line);
-      }
-
-      // read KAF
-      InputStream kafIn = new ByteArrayInputStream(sb.toString().getBytes(
-          "UTF-8"));
-      Element rootNode = kafReader.getRootNode(kafIn);
-      List<Element> lingProc = kafReader.getKafHeader(rootNode);
-      List<Element> wfs = kafReader.getWfs(rootNode);
-      List<Element> termList = kafReader.getTerms(rootNode);
+      KAFDocument kaf = KAFDocument.createFromStream(breader);
 
       // add already contained header plus this module linguistic
       // processor
-      kaf.addKafHeader(lingProc, kaf);
       if (parsedArguments.getBoolean("timestamp") == true) {
-        kaf.addlps("entities", "ehu-nerc-"+lang, "now", "1.0");
+        kaf.addLinguisticProcessor("entities", "ehu-nerc-"+lang, "now", "1.0");
       }
       else { 
-        kaf.addlps("entities", "ehu-nerc-" + lang, kaf.getTimestamp(), "1.0");
+        kaf.addLinguisticProcessor("entities", "ehu-nerc-" + lang,"1.0");
       }
 
       // annotate NEs to KAF
-      annotator.annotateNEsToKAF(wfs, termList, kaf);
-
-      XMLOutputter xout = new XMLOutputter(Format.getPrettyFormat());
-      xout.output(kaf.createKAFDoc(), bwriter);
-      bwriter.close();
+      annotator.annotateNEsToKAF(kaf);
+      
+      bwriter.write(kaf.toString());
     } catch (IOException e) {
       e.printStackTrace();
     }

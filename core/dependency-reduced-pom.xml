@@ -59,6 +59,15 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>ixa-ehu.github</id>
+      <url>https://raw.github.com/ixa-ehu/kaflib-mvn-repo/master</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
