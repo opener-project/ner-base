@@ -1,4 +1,4 @@
-require_relative '../../lib/opener/ner/base'
+require_relative '../../lib/opener/ners/base'
 require 'rspec/expectations'
 require 'tempfile'
 
