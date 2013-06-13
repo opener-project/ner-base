@@ -19,7 +19,7 @@ module Opener
       # @param [Hash] options
       #
       # @option options [Array] :args The commandline arguments to pass to the
-      #  underlying Python script.
+      #  underlying Java code.
       #
       def initialize(options = {})
         @args    = options.delete(:args) || []
