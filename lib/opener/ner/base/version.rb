@@ -1,7 +1,7 @@
 module Opener
-  module NER
+  module Ners
     class Base
       VERSION = '0.0.1'
     end # Base
-  end # NER
+  end # Ners
 end # Opener

@@ -2,7 +2,7 @@
 
 require_relative '../lib/opener/ner/base'
 
-kernel = Opener::NER::Base.new(:args => ARGV, :language => 'de')
+kernel = Opener::Ners::Base.new(:args => ARGV, :language => 'de')
 input  = STDIN.tty? ? nil : STDIN.read
 
 kernel.run!(input)

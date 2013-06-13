@@ -3,7 +3,7 @@ require 'open3'
 require_relative 'base/version'
 
 module Opener
-  module NER
+  module Ners
     ##
     # Base NER class that supports various languages such as Dutch and English.
     #
@@ -91,5 +91,5 @@ module Opener
         return File.join(core_dir, 'ehu-nerc-1.0.jar')
       end
     end # Base
-  end # NER
+  end # Ners
 end # Opener

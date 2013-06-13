@@ -7,5 +7,5 @@ def kernel_root
 end
 
 def kernel(language)
-  return Opener::NER::Base.new(:language => language, :args => ['-t'])
+  return Opener::Ners::Base.new(:language => language, :args => ['-t'])
 end
