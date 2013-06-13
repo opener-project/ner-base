@@ -49,7 +49,7 @@ First make sure all the required dependencies are installed:
 
 Then compile the required Java code:
 
-    bundle exec rake java:compile
+    bundle exec rake compile
 
 For this you'll need to have Java 1.7 and Maven installed. These requirements
 are verified for you before the Rake task calls Maven.

@@ -26,17 +26,16 @@ task :requirements do
   require_executable('mvn')
 end
 
-namespace :java do
-  task :compile => :requirements
-end
+desc 'Alias for java:compile'
+task :compile => [:requirements, 'java:compile']
 
 desc 'Runs the tests'
-task :test => 'java:compile' do
+task :test => :compile do
   sh 'cucumber features'
 end
 
 desc 'Cleans the repository'
 task :clean => ['java:clean:packages', 'clean:tmp']
 
-task :build   => 'java:compile'
+task :build   => :compile
 task :default => :test
