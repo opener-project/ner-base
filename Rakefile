@@ -14,7 +14,7 @@ TMP_DIRECTORY = File.expand_path('../tmp', __FILE__)
 
 desc 'Lists all the files of the Gem'
 task :files do
-  gemspec = Gem::Specification.load('ner-base.gemspec')
+  gemspec = Gem::Specification.load('opener-ner-base.gemspec')
 
   puts gemspec.files.sort
 end
