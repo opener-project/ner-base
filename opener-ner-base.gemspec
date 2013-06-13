@@ -1,4 +1,4 @@
-require File.expand_path('../lib/opener/ner/base/version', __FILE__)
+require File.expand_path('../lib/opener/ners/base/version', __FILE__)
 
 generated = Dir.glob('core/ehu-nerc-*.jar')
 
