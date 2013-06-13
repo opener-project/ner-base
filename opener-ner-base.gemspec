@@ -4,7 +4,7 @@ generated = Dir.glob('core/ehu-nerc-*.jar')
 
 Gem::Specification.new do |gem|
   gem.name          = 'opener-ner-base'
-  gem.version       = Opener::NER::Base::VERSION
+  gem.version       = Opener::Ners::Base::VERSION
   gem.authors       = ['development@olery.com']
   gem.summary       = 'Base NER component for languages such as English.'
   gem.description   = gem.summary
