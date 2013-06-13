@@ -39,7 +39,7 @@ Using specific install:
 
 ## Usage
 
-    cat some_input_file.kaf | ner-base-en
+    cat some_input_file.kaf | ner-en
 
 ## Contributing
 
