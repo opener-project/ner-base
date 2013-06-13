@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-$:.unshift(File.dirname(__FILE__) + '/../lib') unless $:.include?(File.dirname(__FILE__) + '/../lib')
-
-require 'EHU-ner-lite_EN_kernel'
-
-kernel = Opener::Kernel::EHU::NER::Lite::EN.new
-command = "#{kernel.command(:input=>ARGV[0], :arguments=>ARGV[1..-1])}"
-
-puts `#{command}`

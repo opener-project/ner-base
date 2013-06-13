@@ -3,10 +3,18 @@ Given /^the fixture file "(.*?)"$/ do |filename|
   @filename = filename
 end
 
+Given /^the language "(.*?)"$/ do |language|
+  @language = language
+end
+
 Given /^I put them through the kernel$/ do
   tmp_filename = "output_#{rand(1000)}_#{@filename}"
-  @output = tmp_file(tmp_filename)
-  `#{kernel.command(:input=>@input, :test=>true)} > #{@output}`
+  @output    = tmp_file(tmp_filename)
+  output, *_ = kernel(@language).run(File.read(@input))
+
+  File.open(@output, 'w') do |handle|
+    handle.write(output)
+  end
 end
 
 Then /^the output should match the fixture "(.*?)"$/ do |filename|
