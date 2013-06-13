@@ -10,6 +10,8 @@ core/target
 *.project
 *.pydevproject
 *.settings
+*.jar
+dependency-reduced-pom.xml
 
 tmp/*
 .DS_Store
