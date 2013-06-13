@@ -81,7 +81,7 @@ module Opener
       # @return [String]
       #
       def core_dir
-        return File.expand_path('../../../../core', __FILE__)
+        return File.expand_path('../../../../core/target', __FILE__)
       end
 
       ##
