@@ -25,6 +25,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 import net.sourceforge.argparse4j.ArgumentParsers;
+import net.sourceforge.argparse4j.impl.Arguments;
 import net.sourceforge.argparse4j.inf.ArgumentParser;
 import net.sourceforge.argparse4j.inf.ArgumentParserException;
 import net.sourceforge.argparse4j.inf.Namespace;
@@ -71,10 +72,9 @@ public class CLI {
         .required(true)
         .help(
             "It is REQUIRED to choose a language to perform annotation with ixa-pipe-nerc");
-    // parser.addArgument("-f","--format").choices("kaf","plain").setDefault("kaf").help("output annotation in plain native "
-    // +
-    // "Apache OpenNLP format or in KAF format. The default is KAF");
-
+    
+    parser.addArgument("-t","--timestamp").action(Arguments.storeTrue()).help("flag to make timestamp static for continous " +
+            "integration testing");
     /*
      * Parse the command line arguments
      */
@@ -104,8 +104,15 @@ public class CLI {
       
       // read KAF document from inputstream
       KAFDocument kaf = KAFDocument.createFromStream(breader);
-      kaf.addLinguisticProcessor("entities","ehu-nerc-"+lang, "1.0");
-      // annotated Named Entities to KAF
+      
+      if (parsedArguments.getBoolean("timestamp") == true) {
+          kaf.addLinguisticProcessor("terms","ehu-nerc-"+lang,"now", "1.0");
+        }
+        else {
+          kaf.addLinguisticProcessor("terms", "ehu-nerc-"+lang, "1.0");
+        }
+      
+      // annotate Named Entities to KAF
       annotator.annotateNEsToKAF(kaf);
       bwriter.write(kaf.toString());
       bwriter.close();
