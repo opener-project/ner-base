@@ -16,8 +16,6 @@
 
 package ehu.nerc;
 
-
-
 import ixa.kaflib.KAFDocument;
 
 import java.io.BufferedReader;
@@ -27,17 +25,14 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 import net.sourceforge.argparse4j.ArgumentParsers;
-import net.sourceforge.argparse4j.impl.Arguments;
 import net.sourceforge.argparse4j.inf.ArgumentParser;
 import net.sourceforge.argparse4j.inf.ArgumentParserException;
 import net.sourceforge.argparse4j.inf.Namespace;
 
 import org.jdom2.JDOMException;
 
-
-
 /**
- * IXA  NERC using Apache OpenNLP.
+ * IXA-OpenNLP NERC using Apache OpenNLP.
  * 
  * @author ragerri
  * @version 1.0
@@ -66,7 +61,8 @@ public class CLI {
     ArgumentParser parser = ArgumentParsers
         .newArgumentParser("ehu-nerc-1.0.jar")
         .description(
-            "ehu-nerc-1.0 is a multilingual NERC module developed by IXA NLP Group based on Apache OpenNLP.\n");
+            "ehu-nerc-1.0 is a multilingual NERC module developed by IXA NLP Group " +
+            "based on Apache OpenNLP.\n");
 
     // specify language
     parser
@@ -74,11 +70,11 @@ public class CLI {
         .choices("de","en","es","it","nl")
         .required(true)
         .help(
-            "It is REQUIRED to choose a language to perform annotation with ehu-nerc");
-    
-    parser.addArgument("-t","--timestamp").action(Arguments.storeTrue()).help("flag to make timestamp static for continous " +
-        "integration testing");
-    
+            "It is REQUIRED to choose a language to perform annotation with ixa-pipe-nerc");
+    // parser.addArgument("-f","--format").choices("kaf","plain").setDefault("kaf").help("output annotation in plain native "
+    // +
+    // "Apache OpenNLP format or in KAF format. The default is KAF");
+
     /*
      * Parse the command line arguments
      */
@@ -94,7 +90,7 @@ public class CLI {
     }
 
     /*
-     * Load language and dictionary parameters and construct annotators, read
+     * Load language parameters and construct annotators, read
      * and write kaf
      */
 
@@ -105,22 +101,17 @@ public class CLI {
     try {
       breader = new BufferedReader(new InputStreamReader(System.in, "UTF-8"));
       bwriter = new BufferedWriter(new OutputStreamWriter(System.out, "UTF-8"));
-      KAFDocument kaf = KAFDocument.createFromStream(breader);
-
-      // add already contained header plus this module linguistic
-      // processor
-      if (parsedArguments.getBoolean("timestamp") == true) {
-        kaf.addLinguisticProcessor("entities", "ehu-nerc-"+lang, "now", "1.0");
-      }
-      else { 
-        kaf.addLinguisticProcessor("entities", "ehu-nerc-" + lang,"1.0");
-      }
-
-      // annotate NEs to KAF
-      annotator.annotateNEsToKAF(kaf);
       
+      // read KAF document from inputstream
+      KAFDocument kaf = KAFDocument.createFromStream(breader);
+      kaf.addLinguisticProcessor("entities","ehu-nerc-"+lang, "1.0");
+      // annotated Named Entities to KAF
+      annotator.annotateNEsToKAF(kaf);
       bwriter.write(kaf.toString());
-    } catch (IOException e) {
+      bwriter.close();
+      breader.close();
+      }
+      catch (IOException e) {
       e.printStackTrace();
     }
 
