@@ -106,10 +106,10 @@ public class CLI {
       KAFDocument kaf = KAFDocument.createFromStream(breader);
       
       if (parsedArguments.getBoolean("timestamp") == true) {
-          kaf.addLinguisticProcessor("terms","ehu-nerc-"+lang,"now", "1.0");
+          kaf.addLinguisticProcessor("entities","ehu-nerc-"+lang,"now", "1.0");
         }
         else {
-          kaf.addLinguisticProcessor("terms", "ehu-nerc-"+lang, "1.0");
+          kaf.addLinguisticProcessor("entities", "ehu-nerc-"+lang, "1.0");
         }
       
       // annotate Named Entities to KAF

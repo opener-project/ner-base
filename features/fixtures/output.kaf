@@ -5608,4 +5608,104 @@
           <target id="t276" />
           <target id="t277" />
         </span>
-   
+      </references>
+    </entity>
+    <entity eid="e31" type="organization">
+      <references>
+        <!--Drugs-->
+        <span>
+          <target id="t279" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e32" type="organization">
+      <references>
+        <!--Crime-->
+        <span>
+          <target id="t281" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e33" type="location">
+      <references>
+        <!--Afghanistan-->
+        <span>
+          <target id="t300" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e34" type="location">
+      <references>
+        <!--Herat-->
+        <span>
+          <target id="t349" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e35" type="organization">
+      <references>
+        <!--UN-->
+        <span>
+          <target id="t362" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e36" type="location">
+      <references>
+        <!--Afghanistan-->
+        <span>
+          <target id="t429" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e37" type="location">
+      <references>
+        <!--Afghanistan-->
+        <span>
+          <target id="t555" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e38" type="person">
+      <references>
+        <!--Lemahieu-->
+        <span>
+          <target id="t561" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e39" type="person">
+      <references>
+        <!--Lemahieu-->
+        <span>
+          <target id="t615" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e40" type="location">
+      <references>
+        <!--Kabul-->
+        <span>
+          <target id="t629" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e41" type="location">
+      <references>
+        <!--Kabul-->
+        <span>
+          <target id="t646" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e42" type="organization">
+      <references>
+        <!--Taliban-->
+        <span>
+          <target id="t748" />
+        </span>
+      </references>
+    </entity>
+  </entities>
+  <features />
+</KAF>
