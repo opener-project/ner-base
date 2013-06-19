@@ -1,6 +1,6 @@
 require File.expand_path('../lib/opener/ners/base/version', __FILE__)
 
-generated = Dir.glob('core/ehu-nerc-*.jar')
+generated = Dir.glob('core/target/ehu-nerc-*.jar')
 
 Gem::Specification.new do |gem|
   gem.name          = 'opener-ner-base'
