@@ -5,10 +5,7 @@ require 'stringio'
 require 'core/target/ehu-nerc-1.0.jar'
 import 'ehu.nerc.Annotate'
 import 'ixa.kaflib.KAFDocument'
-import 'java.io.InputStream'
 import 'java.io.InputStreamReader'
-import 'java.io.Reader'
-
 
 require_relative 'base/version'
 
