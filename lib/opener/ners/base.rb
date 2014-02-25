@@ -34,14 +34,6 @@ module Opener
       end
 
       ##
-      # Builds the command used to execute the kernel.
-      #
-      # @return [String]
-      #
-      def command
-      end
-
-      ##
       # Runs the command and returns the output of STDOUT, STDERR and the
       # process information.
       #
@@ -49,36 +41,15 @@ module Opener
       # @return [Array]
       #
       def run(input)
-        input = StringIO.new(input) unless input.kind_of?(IO)
-
+        input     = StringIO.new(input) unless input.kind_of?(IO)
         annotator = Annotate.new(language)
+        reader    = InputStreamReader.new(input.to_inputstream)
+        kaf       = KAFDocument.create_from_stream(reader)
 
-        reader = InputStreamReader.new(input.to_inputstream)
-
-        kaf = KAFDocument.create_from_stream(reader)
         kaf.add_linguistic_processor("entities","ehu-nerc-"+language,"now","1.0")
-
         annotator.annotateNEsToKAF(kaf)
 
         return kaf.to_string
-      end
-
-      ##
-      # Runs the command and takes care of error handling/aborting based on the
-      # output.
-      #
-      # @see #run
-      #
-      def run!(input)
-        stdout, stderr, process = run(input)
-
-        if process.success?
-          puts stdout
-
-          STDERR.puts(stderr) unless stderr.empty?
-        else
-          abort stderr
-        end
       end
 
       ##
