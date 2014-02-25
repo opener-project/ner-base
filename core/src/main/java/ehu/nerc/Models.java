@@ -48,6 +48,11 @@ public class Models {
           "/nl-nerc-perceptron-500-0-testa.bin");
     }
     
+    if (cmdOption.equals("fr")) {
+        nerModel = getClass().getResourceAsStream(
+            "/fr-ner-all.bin");
+      }
+    
     return nerModel;
   }
 

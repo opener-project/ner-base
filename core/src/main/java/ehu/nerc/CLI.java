@@ -68,7 +68,7 @@ public class CLI {
     // specify language
     parser
         .addArgument("-l", "--lang")
-        .choices("de","en","es","it","nl")
+        .choices("de","en","es","it","nl","fr")
         .required(true)
         .help(
             "It is REQUIRED to choose a language to perform annotation with ixa-pipe-nerc");
