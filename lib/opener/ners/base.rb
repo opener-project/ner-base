@@ -1,4 +1,14 @@
 require 'open3'
+require 'java'
+require 'stringio'
+
+require 'core/target/ehu-nerc-1.0.jar'
+import 'ehu.nerc.Annotate'
+import 'ixa.kaflib.KAFDocument'
+import 'java.io.InputStream'
+import 'java.io.InputStreamReader'
+import 'java.io.Reader'
+
 
 require_relative 'base/version'
 
@@ -32,7 +42,6 @@ module Opener
       # @return [String]
       #
       def command
-        return "java -jar #{kernel} -l #{language} #{args.join(' ')}"
       end
 
       ##
@@ -43,11 +52,18 @@ module Opener
       # @return [Array]
       #
       def run(input)
-        unless File.file?(kernel)
-          raise "The Java kernel (#{kernel}) does not exist"
-        end
+        input = StringIO.new(input) unless input.kind_of?(IO)
 
-        return Open3.capture3(command, :stdin_data => input)
+        annotator = Annotate.new(language)
+
+        reader = InputStreamReader.new(input.to_inputstream)
+
+        kaf = KAFDocument.create_from_stream(reader)
+        kaf.add_linguistic_processor("entities","ehu-nerc-"+language,"now","1.0")
+
+        annotator.annotateNEsToKAF(kaf)
+
+        return kaf.to_string
       end
 
       ##
