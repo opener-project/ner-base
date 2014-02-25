@@ -2,7 +2,7 @@ require 'open3'
 require 'java'
 require 'stringio'
 
-require 'core/target/ehu-nerc-1.0.jar'
+require File.expand_path("../../../../core/target/ehu-nerc-1.0.jar", __FILE__)
 import 'ehu.nerc.Annotate'
 import 'ixa.kaflib.KAFDocument'
 import 'java.io.InputStreamReader'
@@ -59,21 +59,6 @@ module Opener
         return options[:language]
       end
 
-      protected
-
-      ##
-      # @return [String]
-      #
-      def core_dir
-        return File.expand_path('../../../../core/target', __FILE__)
-      end
-
-      ##
-      # @return [String]
-      #
-      def kernel
-        return File.join(core_dir, 'ehu-nerc-1.0.jar')
-      end
     end # Base
   end # Ners
 end # Opener
