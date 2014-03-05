@@ -42,7 +42,7 @@ module Opener
       #
       def run(input)
         input     = StringIO.new(input) unless input.kind_of?(IO)
-        annotator = Annotate.new(language)
+        annotator = Java::ehu.nerc.Annotate.new(language)
         reader    = InputStreamReader.new(input.to_inputstream)
         kaf       = KAFDocument.create_from_stream(reader)
 
