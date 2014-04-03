@@ -21,7 +21,6 @@ import ixa.kaflib.Term;
 import ixa.kaflib.WF;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -37,10 +36,11 @@ public class Annotate {
 
   private NERC nameFinder;
 
-  public Annotate(String cmdOption) {
-    Models modelRetriever = new Models();
-    InputStream nerModel = modelRetriever.getNERModel(cmdOption);
-    nameFinder = new NERC(nerModel);
+  public Annotate(String langCmdOption) {
+//    Models modelRetriever = new Models();
+//    InputStream nerModel = modelRetriever.getNERModelInputStream(cmdOption);
+//    nameFinder = new NERC(nerModel);
+	  nameFinder=new NERC(langCmdOption);
   }
 
 

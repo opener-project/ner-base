@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KAF version="v1.opener" xml:lang="it">
+  <kafHeader>
+    <linguisticProcessors layer="text">
+      <lp name="opener-sentence-splitter-it" timestamp="0000-00-00T00:00:00Z" version="0.0.1"/>
+      <lp name="opener-tokenizer-it" timestamp="0000-00-00T00:00:00Z" version="1.0.1"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="terms">
+      <lp name="opennlp-it-pos" timestamp="0000-00-00-T00:00:00Z" version="1.0"/>
+    </linguisticProcessors>
+  </kafHeader>
+  <text>
+    <wf length="2" offset="0" para="1" sent="1" wid="w1">Il</wf>
+    <wf length="10" offset="3" para="1" sent="1" wid="w2">presidente</wf>
+    <wf length="6" offset="14" para="1" sent="1" wid="w3">Barack</wf>
+    <wf length="5" offset="21" para="1" sent="1" wid="w4">Obama</wf>
+    <wf length="1" offset="26" para="1" sent="1" wid="w5">.</wf>
+  </text>
+  <terms>
+    <term lemma="lo" morphofeat="ART~DE" pos="D" tid="t1" type="">
+      <span>
+        <!-- Il -->
+        <target id="w1"/>
+      </span>
+    </term>
+    <term lemma="presidente" morphofeat="NOU~CS" pos="N" tid="t2" type="">
+      <span>
+        <!-- presidente -->
+        <target id="w2"/>
+      </span>
+    </term>
+    <term lemma="barack" morphofeat="NOU~CA" pos="N" tid="t3" type="">
+      <span>
+        <!-- Barack -->
+        <target id="w3"/>
+      </span>
+    </term>
+    <term lemma="obama" morphofeat="NOU~CS" pos="N" tid="t4" type="">
+      <span>
+        <!-- Obama -->
+        <target id="w4"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="." pos="O" tid="t5" type="">
+      <span>
+        <!-- . -->
+        <target id="w5"/>
+      </span>
+    </term>
+  </terms>
+  <deps/>
+  <chunks/>
+  <entities/>
+  <coreferences/>
+  <features>
+    <properties/>
+    <categories/>
+  </features>
+  <relations/>
+  <opinions/>
+</KAF>
