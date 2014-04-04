@@ -34,7 +34,6 @@ import opennlp.tools.util.Span;
 
 public class NERC {
 
-  private TokenNameFinderModel nercModel;
   private NameFinderME nercDetector;
 
   /**
@@ -42,11 +41,12 @@ public class NERC {
    * then it initializes the nercModel and finally it creates a nercDetector
    * using such model.
    */
+  @Deprecated
   public NERC(InputStream trainedModel) {
 
     // InputStream trainedModel =
     // getClass().getResourceAsStream("/en-500-0-testa-perceptron.bin");
-
+	  TokenNameFinderModel nercModel=null;
     try {
       nercModel = new TokenNameFinderModel(trainedModel);
 
@@ -62,6 +62,12 @@ public class NERC {
     }
 
     nercDetector = new NameFinderME(nercModel);
+  }
+  
+  public NERC(String lang){
+	  Models models=new Models();
+	  TokenNameFinderModel nercModel=models.getNercModel(lang);
+	  nercDetector = new NameFinderME(nercModel);
   }
 
   /**

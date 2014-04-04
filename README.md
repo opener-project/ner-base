@@ -10,6 +10,7 @@ Recognition for the following languages:
 * German
 * Italian
 * Spanish
+* French
 
 ## Requirements
 

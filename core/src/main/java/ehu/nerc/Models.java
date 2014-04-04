@@ -17,43 +17,76 @@
 package ehu.nerc;
 
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+
+import opennlp.tools.namefind.TokenNameFinderModel;
 
 public class Models {
 
+	private static Map<String, TokenNameFinderModel> posModelMap = new HashMap<String, TokenNameFinderModel>();
   private InputStream nerModel;
 
-  public InputStream getNERModel(String cmdOption) {
+  public InputStream getNERModelInputStream(String langCmdOption) {
     
-    if (cmdOption.equals("de")) {
+    if (langCmdOption.equals("de")) {
       nerModel = getClass().getResourceAsStream(
           "/de-nerc-perceptron-500-0-testa.bin");
     }
 
-    if (cmdOption.equals("en")) {
+    if (langCmdOption.equals("en")) {
       nerModel = getClass().getResourceAsStream(
           "/en-nerc-perceptron-500-0-testa.bin");
     }
 
-    if (cmdOption.equals("es")) {
+    if (langCmdOption.equals("es")) {
       nerModel = getClass().getResourceAsStream("/es-nerc-500-4-testa.bin");
     }
     
-    if (cmdOption.equals("it")) {
+    if (langCmdOption.equals("it")) {
       nerModel = getClass().getResourceAsStream(
           "/it-nerc-perceptron-500-0-09.bin");
     }
     
-    if (cmdOption.equals("nl")) {
+    if (langCmdOption.equals("nl")) {
       nerModel = getClass().getResourceAsStream(
           "/nl-nerc-perceptron-500-0-testa.bin");
     }
     
-    if (cmdOption.equals("fr")) {
+    if (langCmdOption.equals("fr")) {
         nerModel = getClass().getResourceAsStream(
             "/fr-ner-all.bin");
       }
     
     return nerModel;
   }
+  
+  public TokenNameFinderModel getNercModel(String lang) {
+	  TokenNameFinderModel model = posModelMap.get(lang);
+		if (model == null) {
+			model=loadModel(lang);
+			posModelMap.put(lang, model);
+		}
+		return model;
+	}
+
+	private TokenNameFinderModel loadModel(String lang) {
+		InputStream modelInputStream = null;
+		try {
+			modelInputStream = getNERModelInputStream(lang);
+			TokenNameFinderModel model = new TokenNameFinderModel(modelInputStream);
+			return model;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		} finally {
+			if (modelInputStream != null) {
+				try {
+					modelInputStream.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 
 }

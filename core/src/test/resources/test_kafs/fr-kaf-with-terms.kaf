@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KAF version="v1.opener" xml:lang="fr">
+  <kafHeader>
+    <linguisticProcessors layer="text">
+      <lp name="opener-sentence-splitter-fr" timestamp="2014-04-03T11:35:51Z" version="0.0.1"/>
+      <lp name="opener-tokenizer-fr" timestamp="2014-04-03T11:35:51Z" version="1.0.1"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="terms">
+      <lp name="opennlp-pos-treetagger-fr" timestamp="2014-04-03T11:35:52Z" version="1.0"/>
+      <lp name="opennlp-multiword-fr" timestamp="2014-04-03T11:35:52Z" version="1.0"/>
+    </linguisticProcessors>
+  </kafHeader>
+  <text>
+    <wf length="2" offset="0" para="1" sent="1" wid="w1">Le</wf>
+    <wf length="9" offset="3" para="1" sent="1" wid="w2">president</wf>
+    <wf length="6" offset="13" para="1" sent="1" wid="w3">Barack</wf>
+    <wf length="5" offset="20" para="1" sent="1" wid="w4">Obama</wf>
+    <wf length="1" offset="25" para="1" sent="1" wid="w5">.</wf>
+  </text>
+  <terms>
+    <term lemma="le" morphofeat="Dms" pos="D" tid="t1" type="close">
+      <span>
+        <!-- Le -->
+        <target id="w1"/>
+      </span>
+    </term>
+    <term lemma="president" morphofeat="NCms" pos="N" tid="t2" type="open">
+      <span>
+        <!-- president -->
+        <target id="w2"/>
+      </span>
+    </term>
+    <term lemma="Barack" morphofeat="NPms" pos="N" tid="t3" type="open">
+      <span>
+        <!-- Barack -->
+        <target id="w3"/>
+      </span>
+    </term>
+    <term lemma="Obama" morphofeat="NPms" pos="N" tid="t4" type="open">
+      <span>
+        <!-- Obama -->
+        <target id="w4"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="." pos="O" tid="t5" type="close">
+      <span>
+        <!-- . -->
+        <target id="w5"/>
+      </span>
+    </term>
+  </terms>
+  <deps/>
+  <chunks/>
+  <entities/>
+  <coreferences/>
+  <features>
+    <properties/>
+    <categories/>
+  </features>
+  <relations/>
+  <opinions/>
+</KAF>
