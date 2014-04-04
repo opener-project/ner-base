@@ -5,4 +5,4 @@ require_relative '../lib/opener/ners/base'
 kernel = Opener::Ners::Base.new(:args => ARGV, :language => 'es')
 input  = STDIN.tty? ? nil : STDIN.read
 
-kernel.run!(input)
+puts kernel.run(input)
