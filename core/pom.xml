@@ -65,7 +65,6 @@
 			<scope>compile</scope>
 		</dependency>
 
-
 		<dependency>
 			<groupId>ixa.kaflib</groupId>
 			<artifactId>kaflib</artifactId>
