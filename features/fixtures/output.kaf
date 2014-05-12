@@ -8,7 +8,7 @@
       <lp name="ehu-pos-en" timestamp="now" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-nerc-en" timestamp="now" version="1.0" />
+      <lp name="ehu-nerc-en" version="1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
@@ -760,7 +760,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e2" type="person">
+    <entity eid="e2" type="organization">
       <references>
         <!--Claudia Lawrence-->
         <span>
@@ -788,12 +788,20 @@
         </span>
       </references>
     </entity>
-    <entity eid="e5" type="misc">
+    <entity eid="e5" type="person">
       <references>
         <!--Miss Lawrence-->
         <span>
           <target id="t83" />
           <target id="t84" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e6" type="person">
+      <references>
+        <!--Crimestoppers-->
+        <span>
+          <target id="t86" />
         </span>
       </references>
     </entity>
