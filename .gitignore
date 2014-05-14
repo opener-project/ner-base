@@ -20,3 +20,4 @@ pkg/
 Gemfile.lock
 *.swp
 
+!.gitkeep
