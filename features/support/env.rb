@@ -1,5 +1,5 @@
 require_relative '../../lib/opener/ners/base'
-require 'rspec/expectations'
+require 'rspec'
 require 'tempfile'
 
 def kernel_root
@@ -8,4 +8,14 @@ end
 
 def kernel(language)
   return Opener::Ners::Base.new(:language => language, :args => ['-t'])
+end
+
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
+
+  config.mock_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
 end
