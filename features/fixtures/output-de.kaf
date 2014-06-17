@@ -10,7 +10,7 @@
       <lp name="TreeTagger_from_kaf German models" timestamp="*" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-nerc-de" version="1.0" />
+      <lp name="ehu-nerc-de" timestamp="now" version="1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
