@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KAF xml:lang="es" version="v1.opener">
+  <kafHeader>
+    <fileDesc />
+    <linguisticProcessors layer="text">
+      <lp name="opener-sentence-splitter-es" timestamp="0000-00-00T00:00:00Z" version="0.0.1" />
+      <lp name="opener-tokenizer-es" timestamp="0000-00-00T00:00:00Z" version="1.0.1" />
+    </linguisticProcessors>
+    <linguisticProcessors layer="terms">
+      <lp name="ehu-pos-es" timestamp="now" version="1.0" />
+    </linguisticProcessors>
+  </kafHeader>
+  <text>
+    <wf wid="w1" sent="1" para="1" offset="0" length="2">La</wf>
+    <wf wid="w2" sent="1" para="1" offset="3" length="4">niña</wf>
+    <wf wid="w3" sent="1" para="1" offset="8" length="3">que</wf>
+    <wf wid="w4" sent="1" para="1" offset="12" length="10">filosofaba</wf>
+    <wf wid="w5" sent="1" para="1" offset="23" length="5">nació</wf>
+    <wf wid="w6" sent="1" para="1" offset="29" length="2">de</wf>
+    <wf wid="w7" sent="1" para="1" offset="32" length="2">la</wf>
+    <wf wid="w8" sent="1" para="1" offset="35" length="5">pluma</wf>
+    <wf wid="w9" sent="1" para="1" offset="41" length="2">de</wf>
+    <wf wid="w10" sent="1" para="1" offset="44" length="2">un</wf>
+    <wf wid="w11" sent="1" para="1" offset="47" length="10">ilustrador</wf>
+    <wf wid="w12" sent="1" para="1" offset="58" length="3">que</wf>
+    <wf wid="w13" sent="1" para="1" offset="62" length="5">pensó</wf>
+    <wf wid="w14" sent="1" para="1" offset="68" length="2">en</wf>
+    <wf wid="w15" sent="1" para="1" offset="71" length="5">hacer</wf>
+    <wf wid="w16" sent="1" para="1" offset="77" length="7">dibujos</wf>
+    <wf wid="w17" sent="1" para="1" offset="85" length="5">mudos</wf>
+    <wf wid="w18" sent="1" para="1" offset="90" length="1">.</wf>
+    <wf wid="w19" sent="2" para="1" offset="92" length="5">Quino</wf>
+    <wf wid="w20" sent="2" para="1" offset="97" length="1">,</wf>
+    <wf wid="w21" sent="2" para="1" offset="99" length="2">el</wf>
+    <wf wid="w22" sent="2" para="1" offset="102" length="9">viñetista</wf>
+    <wf wid="w23" sent="2" para="1" offset="112" length="3">que</wf>
+    <wf wid="w24" sent="2" para="1" offset="116" length="3">hoy</wf>
+    <wf wid="w25" sent="2" para="1" offset="120" length="2">ha</wf>
+    <wf wid="w26" sent="2" para="1" offset="123" length="8">recibido</wf>
+    <wf wid="w27" sent="2" para="1" offset="132" length="2">el</wf>
+    <wf wid="w28" sent="2" para="1" offset="135" length="6">premio</wf>
+    <wf wid="w29" sent="2" para="1" offset="142" length="8">Príncipe</wf>
+    <wf wid="w30" sent="2" para="1" offset="151" length="2">de</wf>
+    <wf wid="w31" sent="2" para="1" offset="154" length="8">Asturias</wf>
+    <wf wid="w32" sent="2" para="1" offset="163" length="2">de</wf>
+    <wf wid="w33" sent="2" para="1" offset="166" length="12">Comunicación</wf>
+    <wf wid="w34" sent="2" para="1" offset="179" length="1">y</wf>
+    <wf wid="w35" sent="2" para="1" offset="181" length="11">Humanidades</wf>
+    <wf wid="w36" sent="2" para="1" offset="192" length="1">,</wf>
+    <wf wid="w37" sent="2" para="1" offset="194" length="7">adoraba</wf>
+    <wf wid="w38" sent="2" para="1" offset="202" length="2">el</wf>
+    <wf wid="w39" sent="2" para="1" offset="205" length="4">arte</wf>
+    <wf wid="w40" sent="2" para="1" offset="210" length="7">silente</wf>
+    <wf wid="w41" sent="2" para="1" offset="218" length="2">de</wf>
+    <wf wid="w42" sent="2" para="1" offset="221" length="6">Buster</wf>
+    <wf wid="w43" sent="2" para="1" offset="228" length="6">Keaton</wf>
+    <wf wid="w44" sent="2" para="1" offset="234" length="1">.</wf>
+    <wf wid="w45" sent="3" para="1" offset="236" length="3">Por</wf>
+    <wf wid="w46" sent="3" para="1" offset="240" length="3">ese</wf>
+    <wf wid="w47" sent="3" para="1" offset="244" length="7">sendero</wf>
+    <wf wid="w48" sent="3" para="1" offset="252" length="6">siguió</wf>
+    <wf wid="w49" sent="3" para="1" offset="259" length="5">hasta</wf>
+    <wf wid="w50" sent="3" para="1" offset="265" length="3">que</wf>
+    <wf wid="w51" sent="3" para="1" offset="269" length="2">en</wf>
+    <wf wid="w52" sent="3" para="1" offset="272" length="3">una</wf>
+    <wf wid="w53" sent="3" para="1" offset="276" length="9">redacción</wf>
+    <wf wid="w54" sent="3" para="1" offset="286" length="2">de</wf>
+    <wf wid="w55" sent="3" para="1" offset="289" length="6">Buenos</wf>
+    <wf wid="w56" sent="3" para="1" offset="296" length="5">Aires</wf>
+    <wf wid="w57" sent="3" para="1" offset="302" length="2">le</wf>
+    <wf wid="w58" sent="3" para="1" offset="305" length="7">dijeron</wf>
+    <wf wid="w59" sent="3" para="1" offset="313" length="3">que</wf>
+    <wf wid="w60" sent="3" para="1" offset="317" length="2">el</wf>
+    <wf wid="w61" sent="3" para="1" offset="320" length="5">humor</wf>
+    <wf wid="w62" sent="3" para="1" offset="326" length="10">necesitaba</wf>
+    <wf wid="w63" sent="3" para="1" offset="337" length="8">palabras</wf>
+    <wf wid="w64" sent="3" para="1" offset="345" length="1">.</wf>
+  </text>
+  <terms>
+    <!--La-->
+    <term tid="t1" type="close" lemma="el" pos="D" morphofeat="DA0FS0">
+      <span>
+        <target id="w1" />
+      </span>
+    </term>
+    <!--niña-->
+    <term tid="t2" type="open" lemma="niño" pos="N" morphofeat="NCFS000">
+      <span>
+        <target id="w2" />
+      </span>
+    </term>
+    <!--que-->
+    <term tid="t3" type="close" lemma="que" pos="Q" morphofeat="PR0CC000">
+      <span>
+        <target id="w3" />
+      </span>
+    </term>
+    <!--filosofaba-->
+    <term tid="t4" type="open" lemma="filosofar" pos="V" morphofeat="VMII3S0">
+      <span>
+        <target id="w4" />
+      </span>
+    </term>
+    <!--nació-->
+    <term tid="t5" type="open" lemma="nacer" pos="V" morphofeat="VMIS3S0">
+      <span>
+        <target id="w5" />
+      </span>
+    </term>
+    <!--de-->
+    <term tid="t6" type="close" lemma="de" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w6" />
+      </span>
+    </term>
+    <!--la-->
+    <term tid="t7" type="close" lemma="el" pos="D" morphofeat="DA0FS0">
+      <span>
+        <target id="w7" />
+      </span>
+    </term>
+    <!--pluma-->
+    <term tid="t8" type="open" lemma="pluma" pos="N" morphofeat="NCFS000">
+      <span>
+        <target id="w8" />
+      </span>
+    </term>
+    <!--de-->
+    <term tid="t9" type="close" lemma="de" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w9" />
+      </span>
+    </term>
+    <!--un-->
+    <term tid="t10" type="close" lemma="uno" pos="D" morphofeat="DI0MS0">
+      <span>
+        <target id="w10" />
+      </span>
+    </term>
+    <!--ilustrador-->
+    <term tid="t11" type="open" lemma="ilustrador" pos="N" morphofeat="NCMS000">
+      <span>
+        <target id="w11" />
+      </span>
+    </term>
+    <!--que-->
+    <term tid="t12" type="close" lemma="que" pos="Q" morphofeat="PR0CC000">
+      <span>
+        <target id="w12" />
+      </span>
+    </term>
+    <!--pensó-->
+    <term tid="t13" type="open" lemma="pensar" pos="V" morphofeat="VMIS3S0">
+      <span>
+        <target id="w13" />
+      </span>
+    </term>
+    <!--en-->
+    <term tid="t14" type="close" lemma="en" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w14" />
+      </span>
+    </term>
+    <!--hacer-->
+    <term tid="t15" type="open" lemma="hacer" pos="V" morphofeat="VMN0000">
+      <span>
+        <target id="w15" />
+      </span>
+    </term>
+    <!--dibujos-->
+    <term tid="t16" type="open" lemma="dibujo" pos="N" morphofeat="NCMP000">
+      <span>
+        <target id="w16" />
+      </span>
+    </term>
+    <!--mudos-->
+    <term tid="t17" type="open" lemma="mudo" pos="G" morphofeat="AQ0MP0">
+      <span>
+        <target id="w17" />
+      </span>
+    </term>
+    <!--.-->
+    <term tid="t18" type="close" lemma="." pos="O" morphofeat="Fp">
+      <span>
+        <target id="w18" />
+      </span>
+    </term>
+    <!--Quino-->
+    <term tid="t19" type="close" lemma="quino" pos="O" morphofeat="RG">
+      <span>
+        <target id="w19" />
+      </span>
+    </term>
+    <!--,-->
+    <term tid="t20" type="close" lemma="," pos="O" morphofeat="Fc">
+      <span>
+        <target id="w20" />
+      </span>
+    </term>
+    <!--el-->
+    <term tid="t21" type="close" lemma="el" pos="D" morphofeat="DA0MS0">
+      <span>
+        <target id="w21" />
+      </span>
+    </term>
+    <!--viñetista-->
+    <term tid="t22" type="open" lemma="viñetista" pos="N" morphofeat="NCCS000">
+      <span>
+        <target id="w22" />
+      </span>
+    </term>
+    <!--que-->
+    <term tid="t23" type="close" lemma="que" pos="Q" morphofeat="PR0CC000">
+      <span>
+        <target id="w23" />
+      </span>
+    </term>
+    <!--hoy-->
+    <term tid="t24" type="close" lemma="hoy" pos="O" morphofeat="RG">
+      <span>
+        <target id="w24" />
+      </span>
+    </term>
+    <!--ha-->
+    <term tid="t25" type="open" lemma="haber" pos="V" morphofeat="VAIP3S0">
+      <span>
+        <target id="w25" />
+      </span>
+    </term>
+    <!--recibido-->
+    <term tid="t26" type="open" lemma="recibir" pos="V" morphofeat="VMP00SM">
+      <span>
+        <target id="w26" />
+      </span>
+    </term>
+    <!--el-->
+    <term tid="t27" type="close" lemma="el" pos="D" morphofeat="DA0MS0">
+      <span>
+        <target id="w27" />
+      </span>
+    </term>
+    <!--premio-->
+    <term tid="t28" type="open" lemma="premio" pos="N" morphofeat="NCMS000">
+      <span>
+        <target id="w28" />
+      </span>
+    </term>
+    <!--Príncipe-->
+    <term tid="t29" type="close" lemma="Príncipe" pos="R" morphofeat="NP00000">
+      <span>
+        <target id="w29" />
+      </span>
+    </term>
+    <!--de-->
+    <term tid="t30" type="close" lemma="de" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w30" />
+      </span>
+    </term>
+    <!--Asturias-->
+    <term tid="t31" type="close" lemma="Asturias" pos="R" morphofeat="NP00000">
+      <span>
+        <target id="w31" />
+      </span>
+    </term>
+    <!--de-->
+    <term tid="t32" type="close" lemma="de" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w32" />
+      </span>
+    </term>
+    <!--Comunicación-->
+    <term tid="t33" type="close" lemma="Comunicación" pos="R" morphofeat="NP00000">
+      <span>
+        <target id="w33" />
+      </span>
+    </term>
+    <!--y-->
+    <term tid="t34" type="close" lemma="y" pos="C" morphofeat="CC">
+      <span>
+        <target id="w34" />
+      </span>
+    </term>
+    <!--Humanidades-->
+    <term tid="t35" type="close" lemma="Humanidades" pos="R" morphofeat="NP00000">
+      <span>
+        <target id="w35" />
+      </span>
+    </term>
+    <!--,-->
+    <term tid="t36" type="close" lemma="," pos="O" morphofeat="Fc">
+      <span>
+        <target id="w36" />
+      </span>
+    </term>
+    <!--adoraba-->
+    <term tid="t37" type="open" lemma="adorar" pos="V" morphofeat="VMII3S0">
+      <span>
+        <target id="w37" />
+      </span>
+    </term>
+    <!--el-->
+    <term tid="t38" type="close" lemma="el" pos="D" morphofeat="DA0MS0">
+      <span>
+        <target id="w38" />
+      </span>
+    </term>
+    <!--arte-->
+    <term tid="t39" type="open" lemma="arte" pos="N" morphofeat="NCCS000">
+      <span>
+        <target id="w39" />
+      </span>
+    </term>
+    <!--silente-->
+    <term tid="t40" type="open" lemma="silente" pos="G" morphofeat="AQ0CS0">
+      <span>
+        <target id="w40" />
+      </span>
+    </term>
+    <!--de-->
+    <term tid="t41" type="close" lemma="de" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w41" />
+      </span>
+    </term>
+    <!--Buster-->
+    <term tid="t42" type="close" lemma="Buster" pos="R" morphofeat="NP00000">
+      <span>
+        <target id="w42" />
+      </span>
+    </term>
+    <!--Keaton-->
+    <term tid="t43" type="close" lemma="Keaton" pos="R" morphofeat="NP00000">
+      <span>
+        <target id="w43" />
+      </span>
+    </term>
+    <!--.-->
+    <term tid="t44" type="close" lemma="." pos="O" morphofeat="Fp">
+      <span>
+        <target id="w44" />
+      </span>
+    </term>
+    <!--Por-->
+    <term tid="t45" type="close" lemma="por" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w45" />
+      </span>
+    </term>
+    <!--ese-->
+    <term tid="t46" type="close" lemma="ese" pos="D" morphofeat="DD0MS0">
+      <span>
+        <target id="w46" />
+      </span>
+    </term>
+    <!--sendero-->
+    <term tid="t47" type="open" lemma="sendero" pos="N" morphofeat="NCMS000">
+      <span>
+        <target id="w47" />
+      </span>
+    </term>
+    <!--siguió-->
+    <term tid="t48" type="open" lemma="seguir" pos="V" morphofeat="VMIS3S0">
+      <span>
+        <target id="w48" />
+      </span>
+    </term>
+    <!--hasta-->
+    <term tid="t49" type="close" lemma="hasta" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w49" />
+      </span>
+    </term>
+    <!--que-->
+    <term tid="t50" type="close" lemma="que" pos="C" morphofeat="CS">
+      <span>
+        <target id="w50" />
+      </span>
+    </term>
+    <!--en-->
+    <term tid="t51" type="close" lemma="en" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w51" />
+      </span>
+    </term>
+    <!--una-->
+    <term tid="t52" type="close" lemma="uno" pos="D" morphofeat="DI0FS0">
+      <span>
+        <target id="w52" />
+      </span>
+    </term>
+    <!--redacción-->
+    <term tid="t53" type="open" lemma="redacción" pos="N" morphofeat="NCFS000">
+      <span>
+        <target id="w53" />
+      </span>
+    </term>
+    <!--de-->
+    <term tid="t54" type="close" lemma="de" pos="P" morphofeat="SPS00">
+      <span>
+        <target id="w54" />
+      </span>
+    </term>
+    <!--Buenos-->
+    <term tid="t55" type="close" lemma="Buenos" pos="R" morphofeat="NP00000">
+      <span>
+        <target id="w55" />
+      </span>
+    </term>
+    <!--Aires-->
+    <term tid="t56" type="close" lemma="Aires" pos="R" morphofeat="NP00000">
+      <span>
+        <target id="w56" />
+      </span>
+    </term>
+    <!--le-->
+    <term tid="t57" type="close" lemma="le" pos="Q" morphofeat="PP3CSD00">
+      <span>
+        <target id="w57" />
+      </span>
+    </term>
+    <!--dijeron-->
+    <term tid="t58" type="open" lemma="decir" pos="V" morphofeat="VMIS3P0">
+      <span>
+        <target id="w58" />
+      </span>
+    </term>
+    <!--que-->
+    <term tid="t59" type="close" lemma="que" pos="C" morphofeat="CS">
+      <span>
+        <target id="w59" />
+      </span>
+    </term>
+    <!--el-->
+    <term tid="t60" type="close" lemma="el" pos="D" morphofeat="DA0MS0">
+      <span>
+        <target id="w60" />
+      </span>
+    </term>
+    <!--humor-->
+    <term tid="t61" type="open" lemma="humor" pos="N" morphofeat="NCMS000">
+      <span>
+        <target id="w61" />
+      </span>
+    </term>
+    <!--necesitaba-->
+    <term tid="t62" type="open" lemma="necesitar" pos="V" morphofeat="VMII3S0">
+      <span>
+        <target id="w62" />
+      </span>
+    </term>
+    <!--palabras-->
+    <term tid="t63" type="open" lemma="palabra" pos="N" morphofeat="NCFP000">
+      <span>
+        <target id="w63" />
+      </span>
+    </term>
+    <!--.-->
+    <term tid="t64" type="close" lemma="." pos="O" morphofeat="Fp">
+      <span>
+        <target id="w64" />
+      </span>
+    </term>
+  </terms>
+</KAF>
