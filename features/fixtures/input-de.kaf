@@ -1,0 +1,1175 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<KAF xml:lang="de" version="v1.opener">
+  <kafHeader>
+    <fileDesc/>
+    <linguisticProcessors layer="text">
+      <lp name="opener-sentence-splitter-de" version="0.0.1" timestamp="2014-05-09T11:20:35Z"/>
+      <lp name="opener-tokenizer-de" version="1.0.1" timestamp="2014-05-09T11:20:35Z"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="term">
+      <lp timestamp="*" version="1.0" name="TreeTagger_from_kaf German models"/>
+    </linguisticProcessors>
+  </kafHeader>
+  <text>
+    <wf wid="w1" sent="1" para="1" offset="0" length="14"><![CDATA[Campanareliefs]]></wf>
+    <wf wid="w2" sent="1" para="1" offset="15" length="1"><![CDATA[(]]></wf>
+    <wf wid="w3" sent="1" para="1" offset="16" length="4"><![CDATA[auch]]></wf>
+    <wf wid="w4" sent="1" para="1" offset="21" length="14"><![CDATA[Campanaplatten]]></wf>
+    <wf wid="w5" sent="1" para="1" offset="35" length="1"><![CDATA[)]]></wf>
+    <wf wid="w6" sent="1" para="1" offset="37" length="4"><![CDATA[sind]]></wf>
+    <wf wid="w7" sent="1" para="1" offset="42" length="6"><![CDATA[antike]]></wf>
+    <wf wid="w8" sent="1" para="1" offset="49" length="8"><![CDATA[römische]]></wf>
+    <wf wid="w9" sent="1" para="1" offset="58" length="11"><![CDATA[Terrakotta-]]></wf>
+    <wf wid="w10" sent="1" para="1" offset="70" length="15"><![CDATA[beziehungsweise]]></wf>
+    <wf wid="w11" sent="1" para="1" offset="86" length="10"><![CDATA[Tonreliefs]]></wf>
+    <wf wid="w12" sent="1" para="1" offset="97" length="3"><![CDATA[aus]]></wf>
+    <wf wid="w13" sent="1" para="1" offset="101" length="3"><![CDATA[der]]></wf>
+    <wf wid="w14" sent="1" para="1" offset="105" length="4"><![CDATA[Zeit]]></wf>
+    <wf wid="w15" sent="1" para="1" offset="110" length="3"><![CDATA[von]]></wf>
+    <wf wid="w16" sent="1" para="1" offset="114" length="3"><![CDATA[der]]></wf>
+    <wf wid="w17" sent="1" para="1" offset="118" length="5"><![CDATA[Mitte]]></wf>
+    <wf wid="w18" sent="1" para="1" offset="124" length="3"><![CDATA[des]]></wf>
+    <wf wid="w19" sent="1" para="1" offset="128" length="2"><![CDATA[1.]]></wf>
+    <wf wid="w20" sent="1" para="1" offset="131" length="12"><![CDATA[Jahrhunderts]]></wf>
+    <wf wid="w21" sent="1" para="1" offset="144" length="2"><![CDATA[v.]]></wf>
+    <wf wid="w22" sent="1" para="1" offset="147" length="4"><![CDATA[Chr.]]></wf>
+    <wf wid="w23" sent="1" para="1" offset="152" length="3"><![CDATA[bis]]></wf>
+    <wf wid="w24" sent="1" para="1" offset="156" length="2"><![CDATA[in]]></wf>
+    <wf wid="w25" sent="1" para="1" offset="159" length="3"><![CDATA[die]]></wf>
+    <wf wid="w26" sent="1" para="1" offset="163" length="5"><![CDATA[erste]]></wf>
+    <wf wid="w27" sent="1" para="1" offset="169" length="6"><![CDATA[Hälfte]]></wf>
+    <wf wid="w28" sent="1" para="1" offset="176" length="3"><![CDATA[des]]></wf>
+    <wf wid="w29" sent="1" para="1" offset="180" length="2"><![CDATA[2.]]></wf>
+    <wf wid="w30" sent="1" para="1" offset="183" length="12"><![CDATA[Jahrhunderts]]></wf>
+    <wf wid="w31" sent="1" para="1" offset="196" length="2"><![CDATA[n.]]></wf>
+    <wf wid="w32" sent="1" para="1" offset="199" length="4"><![CDATA[Chr.]]></wf>
+    <wf wid="w33" sent="1" para="1" offset="204" length="7"><![CDATA[Benannt]]></wf>
+    <wf wid="w34" sent="1" para="1" offset="212" length="4"><![CDATA[sind]]></wf>
+    <wf wid="w35" sent="1" para="1" offset="217" length="3"><![CDATA[sie]]></wf>
+    <wf wid="w36" sent="1" para="1" offset="221" length="4"><![CDATA[nach]]></wf>
+    <wf wid="w37" sent="1" para="1" offset="226" length="3"><![CDATA[dem]]></wf>
+    <wf wid="w38" sent="1" para="1" offset="230" length="13"><![CDATA[italienischen]]></wf>
+    <wf wid="w39" sent="1" para="1" offset="244" length="7"><![CDATA[Sammler]]></wf>
+    <wf wid="w40" sent="1" para="1" offset="252" length="10"><![CDATA[Giampietro]]></wf>
+    <wf wid="w41" sent="1" para="1" offset="263" length="7"><![CDATA[Campana]]></wf>
+    <wf wid="w42" sent="1" para="1" offset="270" length="1"><![CDATA[,]]></wf>
+    <wf wid="w43" sent="1" para="1" offset="272" length="3"><![CDATA[der]]></wf>
+    <wf wid="w44" sent="1" para="1" offset="276" length="6"><![CDATA[solche]]></wf>
+    <wf wid="w45" sent="1" para="1" offset="283" length="7"><![CDATA[Reliefs]]></wf>
+    <wf wid="w46" sent="1" para="1" offset="291" length="3"><![CDATA[als]]></wf>
+    <wf wid="w47" sent="1" para="1" offset="295" length="6"><![CDATA[Erster]]></wf>
+    <wf wid="w48" sent="1" para="1" offset="302" length="11"><![CDATA[publizierte]]></wf>
+    <wf wid="w49" sent="1" para="1" offset="314" length="1"><![CDATA[(]]></wf>
+    <wf wid="w50" sent="1" para="1" offset="315" length="4"><![CDATA[1842]]></wf>
+    <wf wid="w51" sent="1" para="1" offset="319" length="1"><![CDATA[)]]></wf>
+    <wf wid="w52" sent="1" para="1" offset="320" length="1"><![CDATA[.]]></wf>
+    <wf wid="w53" sent="2" para="1" offset="322" length="3"><![CDATA[Die]]></wf>
+    <wf wid="w54" sent="2" para="1" offset="326" length="7"><![CDATA[Reliefs]]></wf>
+    <wf wid="w55" sent="2" para="1" offset="334" length="6"><![CDATA[fanden]]></wf>
+    <wf wid="w56" sent="2" para="1" offset="341" length="3"><![CDATA[als]]></wf>
+    <wf wid="w57" sent="2" para="1" offset="345" length="15"><![CDATA[Dachverkleidung]]></wf>
+    <wf wid="w58" sent="2" para="1" offset="360" length="1"><![CDATA[,]]></wf>
+    <wf wid="w59" sent="2" para="1" offset="362" length="4"><![CDATA[aber]]></wf>
+    <wf wid="w60" sent="2" para="1" offset="367" length="4"><![CDATA[auch]]></wf>
+    <wf wid="w61" sent="2" para="1" offset="372" length="3"><![CDATA[als]]></wf>
+    <wf wid="w62" sent="2" para="1" offset="376" length="10"><![CDATA[Dekoration]]></wf>
+    <wf wid="w63" sent="2" para="1" offset="387" length="3"><![CDATA[von]]></wf>
+    <wf wid="w64" sent="2" para="1" offset="391" length="11"><![CDATA[Innenräumen]]></wf>
+    <wf wid="w65" sent="2" para="1" offset="403" length="10"><![CDATA[Verwendung]]></wf>
+    <wf wid="w66" sent="2" para="1" offset="413" length="1"><![CDATA[.]]></wf>
+    <wf wid="w67" sent="3" para="1" offset="415" length="3"><![CDATA[Sie]]></wf>
+    <wf wid="w68" sent="3" para="1" offset="419" length="5"><![CDATA[waren]]></wf>
+    <wf wid="w69" sent="3" para="1" offset="425" length="3"><![CDATA[ein]]></wf>
+    <wf wid="w70" sent="3" para="1" offset="429" length="13"><![CDATA[Massenprodukt]]></wf>
+    <wf wid="w71" sent="3" para="1" offset="443" length="3"><![CDATA[und]]></wf>
+    <wf wid="w72" sent="3" para="1" offset="447" length="7"><![CDATA[dienten]]></wf>
+    <wf wid="w73" sent="3" para="1" offset="455" length="3"><![CDATA[als]]></wf>
+    <wf wid="w74" sent="3" para="1" offset="459" length="7"><![CDATA[Schmuck]]></wf>
+    <wf wid="w75" sent="3" para="1" offset="467" length="3"><![CDATA[von]]></wf>
+    <wf wid="w76" sent="3" para="1" offset="471" length="7"><![CDATA[Tempeln]]></wf>
+    <wf wid="w77" sent="3" para="1" offset="479" length="5"><![CDATA[sowie]]></wf>
+    <wf wid="w78" sent="3" para="1" offset="485" length="3"><![CDATA[von]]></wf>
+    <wf wid="w79" sent="3" para="1" offset="489" length="12"><![CDATA[öffentlichen]]></wf>
+    <wf wid="w80" sent="3" para="1" offset="502" length="3"><![CDATA[und]]></wf>
+    <wf wid="w81" sent="3" para="1" offset="506" length="8"><![CDATA[privaten]]></wf>
+    <wf wid="w82" sent="3" para="1" offset="515" length="6"><![CDATA[Bauten]]></wf>
+    <wf wid="w83" sent="3" para="1" offset="521" length="1"><![CDATA[.]]></wf>
+    <wf wid="w84" sent="4" para="1" offset="523" length="8"><![CDATA[Aufgrund]]></wf>
+    <wf wid="w85" sent="4" para="1" offset="532" length="5"><![CDATA[ihrer]]></wf>
+    <wf wid="w86" sent="4" para="1" offset="538" length="16"><![CDATA[Zerbrechlichkeit]]></wf>
+    <wf wid="w87" sent="4" para="1" offset="555" length="7"><![CDATA[mussten]]></wf>
+    <wf wid="w88" sent="4" para="1" offset="563" length="3"><![CDATA[die]]></wf>
+    <wf wid="w89" sent="4" para="1" offset="567" length="6"><![CDATA[Ziegel]]></wf>
+    <wf wid="w90" sent="4" para="1" offset="574" length="6"><![CDATA[häufig]]></wf>
+    <wf wid="w91" sent="4" para="1" offset="581" length="7"><![CDATA[ersetzt]]></wf>
+    <wf wid="w92" sent="4" para="1" offset="589" length="6"><![CDATA[werden]]></wf>
+    <wf wid="w93" sent="4" para="1" offset="595" length="1"><![CDATA[.]]></wf>
+    <wf wid="w94" sent="5" para="1" offset="597" length="5"><![CDATA[Ihren]]></wf>
+    <wf wid="w95" sent="5" para="1" offset="603" length="8"><![CDATA[Ursprung]]></wf>
+    <wf wid="w96" sent="5" para="1" offset="612" length="5"><![CDATA[haben]]></wf>
+    <wf wid="w97" sent="5" para="1" offset="618" length="3"><![CDATA[sie]]></wf>
+    <wf wid="w98" sent="5" para="1" offset="622" length="2"><![CDATA[in]]></wf>
+    <wf wid="w99" sent="5" para="1" offset="625" length="3"><![CDATA[den]]></wf>
+    <wf wid="w100" sent="5" para="1" offset="629" length="15"><![CDATA[Dachterrakotten]]></wf>
+    <wf wid="w101" sent="5" para="1" offset="645" length="3"><![CDATA[der]]></wf>
+    <wf wid="w102" sent="5" para="1" offset="649" length="12"><![CDATA[etruskischen]]></wf>
+    <wf wid="w103" sent="5" para="1" offset="662" length="17"><![CDATA[Tempelarchitektur]]></wf>
+    <wf wid="w104" sent="5" para="1" offset="679" length="1"><![CDATA[.]]></wf>
+    <wf wid="w105" sent="6" para="1" offset="681" length="3"><![CDATA[Auf]]></wf>
+    <wf wid="w106" sent="6" para="1" offset="685" length="3"><![CDATA[den]]></wf>
+    <wf wid="w107" sent="6" para="1" offset="689" length="7"><![CDATA[Reliefs]]></wf>
+    <wf wid="w108" sent="6" para="1" offset="697" length="8"><![CDATA[befanden]]></wf>
+    <wf wid="w109" sent="6" para="1" offset="706" length="4"><![CDATA[sich]]></wf>
+    <wf wid="w110" sent="6" para="1" offset="711" length="11"><![CDATA[vielfältige]]></wf>
+    <wf wid="w111" sent="6" para="1" offset="723" length="10"><![CDATA[Bildmotive]]></wf>
+    <wf wid="w112" sent="6" para="1" offset="734" length="3"><![CDATA[aus]]></wf>
+    <wf wid="w113" sent="6" para="1" offset="738" length="3"><![CDATA[der]]></wf>
+    <wf wid="w114" sent="6" para="1" offset="742" length="10"><![CDATA[Mythologie]]></wf>
+    <wf wid="w115" sent="6" para="1" offset="753" length="3"><![CDATA[und]]></wf>
+    <wf wid="w116" sent="6" para="1" offset="757" length="3"><![CDATA[der]]></wf>
+    <wf wid="w117" sent="6" para="1" offset="761" length="8"><![CDATA[Religion]]></wf>
+    <wf wid="w118" sent="6" para="1" offset="769" length="1"><![CDATA[,]]></wf>
+    <wf wid="w119" sent="6" para="1" offset="771" length="3"><![CDATA[aus]]></wf>
+    <wf wid="w120" sent="6" para="1" offset="775" length="3"><![CDATA[dem]]></wf>
+    <wf wid="w121" sent="6" para="1" offset="779" length="9"><![CDATA[römischen]]></wf>
+    <wf wid="w122" sent="6" para="1" offset="789" length="6"><![CDATA[Alltag]]></wf>
+    <wf wid="w123" sent="6" para="1" offset="795" length="1"><![CDATA[,]]></wf>
+    <wf wid="w124" sent="6" para="1" offset="797" length="17"><![CDATA[Landschaftsbilder]]></wf>
+    <wf wid="w125" sent="6" para="1" offset="815" length="3"><![CDATA[und]]></wf>
+    <wf wid="w126" sent="6" para="1" offset="819" length="11"><![CDATA[ornamentale]]></wf>
+    <wf wid="w127" sent="6" para="1" offset="831" length="6"><![CDATA[Themen]]></wf>
+    <wf wid="w128" sent="6" para="1" offset="837" length="1"><![CDATA[.]]></wf>
+    <wf wid="w129" sent="7" para="1" offset="839" length="12"><![CDATA[Ursprünglich]]></wf>
+    <wf wid="w130" sent="7" para="1" offset="852" length="5"><![CDATA[waren]]></wf>
+    <wf wid="w131" sent="7" para="1" offset="858" length="3"><![CDATA[sie]]></wf>
+    <wf wid="w132" sent="7" para="1" offset="862" length="6"><![CDATA[farbig]]></wf>
+    <wf wid="w133" sent="7" para="1" offset="869" length="6"><![CDATA[bemalt]]></wf>
+    <wf wid="w134" sent="7" para="1" offset="875" length="1"><![CDATA[,]]></wf>
+    <wf wid="w135" sent="7" para="1" offset="877" length="5"><![CDATA[wovon]]></wf>
+    <wf wid="w136" sent="7" para="1" offset="883" length="4"><![CDATA[sich]]></wf>
+    <wf wid="w137" sent="7" para="1" offset="887" length="1"><![CDATA[,]]></wf>
+    <wf wid="w138" sent="7" para="1" offset="889" length="4"><![CDATA[wenn]]></wf>
+    <wf wid="w139" sent="7" para="1" offset="894" length="9"><![CDATA[überhaupt]]></wf>
+    <wf wid="w140" sent="7" para="1" offset="903" length="1"><![CDATA[,]]></wf>
+    <wf wid="w141" sent="7" para="1" offset="905" length="3"><![CDATA[nur]]></wf>
+    <wf wid="w142" sent="7" para="1" offset="909" length="4"><![CDATA[noch]]></wf>
+    <wf wid="w143" sent="7" para="1" offset="914" length="6"><![CDATA[Spuren]]></wf>
+    <wf wid="w144" sent="7" para="1" offset="921" length="8"><![CDATA[erhalten]]></wf>
+    <wf wid="w145" sent="7" para="1" offset="930" length="5"><![CDATA[haben]]></wf>
+    <wf wid="w146" sent="7" para="1" offset="935" length="1"><![CDATA[.]]></wf>
+    <wf wid="w147" sent="8" para="1" offset="937" length="3"><![CDATA[Sie]]></wf>
+    <wf wid="w148" sent="8" para="1" offset="941" length="6"><![CDATA[wurden]]></wf>
+    <wf wid="w149" sent="8" para="1" offset="948" length="13"><![CDATA[hauptsächlich]]></wf>
+    <wf wid="w150" sent="8" para="1" offset="962" length="2"><![CDATA[in]]></wf>
+    <wf wid="w151" sent="8" para="1" offset="965" length="3"><![CDATA[der]]></wf>
+    <wf wid="w152" sent="8" para="1" offset="969" length="6"><![CDATA[Region]]></wf>
+    <wf wid="w153" sent="8" para="1" offset="976" length="6"><![CDATA[Latium]]></wf>
+    <wf wid="w154" sent="8" para="1" offset="983" length="4"><![CDATA[rund]]></wf>
+    <wf wid="w155" sent="8" para="1" offset="988" length="2"><![CDATA[um]]></wf>
+    <wf wid="w156" sent="8" para="1" offset="991" length="3"><![CDATA[die]]></wf>
+    <wf wid="w157" sent="8" para="1" offset="995" length="5"><![CDATA[Stadt]]></wf>
+    <wf wid="w158" sent="8" para="1" offset="1001" length="3"><![CDATA[Rom]]></wf>
+    <wf wid="w159" sent="8" para="1" offset="1005" length="10"><![CDATA[produziert]]></wf>
+    <wf wid="w160" sent="8" para="1" offset="1015" length="1"><![CDATA[,]]></wf>
+    <wf wid="w161" sent="8" para="1" offset="1017" length="3"><![CDATA[und]]></wf>
+    <wf wid="w162" sent="8" para="1" offset="1021" length="4"><![CDATA[auch]]></wf>
+    <wf wid="w163" sent="8" para="1" offset="1026" length="4"><![CDATA[ihre]]></wf>
+    <wf wid="w164" sent="8" para="1" offset="1031" length="10"><![CDATA[Verwendung]]></wf>
+    <wf wid="w165" sent="8" para="1" offset="1042" length="11"><![CDATA[beschränkte]]></wf>
+    <wf wid="w166" sent="8" para="1" offset="1054" length="4"><![CDATA[sich]]></wf>
+    <wf wid="w167" sent="8" para="1" offset="1059" length="10"><![CDATA[weitgehend]]></wf>
+    <wf wid="w168" sent="8" para="1" offset="1070" length="3"><![CDATA[auf]]></wf>
+    <wf wid="w169" sent="8" para="1" offset="1074" length="5"><![CDATA[diese]]></wf>
+    <wf wid="w170" sent="8" para="1" offset="1080" length="6"><![CDATA[Gegend]]></wf>
+    <wf wid="w171" sent="8" para="1" offset="1086" length="1"><![CDATA[.]]></wf>
+    <wf wid="w172" sent="9" para="1" offset="1088" length="10"><![CDATA[Produziert]]></wf>
+    <wf wid="w173" sent="9" para="1" offset="1099" length="6"><![CDATA[wurden]]></wf>
+    <wf wid="w174" sent="9" para="1" offset="1106" length="4"><![CDATA[fünf]]></wf>
+    <wf wid="w175" sent="9" para="1" offset="1111" length="12"><![CDATA[verschiedene]]></wf>
+    <wf wid="w176" sent="9" para="1" offset="1124" length="10"><![CDATA[Grundtypen]]></wf>
+    <wf wid="w177" sent="9" para="1" offset="1134" length="1"><![CDATA[.]]></wf>
+    <wf wid="w178" sent="10" para="1" offset="1136" length="5"><![CDATA[Heute]]></wf>
+    <wf wid="w179" sent="10" para="1" offset="1142" length="6"><![CDATA[finden]]></wf>
+    <wf wid="w180" sent="10" para="1" offset="1149" length="4"><![CDATA[sich]]></wf>
+    <wf wid="w181" sent="10" para="1" offset="1154" length="9"><![CDATA[Beispiele]]></wf>
+    <wf wid="w182" sent="10" para="1" offset="1164" length="6"><![CDATA[dieser]]></wf>
+    <wf wid="w183" sent="10" para="1" offset="1171" length="12"><![CDATA[Kunstgattung]]></wf>
+    <wf wid="w184" sent="10" para="1" offset="1184" length="8"><![CDATA[weltweit]]></wf>
+    <wf wid="w185" sent="10" para="1" offset="1193" length="2"><![CDATA[in]]></wf>
+    <wf wid="w186" sent="10" para="1" offset="1196" length="4"><![CDATA[fast]]></wf>
+    <wf wid="w187" sent="10" para="1" offset="1201" length="5"><![CDATA[allen]]></wf>
+    <wf wid="w188" sent="10" para="1" offset="1207" length="11"><![CDATA[bedeutenden]]></wf>
+    <wf wid="w189" sent="10" para="1" offset="1219" length="6"><![CDATA[Museen]]></wf>
+    <wf wid="w190" sent="10" para="1" offset="1226" length="3"><![CDATA[mit]]></wf>
+    <wf wid="w191" sent="10" para="1" offset="1230" length="9"><![CDATA[römischer]]></wf>
+    <wf wid="w192" sent="10" para="1" offset="1240" length="5"><![CDATA[Kunst]]></wf>
+    <wf wid="w193" sent="10" para="1" offset="1245" length="1"><![CDATA[.]]></wf>
+  </text>
+  <terms>
+    <term lemma="Campanareliefs" morphofeat="NN unknown_lemma" pos="N" tid="t1" type="open">
+      <span>
+        <target id="w1"/>
+      </span>
+    </term>
+    <term lemma="(" morphofeat="$(" pos="O" tid="t2" type="open">
+      <span>
+        <target id="w2"/>
+      </span>
+    </term>
+    <term lemma="auch" morphofeat="ADV" pos="A" tid="t3" type="open">
+      <span>
+        <target id="w3"/>
+      </span>
+    </term>
+    <term lemma="Campanaplatten" morphofeat="NN unknown_lemma" pos="N" tid="t4" type="open">
+      <span>
+        <target id="w4"/>
+      </span>
+    </term>
+    <term lemma=")" morphofeat="$(" pos="O" tid="t5" type="open">
+      <span>
+        <target id="w5"/>
+      </span>
+    </term>
+    <term lemma="sein" morphofeat="VAFIN" pos="V" tid="t6" type="open">
+      <span>
+        <target id="w6"/>
+      </span>
+    </term>
+    <term lemma="antik" morphofeat="ADJA" pos="G" tid="t7" type="open">
+      <span>
+        <target id="w7"/>
+      </span>
+    </term>
+    <term lemma="römisch" morphofeat="ADJA" pos="G" tid="t8" type="open">
+      <span>
+        <target id="w8"/>
+      </span>
+    </term>
+    <term lemma="Terrakotta-" morphofeat="TRUNC unknown_lemma" pos="N" tid="t9" type="open">
+      <span>
+        <target id="w9"/>
+      </span>
+    </term>
+    <term lemma="beziehungsweise" morphofeat="KON" pos="C" tid="t10" type="close">
+      <span>
+        <target id="w10"/>
+      </span>
+    </term>
+    <term lemma="Tonreliefs" morphofeat="NN unknown_lemma" pos="N" tid="t11" type="open">
+      <span>
+        <target id="w11"/>
+      </span>
+    </term>
+    <term lemma="aus" morphofeat="APPR" pos="P" tid="t12" type="close">
+      <span>
+        <target id="w12"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t13" type="close">
+      <span>
+        <target id="w13"/>
+      </span>
+    </term>
+    <term lemma="Zeit" morphofeat="NN" pos="N" tid="t14" type="open">
+      <span>
+        <target id="w14"/>
+      </span>
+    </term>
+    <term lemma="von" morphofeat="APPR" pos="P" tid="t15" type="close">
+      <span>
+        <target id="w15"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t16" type="close">
+      <span>
+        <target id="w16"/>
+      </span>
+    </term>
+    <term lemma="Mitte" morphofeat="NN" pos="N" tid="t17" type="open">
+      <span>
+        <target id="w17"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t18" type="close">
+      <span>
+        <target id="w18"/>
+      </span>
+    </term>
+    <term lemma="1." morphofeat="CARD" pos="O" tid="t19" type="open">
+      <span>
+        <target id="w19"/>
+      </span>
+    </term>
+    <term lemma="Jahrhundert" morphofeat="NN" pos="N" tid="t20" type="open">
+      <span>
+        <target id="w20"/>
+      </span>
+    </term>
+    <term lemma="von" morphofeat="APPR" pos="P" tid="t21" type="close">
+      <span>
+        <target id="w21"/>
+      </span>
+    </term>
+    <term lemma="Chr." morphofeat="NE" pos="R" tid="t22" type="open">
+      <span>
+        <target id="w22"/>
+      </span>
+    </term>
+    <term lemma="bis" morphofeat="KON" pos="C" tid="t23" type="close">
+      <span>
+        <target id="w23"/>
+      </span>
+    </term>
+    <term lemma="in" morphofeat="APPR" pos="P" tid="t24" type="close">
+      <span>
+        <target id="w24"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t25" type="close">
+      <span>
+        <target id="w25"/>
+      </span>
+    </term>
+    <term lemma="erst" morphofeat="ADJA" pos="G" tid="t26" type="open">
+      <span>
+        <target id="w26"/>
+      </span>
+    </term>
+    <term lemma="Hälfte" morphofeat="NN" pos="N" tid="t27" type="open">
+      <span>
+        <target id="w27"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t28" type="close">
+      <span>
+        <target id="w28"/>
+      </span>
+    </term>
+    <term lemma="2." morphofeat="CARD" pos="O" tid="t29" type="open">
+      <span>
+        <target id="w29"/>
+      </span>
+    </term>
+    <term lemma="Jahrhundert" morphofeat="NN" pos="N" tid="t30" type="open">
+      <span>
+        <target id="w30"/>
+      </span>
+    </term>
+    <term lemma="n." morphofeat="APPR" pos="P" tid="t31" type="close">
+      <span>
+        <target id="w31"/>
+      </span>
+    </term>
+    <term lemma="Chr." morphofeat="NE" pos="R" tid="t32" type="open">
+      <span>
+        <target id="w32"/>
+      </span>
+    </term>
+    <term lemma="Benannt" morphofeat="ADJD unknown_lemma" pos="G" tid="t33" type="open">
+      <span>
+        <target id="w33"/>
+      </span>
+    </term>
+    <term lemma="sein" morphofeat="VAFIN" pos="V" tid="t34" type="open">
+      <span>
+        <target id="w34"/>
+      </span>
+    </term>
+    <term lemma="sie" morphofeat="PPER" pos="Q" tid="t35" type="close">
+      <span>
+        <target id="w35"/>
+      </span>
+    </term>
+    <term lemma="nach" morphofeat="APPR" pos="P" tid="t36" type="close">
+      <span>
+        <target id="w36"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t37" type="close">
+      <span>
+        <target id="w37"/>
+      </span>
+    </term>
+    <term lemma="italienisch" morphofeat="ADJA" pos="G" tid="t38" type="open">
+      <span>
+        <target id="w38"/>
+      </span>
+    </term>
+    <term lemma="Sammler" morphofeat="NN" pos="N" tid="t39" type="open">
+      <span>
+        <target id="w39"/>
+      </span>
+    </term>
+    <term lemma="Giampietro" morphofeat="NE" pos="R" tid="t40" type="open">
+      <span>
+        <target id="w40"/>
+      </span>
+    </term>
+    <term lemma="Campana" morphofeat="NE unknown_lemma" pos="R" tid="t41" type="open">
+      <span>
+        <target id="w41"/>
+      </span>
+    </term>
+    <term lemma="," morphofeat="$," pos="O" tid="t42" type="open">
+      <span>
+        <target id="w42"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="PRELS" pos="Q" tid="t43" type="close">
+      <span>
+        <target id="w43"/>
+      </span>
+    </term>
+    <term lemma="solche" morphofeat="PIAT" pos="Q" tid="t44" type="close">
+      <span>
+        <target id="w44"/>
+      </span>
+    </term>
+    <term lemma="Relief" morphofeat="NN" pos="N" tid="t45" type="open">
+      <span>
+        <target id="w45"/>
+      </span>
+    </term>
+    <term lemma="als" morphofeat="KOKOM" pos="C" tid="t46" type="close">
+      <span>
+        <target id="w46"/>
+      </span>
+    </term>
+    <term lemma="Erste" morphofeat="NN" pos="N" tid="t47" type="open">
+      <span>
+        <target id="w47"/>
+      </span>
+    </term>
+    <term lemma="publizieren" morphofeat="VVFIN" pos="V" tid="t48" type="open">
+      <span>
+        <target id="w48"/>
+      </span>
+    </term>
+    <term lemma="(" morphofeat="$(" pos="O" tid="t49" type="open">
+      <span>
+        <target id="w49"/>
+      </span>
+    </term>
+    <term lemma="1842" morphofeat="CARD" pos="O" tid="t50" type="open">
+      <span>
+        <target id="w50"/>
+      </span>
+    </term>
+    <term lemma=")" morphofeat="$(" pos="O" tid="t51" type="open">
+      <span>
+        <target id="w51"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t52" type="open">
+      <span>
+        <target id="w52"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t53" type="close">
+      <span>
+        <target id="w53"/>
+      </span>
+    </term>
+    <term lemma="Relief" morphofeat="NN" pos="N" tid="t54" type="open">
+      <span>
+        <target id="w54"/>
+      </span>
+    </term>
+    <term lemma="finden" morphofeat="VVFIN" pos="V" tid="t55" type="open">
+      <span>
+        <target id="w55"/>
+      </span>
+    </term>
+    <term lemma="als" morphofeat="KOKOM" pos="C" tid="t56" type="close">
+      <span>
+        <target id="w56"/>
+      </span>
+    </term>
+    <term lemma="Dachverkleidung" morphofeat="NN" pos="N" tid="t57" type="open">
+      <span>
+        <target id="w57"/>
+      </span>
+    </term>
+    <term lemma="," morphofeat="$," pos="O" tid="t58" type="open">
+      <span>
+        <target id="w58"/>
+      </span>
+    </term>
+    <term lemma="aber" morphofeat="KON" pos="C" tid="t59" type="close">
+      <span>
+        <target id="w59"/>
+      </span>
+    </term>
+    <term lemma="auch" morphofeat="ADV" pos="A" tid="t60" type="open">
+      <span>
+        <target id="w60"/>
+      </span>
+    </term>
+    <term lemma="als" morphofeat="KOKOM" pos="C" tid="t61" type="close">
+      <span>
+        <target id="w61"/>
+      </span>
+    </term>
+    <term lemma="Dekoration" morphofeat="NN" pos="N" tid="t62" type="open">
+      <span>
+        <target id="w62"/>
+      </span>
+    </term>
+    <term lemma="von" morphofeat="APPR" pos="P" tid="t63" type="close">
+      <span>
+        <target id="w63"/>
+      </span>
+    </term>
+    <term lemma="Innenraum" morphofeat="NN" pos="N" tid="t64" type="open">
+      <span>
+        <target id="w64"/>
+      </span>
+    </term>
+    <term lemma="Verwendung" morphofeat="NN" pos="N" tid="t65" type="open">
+      <span>
+        <target id="w65"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t66" type="open">
+      <span>
+        <target id="w66"/>
+      </span>
+    </term>
+    <term lemma="Sie|sie" morphofeat="PPER" pos="Q" tid="t67" type="close">
+      <span>
+        <target id="w67"/>
+      </span>
+    </term>
+    <term lemma="sein" morphofeat="VAFIN" pos="V" tid="t68" type="open">
+      <span>
+        <target id="w68"/>
+      </span>
+    </term>
+    <term lemma="eine" morphofeat="ART" pos="D" tid="t69" type="close">
+      <span>
+        <target id="w69"/>
+      </span>
+    </term>
+    <term lemma="Massenprodukt" morphofeat="NN" pos="N" tid="t70" type="open">
+      <span>
+        <target id="w70"/>
+      </span>
+    </term>
+    <term lemma="und" morphofeat="KON" pos="C" tid="t71" type="close">
+      <span>
+        <target id="w71"/>
+      </span>
+    </term>
+    <term lemma="dienen" morphofeat="VVFIN" pos="V" tid="t72" type="open">
+      <span>
+        <target id="w72"/>
+      </span>
+    </term>
+    <term lemma="als" morphofeat="KOKOM" pos="C" tid="t73" type="close">
+      <span>
+        <target id="w73"/>
+      </span>
+    </term>
+    <term lemma="Schmuck" morphofeat="NN" pos="N" tid="t74" type="open">
+      <span>
+        <target id="w74"/>
+      </span>
+    </term>
+    <term lemma="von" morphofeat="APPR" pos="P" tid="t75" type="close">
+      <span>
+        <target id="w75"/>
+      </span>
+    </term>
+    <term lemma="Tempel" morphofeat="NN" pos="N" tid="t76" type="open">
+      <span>
+        <target id="w76"/>
+      </span>
+    </term>
+    <term lemma="sowie" morphofeat="KON" pos="C" tid="t77" type="close">
+      <span>
+        <target id="w77"/>
+      </span>
+    </term>
+    <term lemma="von" morphofeat="APPR" pos="P" tid="t78" type="close">
+      <span>
+        <target id="w78"/>
+      </span>
+    </term>
+    <term lemma="öffentlich" morphofeat="ADJA" pos="G" tid="t79" type="open">
+      <span>
+        <target id="w79"/>
+      </span>
+    </term>
+    <term lemma="und" morphofeat="KON" pos="C" tid="t80" type="close">
+      <span>
+        <target id="w80"/>
+      </span>
+    </term>
+    <term lemma="privat" morphofeat="ADJA" pos="G" tid="t81" type="open">
+      <span>
+        <target id="w81"/>
+      </span>
+    </term>
+    <term lemma="Bau" morphofeat="NN" pos="N" tid="t82" type="open">
+      <span>
+        <target id="w82"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t83" type="open">
+      <span>
+        <target id="w83"/>
+      </span>
+    </term>
+    <term lemma="aufgrund" morphofeat="APPR" pos="P" tid="t84" type="close">
+      <span>
+        <target id="w84"/>
+      </span>
+    </term>
+    <term lemma="ihr" morphofeat="PPOSAT" pos="Q" tid="t85" type="close">
+      <span>
+        <target id="w85"/>
+      </span>
+    </term>
+    <term lemma="Zerbrechlichkeit" morphofeat="NN" pos="N" tid="t86" type="open">
+      <span>
+        <target id="w86"/>
+      </span>
+    </term>
+    <term lemma="müssen" morphofeat="VMFIN" pos="V" tid="t87" type="open">
+      <span>
+        <target id="w87"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t88" type="close">
+      <span>
+        <target id="w88"/>
+      </span>
+    </term>
+    <term lemma="Ziegel" morphofeat="NN" pos="N" tid="t89" type="open">
+      <span>
+        <target id="w89"/>
+      </span>
+    </term>
+    <term lemma="häufig" morphofeat="ADJD" pos="G" tid="t90" type="open">
+      <span>
+        <target id="w90"/>
+      </span>
+    </term>
+    <term lemma="ersetzen" morphofeat="VVPP" pos="V" tid="t91" type="open">
+      <span>
+        <target id="w91"/>
+      </span>
+    </term>
+    <term lemma="werden" morphofeat="VAINF" pos="V" tid="t92" type="open">
+      <span>
+        <target id="w92"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t93" type="open">
+      <span>
+        <target id="w93"/>
+      </span>
+    </term>
+    <term lemma="ihr" morphofeat="PPOSAT" pos="Q" tid="t94" type="close">
+      <span>
+        <target id="w94"/>
+      </span>
+    </term>
+    <term lemma="Ursprung" morphofeat="NN" pos="N" tid="t95" type="open">
+      <span>
+        <target id="w95"/>
+      </span>
+    </term>
+    <term lemma="haben" morphofeat="VAFIN" pos="V" tid="t96" type="open">
+      <span>
+        <target id="w96"/>
+      </span>
+    </term>
+    <term lemma="sie" morphofeat="PPER" pos="Q" tid="t97" type="close">
+      <span>
+        <target id="w97"/>
+      </span>
+    </term>
+    <term lemma="in" morphofeat="APPR" pos="P" tid="t98" type="close">
+      <span>
+        <target id="w98"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t99" type="close">
+      <span>
+        <target id="w99"/>
+      </span>
+    </term>
+    <term lemma="Dachterrakotten" morphofeat="NN unknown_lemma" pos="N" tid="t100" type="open">
+      <span>
+        <target id="w100"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t101" type="close">
+      <span>
+        <target id="w101"/>
+      </span>
+    </term>
+    <term lemma="etruskischen" morphofeat="ADJA unknown_lemma" pos="G" tid="t102" type="open">
+      <span>
+        <target id="w102"/>
+      </span>
+    </term>
+    <term lemma="Tempelarchitektur" morphofeat="NN unknown_lemma" pos="N" tid="t103" type="open">
+      <span>
+        <target id="w103"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t104" type="open">
+      <span>
+        <target id="w104"/>
+      </span>
+    </term>
+    <term lemma="auf" morphofeat="APPR" pos="P" tid="t105" type="close">
+      <span>
+        <target id="w105"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t106" type="close">
+      <span>
+        <target id="w106"/>
+      </span>
+    </term>
+    <term lemma="Relief" morphofeat="NN" pos="N" tid="t107" type="open">
+      <span>
+        <target id="w107"/>
+      </span>
+    </term>
+    <term lemma="befinden" morphofeat="VVFIN" pos="V" tid="t108" type="open">
+      <span>
+        <target id="w108"/>
+      </span>
+    </term>
+    <term lemma="sich" morphofeat="PRF" pos="Q" tid="t109" type="close">
+      <span>
+        <target id="w109"/>
+      </span>
+    </term>
+    <term lemma="vielfältig" morphofeat="ADJA" pos="G" tid="t110" type="open">
+      <span>
+        <target id="w110"/>
+      </span>
+    </term>
+    <term lemma="Bildmotiv" morphofeat="NN" pos="N" tid="t111" type="open">
+      <span>
+        <target id="w111"/>
+      </span>
+    </term>
+    <term lemma="aus" morphofeat="APPR" pos="P" tid="t112" type="close">
+      <span>
+        <target id="w112"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t113" type="close">
+      <span>
+        <target id="w113"/>
+      </span>
+    </term>
+    <term lemma="Mythologie" morphofeat="NN" pos="N" tid="t114" type="open">
+      <span>
+        <target id="w114"/>
+      </span>
+    </term>
+    <term lemma="und" morphofeat="KON" pos="C" tid="t115" type="close">
+      <span>
+        <target id="w115"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t116" type="close">
+      <span>
+        <target id="w116"/>
+      </span>
+    </term>
+    <term lemma="Religion" morphofeat="NN" pos="N" tid="t117" type="open">
+      <span>
+        <target id="w117"/>
+      </span>
+    </term>
+    <term lemma="," morphofeat="$," pos="O" tid="t118" type="open">
+      <span>
+        <target id="w118"/>
+      </span>
+    </term>
+    <term lemma="aus" morphofeat="APPR" pos="P" tid="t119" type="close">
+      <span>
+        <target id="w119"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t120" type="close">
+      <span>
+        <target id="w120"/>
+      </span>
+    </term>
+    <term lemma="römisch" morphofeat="ADJA" pos="G" tid="t121" type="open">
+      <span>
+        <target id="w121"/>
+      </span>
+    </term>
+    <term lemma="Alltag" morphofeat="NN" pos="N" tid="t122" type="open">
+      <span>
+        <target id="w122"/>
+      </span>
+    </term>
+    <term lemma="," morphofeat="$," pos="O" tid="t123" type="open">
+      <span>
+        <target id="w123"/>
+      </span>
+    </term>
+    <term lemma="Landschaftsbild" morphofeat="NN" pos="N" tid="t124" type="open">
+      <span>
+        <target id="w124"/>
+      </span>
+    </term>
+    <term lemma="und" morphofeat="KON" pos="C" tid="t125" type="close">
+      <span>
+        <target id="w125"/>
+      </span>
+    </term>
+    <term lemma="ornamental" morphofeat="ADJA" pos="G" tid="t126" type="open">
+      <span>
+        <target id="w126"/>
+      </span>
+    </term>
+    <term lemma="Thema" morphofeat="NN" pos="N" tid="t127" type="open">
+      <span>
+        <target id="w127"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t128" type="open">
+      <span>
+        <target id="w128"/>
+      </span>
+    </term>
+    <term lemma="ursprünglich" morphofeat="ADJD" pos="G" tid="t129" type="open">
+      <span>
+        <target id="w129"/>
+      </span>
+    </term>
+    <term lemma="sein" morphofeat="VAFIN" pos="V" tid="t130" type="open">
+      <span>
+        <target id="w130"/>
+      </span>
+    </term>
+    <term lemma="sie" morphofeat="PPER" pos="Q" tid="t131" type="close">
+      <span>
+        <target id="w131"/>
+      </span>
+    </term>
+    <term lemma="farbig" morphofeat="ADJD" pos="G" tid="t132" type="open">
+      <span>
+        <target id="w132"/>
+      </span>
+    </term>
+    <term lemma="bemalen" morphofeat="VVPP" pos="V" tid="t133" type="open">
+      <span>
+        <target id="w133"/>
+      </span>
+    </term>
+    <term lemma="," morphofeat="$," pos="O" tid="t134" type="open">
+      <span>
+        <target id="w134"/>
+      </span>
+    </term>
+    <term lemma="wovon" morphofeat="PWAV" pos="Q" tid="t135" type="close">
+      <span>
+        <target id="w135"/>
+      </span>
+    </term>
+    <term lemma="sich" morphofeat="PRF" pos="Q" tid="t136" type="close">
+      <span>
+        <target id="w136"/>
+      </span>
+    </term>
+    <term lemma="," morphofeat="$," pos="O" tid="t137" type="open">
+      <span>
+        <target id="w137"/>
+      </span>
+    </term>
+    <term lemma="wenn" morphofeat="KOUS" pos="C" tid="t138" type="close">
+      <span>
+        <target id="w138"/>
+      </span>
+    </term>
+    <term lemma="überhaupt" morphofeat="ADV" pos="A" tid="t139" type="open">
+      <span>
+        <target id="w139"/>
+      </span>
+    </term>
+    <term lemma="," morphofeat="$," pos="O" tid="t140" type="open">
+      <span>
+        <target id="w140"/>
+      </span>
+    </term>
+    <term lemma="nur" morphofeat="ADV" pos="A" tid="t141" type="open">
+      <span>
+        <target id="w141"/>
+      </span>
+    </term>
+    <term lemma="noch" morphofeat="ADV" pos="A" tid="t142" type="open">
+      <span>
+        <target id="w142"/>
+      </span>
+    </term>
+    <term lemma="Spur|Spuren" morphofeat="NN" pos="N" tid="t143" type="open">
+      <span>
+        <target id="w143"/>
+      </span>
+    </term>
+    <term lemma="erhalten" morphofeat="VVPP" pos="V" tid="t144" type="open">
+      <span>
+        <target id="w144"/>
+      </span>
+    </term>
+    <term lemma="haben" morphofeat="VAFIN" pos="V" tid="t145" type="open">
+      <span>
+        <target id="w145"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t146" type="open">
+      <span>
+        <target id="w146"/>
+      </span>
+    </term>
+    <term lemma="Sie|sie" morphofeat="PPER" pos="Q" tid="t147" type="close">
+      <span>
+        <target id="w147"/>
+      </span>
+    </term>
+    <term lemma="werden" morphofeat="VAFIN" pos="V" tid="t148" type="open">
+      <span>
+        <target id="w148"/>
+      </span>
+    </term>
+    <term lemma="hauptsächlich" morphofeat="ADJD" pos="G" tid="t149" type="open">
+      <span>
+        <target id="w149"/>
+      </span>
+    </term>
+    <term lemma="in" morphofeat="APPR" pos="P" tid="t150" type="close">
+      <span>
+        <target id="w150"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t151" type="close">
+      <span>
+        <target id="w151"/>
+      </span>
+    </term>
+    <term lemma="Region" morphofeat="NN" pos="N" tid="t152" type="open">
+      <span>
+        <target id="w152"/>
+      </span>
+    </term>
+    <term lemma="Latium" morphofeat="NN unknown_lemma" pos="N" tid="t153" type="open">
+      <span>
+        <target id="w153"/>
+      </span>
+    </term>
+    <term lemma="rund" morphofeat="ADV" pos="A" tid="t154" type="open">
+      <span>
+        <target id="w154"/>
+      </span>
+    </term>
+    <term lemma="um" morphofeat="APPR" pos="P" tid="t155" type="close">
+      <span>
+        <target id="w155"/>
+      </span>
+    </term>
+    <term lemma="die" morphofeat="ART" pos="D" tid="t156" type="close">
+      <span>
+        <target id="w156"/>
+      </span>
+    </term>
+    <term lemma="Stadt" morphofeat="NN" pos="N" tid="t157" type="open">
+      <span>
+        <target id="w157"/>
+      </span>
+    </term>
+    <term lemma="Rom" morphofeat="NE" pos="R" tid="t158" type="open">
+      <span>
+        <target id="w158"/>
+      </span>
+    </term>
+    <term lemma="produzieren" morphofeat="VVPP" pos="V" tid="t159" type="open">
+      <span>
+        <target id="w159"/>
+      </span>
+    </term>
+    <term lemma="," morphofeat="$," pos="O" tid="t160" type="open">
+      <span>
+        <target id="w160"/>
+      </span>
+    </term>
+    <term lemma="und" morphofeat="KON" pos="C" tid="t161" type="close">
+      <span>
+        <target id="w161"/>
+      </span>
+    </term>
+    <term lemma="auch" morphofeat="ADV" pos="A" tid="t162" type="open">
+      <span>
+        <target id="w162"/>
+      </span>
+    </term>
+    <term lemma="ihr" morphofeat="PPOSAT" pos="Q" tid="t163" type="close">
+      <span>
+        <target id="w163"/>
+      </span>
+    </term>
+    <term lemma="Verwendung" morphofeat="NN" pos="N" tid="t164" type="open">
+      <span>
+        <target id="w164"/>
+      </span>
+    </term>
+    <term lemma="beschränken" morphofeat="VVFIN" pos="V" tid="t165" type="open">
+      <span>
+        <target id="w165"/>
+      </span>
+    </term>
+    <term lemma="sich" morphofeat="PRF" pos="Q" tid="t166" type="close">
+      <span>
+        <target id="w166"/>
+      </span>
+    </term>
+    <term lemma="weitgehend" morphofeat="ADJD" pos="G" tid="t167" type="open">
+      <span>
+        <target id="w167"/>
+      </span>
+    </term>
+    <term lemma="auf" morphofeat="APPR" pos="P" tid="t168" type="close">
+      <span>
+        <target id="w168"/>
+      </span>
+    </term>
+    <term lemma="dies" morphofeat="PDAT" pos="Q" tid="t169" type="close">
+      <span>
+        <target id="w169"/>
+      </span>
+    </term>
+    <term lemma="Gegend" morphofeat="NN" pos="N" tid="t170" type="open">
+      <span>
+        <target id="w170"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t171" type="open">
+      <span>
+        <target id="w171"/>
+      </span>
+    </term>
+    <term lemma="produziert" morphofeat="ADJD" pos="G" tid="t172" type="open">
+      <span>
+        <target id="w172"/>
+      </span>
+    </term>
+    <term lemma="werden" morphofeat="VAFIN" pos="V" tid="t173" type="open">
+      <span>
+        <target id="w173"/>
+      </span>
+    </term>
+    <term lemma="fünf" morphofeat="CARD" pos="O" tid="t174" type="open">
+      <span>
+        <target id="w174"/>
+      </span>
+    </term>
+    <term lemma="verschieden" morphofeat="ADJA" pos="G" tid="t175" type="open">
+      <span>
+        <target id="w175"/>
+      </span>
+    </term>
+    <term lemma="Grundtyp" morphofeat="NN" pos="N" tid="t176" type="open">
+      <span>
+        <target id="w176"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t177" type="open">
+      <span>
+        <target id="w177"/>
+      </span>
+    </term>
+    <term lemma="heute" morphofeat="ADV" pos="A" tid="t178" type="open">
+      <span>
+        <target id="w178"/>
+      </span>
+    </term>
+    <term lemma="finden" morphofeat="VVFIN" pos="V" tid="t179" type="open">
+      <span>
+        <target id="w179"/>
+      </span>
+    </term>
+    <term lemma="sich" morphofeat="PRF" pos="Q" tid="t180" type="close">
+      <span>
+        <target id="w180"/>
+      </span>
+    </term>
+    <term lemma="Beispiel" morphofeat="NN" pos="N" tid="t181" type="open">
+      <span>
+        <target id="w181"/>
+      </span>
+    </term>
+    <term lemma="dies" morphofeat="PDAT" pos="Q" tid="t182" type="close">
+      <span>
+        <target id="w182"/>
+      </span>
+    </term>
+    <term lemma="Kunstgattung" morphofeat="NN" pos="N" tid="t183" type="open">
+      <span>
+        <target id="w183"/>
+      </span>
+    </term>
+    <term lemma="weltweit" morphofeat="ADJD" pos="G" tid="t184" type="open">
+      <span>
+        <target id="w184"/>
+      </span>
+    </term>
+    <term lemma="in" morphofeat="APPR" pos="P" tid="t185" type="close">
+      <span>
+        <target id="w185"/>
+      </span>
+    </term>
+    <term lemma="fast" morphofeat="ADV" pos="A" tid="t186" type="open">
+      <span>
+        <target id="w186"/>
+      </span>
+    </term>
+    <term lemma="alle" morphofeat="PIAT" pos="Q" tid="t187" type="close">
+      <span>
+        <target id="w187"/>
+      </span>
+    </term>
+    <term lemma="bedeutend" morphofeat="ADJA" pos="G" tid="t188" type="open">
+      <span>
+        <target id="w188"/>
+      </span>
+    </term>
+    <term lemma="Museum" morphofeat="NN" pos="N" tid="t189" type="open">
+      <span>
+        <target id="w189"/>
+      </span>
+    </term>
+    <term lemma="mit" morphofeat="APPR" pos="P" tid="t190" type="close">
+      <span>
+        <target id="w190"/>
+      </span>
+    </term>
+    <term lemma="römisch" morphofeat="ADJA" pos="G" tid="t191" type="open">
+      <span>
+        <target id="w191"/>
+      </span>
+    </term>
+    <term lemma="Kunst" morphofeat="NN" pos="N" tid="t192" type="open">
+      <span>
+        <target id="w192"/>
+      </span>
+    </term>
+    <term lemma="." morphofeat="$." pos="O" tid="t193" type="open">
+      <span>
+        <target id="w193"/>
+      </span>
+    </term>
+  </terms>
+</KAF>
