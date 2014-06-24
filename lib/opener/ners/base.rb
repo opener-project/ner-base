@@ -3,7 +3,7 @@ require 'java'
 require 'stringio'
 
 require File.expand_path("../../../../core/target/ehu-nerc-1.0.jar", __FILE__)
-import 'ehu.nerc.Annotate'
+
 import 'ixa.kaflib.KAFDocument'
 import 'java.io.InputStreamReader'
 
