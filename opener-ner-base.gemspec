@@ -7,12 +7,14 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Base NER component for languages such as English.'
   gem.description   = gem.summary
   gem.homepage      = 'http://opener-project.github.com/'
+  gem.license       = 'Apache 2.0'
 
   gem.files = Dir.glob([
     'core/target/ehu-nerc-*.jar',
     'lib/**/*',
     '*.gemspec',
-    'README.md'
+    'README.md',
+    'LICENSE.txt'
   ]).select { |file| File.file?(file) }
 
   gem.executables = Dir.glob('bin/*').map { |file| File.basename(file) }
