@@ -89,7 +89,7 @@ module Opener
 
         annotator = Java::es.ehu.si.ixa.pipe.nerc.Annotate.new(*args)
 
-        annotator.annotate_kaf(lang, model, enable_time, kaf)
+        annotator.annotate_kaf(enable_time, kaf)
 
         return kaf.to_string
       end

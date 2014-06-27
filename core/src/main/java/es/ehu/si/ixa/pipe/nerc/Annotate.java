@@ -80,6 +80,16 @@ public class Annotate {
   private boolean lexerFind;
 
   /**
+   * The name of the language to use for annotating documents.
+   */
+  private String language;
+
+  /**
+   * The name of teh model to use.
+   */
+  private String model;
+
+  /**
    * Construct a probabilistic annotator.
    *
    * @param lang
@@ -100,6 +110,9 @@ public class Annotate {
     nameFinder = new StatisticalNameFinder(lang, nameFactory, model, features,
         beamsize);
     statistical = true;
+
+    this.language = lang;
+    this.model    = model;
   }
 
   /**
@@ -125,6 +138,9 @@ public class Annotate {
     nameFactory = new NameFactory();
     dictionaryOptions(lang, model, features, beamsize, dictOption, dictPath, ruleBasedOption);
     nonDictOptions(lang, model, features, beamsize, dictPath, ruleBasedOption);
+
+    this.language = lang;
+    this.model    = model;
   }
 
 
@@ -209,14 +225,12 @@ public class Annotate {
    * constructors of this class. We should probably re-use them from there if
    * possible.
    *
-   * @param lang The language of the document.
-   * @param model The model used for annotatating.
    * @param enable_timestamp Whether to include a dynamic or static timestamp.
    * @param kaf The KAF document to annotate.
    */
-  public final void annotateKAF(final String lang, final String model, final boolean enable_timestamp, final KAFDocument kaf) throws IOException {
+  public final void annotateKAF(final boolean enable_timestamp, final KAFDocument kaf) throws IOException {
     String version   = Annotate.class.getPackage().getImplementationVersion();
-    String processor = "ixa-pipe-nerc-" + lang + "-" + model;
+    String processor = "ixa-pipe-nerc-" + this.language + "-" + this.model;
 
     if ( enable_timestamp ) {
         kaf.addLinguisticProcessor("entities", processor, version);
