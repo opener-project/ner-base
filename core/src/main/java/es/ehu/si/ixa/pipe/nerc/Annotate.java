@@ -34,10 +34,10 @@ import es.ehu.si.ixa.pipe.nerc.dict.Dictionary;
 
 /**
  * Annotation class of ixa-pipe-nerc.
- * 
+ *
  * @author ragerri
  * @version 2014/06/25
- * 
+ *
  */
 public class Annotate {
 
@@ -81,7 +81,7 @@ public class Annotate {
 
   /**
    * Construct a probabilistic annotator.
-   * 
+   *
    * @param lang
    *          the language
    * @param model
@@ -126,14 +126,14 @@ public class Annotate {
     dictionaryOptions(lang, model, features, beamsize, dictOption, dictPath, ruleBasedOption);
     nonDictOptions(lang, model, features, beamsize, dictPath, ruleBasedOption);
   }
-  
-  
+
+
   /**
    * Generates the right options for dictionary-based NER tagging:
-   * Dictionary features by means of the {@link StatisticalNameFinder} 
+   * Dictionary features by means of the {@link StatisticalNameFinder}
    * or using the {@link DictionaryNameFinder} or a combination of
    * those with the {@link NumericNameFinder}.
-   * 
+   *
    * @param lang
    * @param model
    * @param features
@@ -178,10 +178,10 @@ public class Annotate {
       }
     }
   }
-  
+
   /**
    * Generates the right options when dictionary-related name finders are not used.
-   * 
+   *
    * @param lang the language
    * @param model the model
    * @param features the features
@@ -191,7 +191,7 @@ public class Annotate {
    */
   private void nonDictOptions (final String lang, final String model, final String features,
       final int beamsize, final String dictPath, final String ruleBasedOption) {
-    
+
     if (dictPath == null && ruleBasedOption != null) {
       nameFinder = new StatisticalNameFinder(lang, nameFactory, model,
           features, beamsize);
@@ -203,9 +203,32 @@ public class Annotate {
   }
 
   /**
+   * Annotates the given KAF document and sets the linguisticProcessor details.
+   *
+   * @param lang The language of the document.
+   * @param model The model used for annotatating.
+   * @param kaf The KAF document to annotate.
+   */
+  public final void annotateKAF(final String lang, final String model, final KAFDocument kaf) throws IOException {
+    String version = Annotate.class.getPackage().getImplementationVersion();
+
+    KAFDocument.LinguisticProcessor lp = kaf.addLinguisticProcessor(
+      "entities",
+      "ixa-pipe-nerc-" + lang + "-" + model,
+      version
+    );
+
+    lp.setBeginTimestamp();
+
+    annotateNEsToKAF(kaf);
+
+    lp.setEndTimestamp();
+  }
+
+  /**
    * Classify Named Entities and write them to a {@link KAFDocument} using
    * statistical models, post-processing and/or dictionaries only.
-   * 
+   *
    * @param kaf
    *          the kaf document to be used for annotation
    * @throws IOException
@@ -265,7 +288,7 @@ public class Annotate {
   /**
    * Construct a {@link DictionaryNameFinder} for each of the dictionaries in
    * the directory provided.
-   * 
+   *
    * @param dictPath
    *          the directory containing the dictionaries
    * @param nameFactory

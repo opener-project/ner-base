@@ -76,27 +76,15 @@ module Opener
         kaf  = new_kaf_document(input)
         args = [lang, model, features, beamsize]
 
-        lp_tag = kaf.add_linguistic_processor(
-          'entities',
-          'ixa-pipe-nerc-' + lang + '-' + model,
-          VERSION
-        )
-
-        lp_tag.set_begin_timestamp
-
         if use_dictionaries?
           args += [dictionaries, dictionaries_path, lexer]
         end
 
         annotator = Java::es.ehu.si.ixa.pipe.nerc.Annotate.new(*args)
 
-        annotator.annotate_nes_to_kaf(kaf)
+        annotator.annotate_kaf(lang, model, kaf)
 
-        lp_tag.set_end_timestamp
-
-        output = kaf.to_string
-
-        return output
+        return kaf.to_string
       end
 
       ##
