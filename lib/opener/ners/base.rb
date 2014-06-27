@@ -65,7 +65,7 @@ module Opener
         @dictionaries      = options[:dictionaries]
         @dictionaries_path = options[:dictionaries_path]
         @features          = options.fetch(:features, 'baseline')
-        @beamsize          = options.fetch(beamsize, 3)
+        @beamsize          = options.fetch(:beamsize, 3)
         @lexer             = options[:lexer]
         @model             = options.fetch(:model, 'default')
         @enable_time       = options.fetch(:enable_time, true)
