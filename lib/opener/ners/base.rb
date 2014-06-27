@@ -109,7 +109,7 @@ module Opener
       # @return [TrueClass|FalseClass]
       #
       def use_dictionaries?
-        return !!dictionaries || !!dictionaries_path || features == 'dict'
+        return dictionaries || dictionaries_path || features == 'dict'
       end
 
       ##
