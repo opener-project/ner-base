@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.license       = 'Apache 2.0'
 
   gem.files = Dir.glob([
-    'core/target/ehu-nerc-*.jar',
+    'core/target/ixa-pipe-nerc-*.jar',
     'lib/**/*',
     '*.gemspec',
     'README.md',
@@ -18,6 +18,8 @@ Gem::Specification.new do |gem|
   ]).select { |file| File.file?(file) }
 
   gem.executables = Dir.glob('bin/*').map { |file| File.basename(file) }
+
+  gem.add_dependency 'nokogiri'
 
   gem.add_development_dependency 'rspec', '~> 3.0'
   gem.add_development_dependency 'cucumber'
