@@ -1,0 +1,17 @@
+- Version 1.0
+
+This module uses the following APIs:
+
+    + Apache OpenNLP
+      Copyright [2013] The Apache Software Foundation
+
+      This product includes software developed at
+      The Apache Software Foundation (http://www.apache.org/).
+
+    + JDOM Project (http://www.jdom.org/).
+    + JWNL Project (http://sourceforge.net/projects/jwordnet/)
+    + argparse4j (http://argparse4j.sourceforge.net/)
+
+Note that we do not redistribute those libraries in any form (binary
+or source). However, they are maven dependencies and when the module
+is compiled the binaries of those projects are included.

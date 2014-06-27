@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ehu</groupId>
-	<artifactId>ehu-nerc</artifactId>
+	<groupId>es.ehu.si</groupId>
+	<artifactId>ixa-pipe-nerc</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0</version>
-	<name>ehu-nerc</name>
-	<description>English Named Entity Recognition module based on Apache OpenNLP API.
-	All models have been trained by the IXA NLP Group of the University of the
-	Basque Country (ixa.si.ehu.es).
-	</description>
+	<version>1.1.0</version>
+	<name>ixa-pipe-nerc</name>
+	<description>NERC tagger of ixa pipes tools, a multilingual NLP pipeline. All models trained by the IXA NLP Group of the University of the Basque Country (ixa.si.ehu.es).</description>
 	<developers>
 		<developer>
 			<id>ragerri</id>
@@ -24,8 +20,7 @@
 	<prerequisites>
 		<maven>3.0</maven>
 	</prerequisites>
-	<url>http://maven.apache.org</url>
-
+	<url>http://ixa2.si.ehu.es/ixa-pipes</url>
 	<repositories>
 		<repository>
 			<id>ixa-ehu.github</id>
@@ -39,51 +34,36 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>ixa.kaflib</groupId>
+			<artifactId>kaflib</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>net.sourceforge.argparse4j</groupId>
 			<artifactId>argparse4j</artifactId>
-			<version>0.3.2</version>
+			<version>0.4.3</version>
 		</dependency>
-
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
-			<scope>compile</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.opennlp</groupId>
 			<artifactId>opennlp-tools</artifactId>
 			<version>1.5.3</version>
 			<scope>compile</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>ixa.kaflib</groupId>
-			<artifactId>kaflib</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
 		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
@@ -99,13 +79,15 @@
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<manifestEntries>
-										<Main-Class>ehu.nerc.CLI</Main-Class>
-										<!-- <Class-Path>../models/models.jar</Class-Path> -->
+										<Main-Class>es.ehu.si.ixa.pipe.nerc.CLI</Main-Class>
+										<groupId>${project.groupId}</groupId>
+										<artifactId>${project.artifactId}</artifactId>
+										<Implementation-Version>${project.version}</Implementation-Version>
 									</manifestEntries>
 								</transformer>
 							</transformers>
 							<artifactSet>
-								<excludes />
+								<excludes></excludes>
 							</artifactSet>
 						</configuration>
 					</execution>
@@ -117,7 +99,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.2.1</version>
 				<configuration>
-					<mainClass>ehu.nerc.CLI</mainClass>
+					<mainClass>es.ehu.si.ixa.pipe.nerc.CLI</mainClass>
 				</configuration>
 			</plugin>
 
@@ -129,4 +111,12 @@
 
 		</plugins>
 	</build>
+	<organization>
+		<url>ixa2.si.ehu.es/ixa-pipes</url>
+		<name>IXA Pipeline</name>
+	</organization>
+	<scm>
+		<url>https://github.com/ixa-ehu/ixa-pipe-nerc</url>
+		<developerConnection>ragerri</developerConnection>
+	</scm>
 </project>
