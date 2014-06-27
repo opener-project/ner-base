@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../lib/opener/ners/base'
-
-kernel = Opener::Ners::Base.new(:args => ARGV, :language => 'en')
-input  = STDIN.tty? ? nil : STDIN.read
-
-puts kernel.run(input)
