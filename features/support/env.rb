@@ -7,7 +7,7 @@ def kernel_root
 end
 
 def kernel(language)
-  return Opener::Ners::Base.new(:language => language, :args => ['-t'])
+  return Opener::Ners::Base.new(:enable_time => false)
 end
 
 RSpec.configure do |config|

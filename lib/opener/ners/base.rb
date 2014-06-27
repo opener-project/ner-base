@@ -32,9 +32,12 @@ module Opener
     # @!attribute [r] model
     #  @return [String]
     #
+    # @!attribute [r] enable_time
+    #  @return [TrueClass|FalseClass]
+    #
     class Base
       attr_reader :features, :beamsize, :dictionaries, :dictionaries_path,
-        :lexer, :model
+        :lexer, :model, :enable_time
 
       ##
       # @param [Hash] options
@@ -55,13 +58,17 @@ module Opener
       #
       # @option options [String] :model The model to use for NERC annotation.
       #
+      # @option options [TrueClass|FalseClass] :enable_time Whether or not to
+      #  enable dynamic timestamps (enabled by default).
+      #
       def initialize(options = {})
         @dictionaries      = options[:dictionaries]
         @dictionaries_path = options[:dictionaries_path]
-        @features          = options[:features] || 'baseline'
-        @beamsize          = options[:beamsize] || 3
+        @features          = options.fetch(:features, 'baseline')
+        @beamsize          = options.fetch(beamsize, 3)
         @lexer             = options[:lexer]
-        @model             = options[:model] || 'default'
+        @model             = options.fetch(:model, 'default')
+        @enable_time       = options.fetch(:enable_time, true)
       end
 
       ##
@@ -82,7 +89,7 @@ module Opener
 
         annotator = Java::es.ehu.si.ixa.pipe.nerc.Annotate.new(*args)
 
-        annotator.annotate_kaf(lang, model, kaf)
+        annotator.annotate_kaf(lang, model, enable_time, kaf)
 
         return kaf.to_string
       end

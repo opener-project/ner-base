@@ -205,24 +205,27 @@ public class Annotate {
   /**
    * Annotates the given KAF document and sets the linguisticProcessor details.
    *
+   * TODO: arguments such as `lang` and `model` are already given in the
+   * constructors of this class. We should probably re-use them from there if
+   * possible.
+   *
    * @param lang The language of the document.
    * @param model The model used for annotatating.
+   * @param enable_timestamp Whether to include a dynamic or static timestamp.
    * @param kaf The KAF document to annotate.
    */
-  public final void annotateKAF(final String lang, final String model, final KAFDocument kaf) throws IOException {
-    String version = Annotate.class.getPackage().getImplementationVersion();
+  public final void annotateKAF(final String lang, final String model, final boolean enable_timestamp, final KAFDocument kaf) throws IOException {
+    String version   = Annotate.class.getPackage().getImplementationVersion();
+    String processor = "ixa-pipe-nerc-" + lang + "-" + model;
 
-    KAFDocument.LinguisticProcessor lp = kaf.addLinguisticProcessor(
-      "entities",
-      "ixa-pipe-nerc-" + lang + "-" + model,
-      version
-    );
-
-    lp.setBeginTimestamp();
+    if ( enable_timestamp ) {
+        kaf.addLinguisticProcessor("entities", processor, version);
+    }
+    else {
+        kaf.addLinguisticProcessor("entities", processor, "now", version);
+    }
 
     annotateNEsToKAF(kaf);
-
-    lp.setEndTimestamp();
   }
 
   /**
