@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
@@ -47,7 +47,8 @@ public class StatisticalNameFinder implements NameFinder {
    * The models to use for every language. The keys of the hash are the
    * language codes, the values the models.
    */
-  private HashMap<String, TokenNameFinderModel> nercModels = new HashMap<String, TokenNameFinderModel>();
+  private static ConcurrentHashMap<String, TokenNameFinderModel> nercModels =
+      new ConcurrentHashMap<String, TokenNameFinderModel>();
 
   /**
    * The name finder.
