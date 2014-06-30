@@ -1,12 +1,11 @@
 require_relative '../../lib/opener/ners/base'
 require 'rspec'
-require 'tempfile'
 
 def kernel_root
   File.expand_path("../../../", __FILE__)
 end
 
-def kernel(language)
+def kernel
   return Opener::Ners::Base.new(:enable_time => false)
 end
 
