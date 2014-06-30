@@ -175,9 +175,7 @@ public class CLI {
     } else {
       lang = parsedArguments.getString("lang");
     }
-    KAFDocument.LinguisticProcessor newLp = kaf.addLinguisticProcessor(
-        "entities", "ixa-pipe-nerc-" + lang + "-" + model, version);
-    newLp.setBeginTimestamp();
+    kaf.addLinguisticProcessor("entities", "ixa-pipe-nerc-" + lang + "-" + model, version);
 
     if (gazetteerOption != null || 
         ruleBasedOption != null || 
@@ -190,7 +188,6 @@ public class CLI {
       Annotate annotator = new Annotate(lang, model, features, beamsize);
       annotator.annotateNEsToKAF(kaf);
     }
-    newLp.setEndTimestamp();
     bwriter.write(kaf.toString());
     bwriter.close();
     breader.close();
@@ -317,7 +314,7 @@ public class CLI {
    */
   private void loadAnnotateParameters() {
     annotateParser.addArgument("-l", "--lang")
-        .choices("de", "en", "es", "it", "nl").required(false)
+        .choices("de", "en", "es", "fr", "it", "nl").required(false)
         .help("Choose a language to perform annotation with ixa-pipe-nerc\n");
     annotateParser.addArgument("-f", "--features")
         .choices("opennlp", "baseline", "dict").required(false)
@@ -383,7 +380,7 @@ public class CLI {
         .help(
             "Path to the gazetteers for evaluation if dict features are used\n");
     evalParser.addArgument("-l", "--language").required(true)
-        .choices("de", "en", "es", "it", "nl")
+        .choices("de", "en", "es", "fr", "it", "nl")
         .help("Choose language to load model for evaluation\n");
     evalParser.addArgument("-t", "--testSet").required(true)
         .help("Input testset for evaluation\n");

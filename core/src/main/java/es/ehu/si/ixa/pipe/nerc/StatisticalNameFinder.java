@@ -324,8 +324,10 @@ public class StatisticalNameFinder implements NameFinder {
       trainedModelInputStream = getClass().getResourceAsStream("/en/en-nerc-perceptron-baseline-c0-b3-conll03-ontonotes-4.0-4-types.bin");
     }
     if (lang.equalsIgnoreCase("es")) {
-      trainedModelInputStream = getClass().getResourceAsStream(
-          "/es/es-nerc-maxent-baseline-750-c4-b3-conll02-testa.bin");
+      trainedModelInputStream = getClass().getResourceAsStream("/es/es-nerc-maxent-baseline-750-c4-b3-conll02-testa.bin");
+    }
+    if (lang.equalsIgnoreCase("fr")) {
+      trainedModelInputStream = getClass().getResourceAsStream("/fr/fr-ner-all.bin");
     }
     if (lang.equalsIgnoreCase("it")) {
       trainedModelInputStream = getClass().getResourceAsStream("/it/it-nerc-perceptron-baseline-c0-b3-evalita07.bin");

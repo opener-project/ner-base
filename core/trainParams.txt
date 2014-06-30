@@ -22,7 +22,7 @@ Threads=4
 
 #### Custom parameters added by ixa-pipe-nerc ####
 
-# Languages supported: de, en, es, it, nl
+# Languages supported: de, en, es, fr, it, nl
 
 Language=en
 
