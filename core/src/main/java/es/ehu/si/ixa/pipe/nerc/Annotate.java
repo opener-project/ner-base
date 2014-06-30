@@ -103,9 +103,6 @@ public class Annotate {
    */
   public Annotate(final String lang, final String model, final String features,
       final int beamsize) {
-    if (model.equalsIgnoreCase("default")) {
-      System.err.println("No NERC model chosen, reverting to default model!");
-    }
     nameFactory = new NameFactory();
     nameFinder = new StatisticalNameFinder(lang, nameFactory, model, features,
         beamsize);
