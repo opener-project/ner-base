@@ -10,7 +10,7 @@
       <lp name="ehu-pos-fr" timestamp="now" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-nerc-fr" timestamp="now" version="1.0" />
+      <lp name="ixa-pipe-nerc-fr-default" timestamp="now" version="1.1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
@@ -830,7 +830,7 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="date">
+    <entity eid="e1" type="DATE">
       <references>
         <!--2014-->
         <span>
@@ -838,12 +838,20 @@
         </span>
       </references>
     </entity>
-    <entity eid="e2" type="person">
+    <entity eid="e2" type="PERSON">
       <references>
         <!--Sébastien Balibar-->
         <span>
           <target id="t93" />
           <target id="t94" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e3" type="LOCATION">
+      <references>
+        <!--Ecole-->
+        <span>
+          <target id="t103" />
         </span>
       </references>
     </entity>

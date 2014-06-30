@@ -10,7 +10,7 @@
       <lp name="TreeTagger_from_kaf German models" timestamp="*" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-nerc-de" timestamp="now" version="1.0" />
+      <lp name="ixa-pipe-nerc-de-default" timestamp="now" version="1.1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
@@ -1369,7 +1369,7 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="misc">
+    <entity eid="e1" type="MISC">
       <references>
         <!--italienischen-->
         <span>
@@ -1377,7 +1377,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e2" type="person">
+    <entity eid="e2" type="PERSON">
       <references>
         <!--Giampietro Campana-->
         <span>
@@ -1386,16 +1386,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e3" type="person">
-      <references>
-        <!--Innenräumen Verwendung-->
-        <span>
-          <target id="t64" />
-          <target id="t65" />
-        </span>
-      </references>
-    </entity>
-    <entity eid="e4" type="location">
+    <entity eid="e3" type="LOCATION">
       <references>
         <!--Rom-->
         <span>

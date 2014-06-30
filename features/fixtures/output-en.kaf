@@ -8,7 +8,7 @@
       <lp name="ehu-pos-en" timestamp="now" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-nerc-en" timestamp="now" version="1.0" />
+      <lp name="ixa-pipe-nerc-en-default" timestamp="now" version="1.1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
@@ -751,7 +751,7 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="organization">
+    <entity eid="e1" type="ORGANIZATION">
       <references>
         <!--York University-->
         <span>
@@ -760,7 +760,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e2" type="organization">
+    <entity eid="e2" type="ORGANIZATION">
       <references>
         <!--Claudia Lawrence-->
         <span>
@@ -769,7 +769,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e3" type="organization">
+    <entity eid="e3" type="ORGANIZATION">
       <references>
         <!--North Yorkshire Police-->
         <span>
@@ -779,7 +779,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e4" type="person">
+    <entity eid="e4" type="PERSON">
       <references>
         <!--Peter Lawrence-->
         <span>
@@ -788,20 +788,12 @@
         </span>
       </references>
     </entity>
-    <entity eid="e5" type="person">
+    <entity eid="e5" type="PERSON">
       <references>
         <!--Miss Lawrence-->
         <span>
           <target id="t83" />
           <target id="t84" />
-        </span>
-      </references>
-    </entity>
-    <entity eid="e6" type="person">
-      <references>
-        <!--Crimestoppers-->
-        <span>
-          <target id="t86" />
         </span>
       </references>
     </entity>

@@ -10,7 +10,7 @@
       <lp name="ehu-pos-es" timestamp="now" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-nerc-es" timestamp="now" version="1.0" />
+      <lp name="ixa-pipe-nerc-es-default" timestamp="now" version="1.1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
@@ -466,7 +466,15 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="misc">
+    <entity eid="e1" type="PERSON">
+      <references>
+        <!--Quino-->
+        <span>
+          <target id="t19" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e2" type="MISC">
       <references>
         <!--premio Príncipe de Asturias de Comunicación-->
         <span>
@@ -479,7 +487,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e2" type="location">
+    <entity eid="e3" type="MISC">
       <references>
         <!--Humanidades-->
         <span>
@@ -487,7 +495,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e3" type="person">
+    <entity eid="e4" type="PERSON">
       <references>
         <!--Buster Keaton-->
         <span>
@@ -496,7 +504,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e4" type="location">
+    <entity eid="e5" type="LOCATION">
       <references>
         <!--Buenos Aires-->
         <span>

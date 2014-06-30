@@ -10,7 +10,7 @@
       <lp name="ehu-pos-it" timestamp="now" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-nerc-it" timestamp="now" version="1.0" />
+      <lp name="ixa-pipe-nerc-it-default" timestamp="now" version="1.1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
@@ -823,7 +823,7 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="organization">
+    <entity eid="e1" type="ORGANIZATION">
       <references>
         <!--Università di Akron-->
         <span>

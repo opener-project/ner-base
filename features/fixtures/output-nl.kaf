@@ -10,7 +10,7 @@
       <lp name="ehu-pos-nl" timestamp="now" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ehu-nerc-nl" timestamp="now" version="1.0" />
+      <lp name="ixa-pipe-nerc-nl-default" timestamp="now" version="1.1.0" />
     </linguisticProcessors>
   </kafHeader>
   <text>
@@ -361,7 +361,7 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="misc">
+    <entity eid="e1" type="MISC">
       <references>
         <!--Telecommunicatiewet-->
         <span>
