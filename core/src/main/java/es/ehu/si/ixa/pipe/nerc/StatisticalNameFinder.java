@@ -47,7 +47,7 @@ public class StatisticalNameFinder implements NameFinder {
    * The models to use for every language. The keys of the hash are the
    * language codes, the values the models.
    */
-  private HashMap<String, TokenNameFinderModel> nercModels;
+  private HashMap<String, TokenNameFinderModel> nercModels = new HashMap<String, TokenNameFinderModel>();
 
   /**
    * The name finder.
@@ -76,8 +76,6 @@ public class StatisticalNameFinder implements NameFinder {
    */
   public StatisticalNameFinder(final String lang, final String model,
       final String features, final int beamsize) {
-
-    nercModels = new HashMap<String, TokenNameFinderModel>();
 
     TokenNameFinderModel nerModel = loadModel(lang, model);
     nameFinderTrainer = getNameFinderTrainer(features, beamsize);
@@ -113,8 +111,6 @@ public class StatisticalNameFinder implements NameFinder {
   public StatisticalNameFinder(final String lang, final String model,
       final String features, final int beamsize, final Dictionaries dictionaries) {
 
-    nercModels = new HashMap<String, TokenNameFinderModel>();
-
     TokenNameFinderModel nerModel = loadModel(lang, model);
     nameFinderTrainer = new DictNameFinderTrainer(dictionaries, beamsize);
     nameFinder = new NameFinderME(nerModel,
@@ -146,8 +142,6 @@ public class StatisticalNameFinder implements NameFinder {
    */
   public StatisticalNameFinder(final String lang, final NameFactory aNameFactory,
       final String model, final String features, final int beamsize) {
-
-    nercModels = new HashMap<String, TokenNameFinderModel>();
 
     this.nameFactory = aNameFactory;
     TokenNameFinderModel nerModel = loadModel(lang, model);
@@ -185,8 +179,6 @@ public class StatisticalNameFinder implements NameFinder {
    */
   public StatisticalNameFinder(final String lang, final NameFactory aNameFactory,
       final String model, final String features, final int beamsize, final Dictionaries dictionaries) {
-
-    nercModels = new HashMap<String, TokenNameFinderModel>();
 
     this.nameFactory = aNameFactory;
     TokenNameFinderModel nerModel = loadModel(lang, model);
