@@ -22,6 +22,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.HashMap;
 
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
@@ -43,10 +44,11 @@ import es.ehu.si.ixa.pipe.nerc.train.DefaultNameFinderTrainer;
 public class StatisticalNameFinder implements NameFinder {
 
   /**
-   * The model to be instantiated. We ensure that only one instance of nercModel
-   * is used for every instantiation of this class.
+   * The models to use for every language. The keys of the hash are the
+   * language codes, the values the models.
    */
-  private static TokenNameFinderModel nercModel;
+  private HashMap<String, TokenNameFinderModel> nercModels;
+
   /**
    * The name finder.
    */
@@ -75,6 +77,8 @@ public class StatisticalNameFinder implements NameFinder {
   public StatisticalNameFinder(final String lang, final String model,
       final String features, final int beamsize) {
 
+    nercModels = new HashMap<String, TokenNameFinderModel>();
+
     TokenNameFinderModel nerModel = loadModel(lang, model);
     nameFinderTrainer = getNameFinderTrainer(features, beamsize);
     nameFinder = new NameFinderME(nerModel,
@@ -92,7 +96,7 @@ public class StatisticalNameFinder implements NameFinder {
   public StatisticalNameFinder(final String lang, final String model, final String features) {
     this(lang, model, features, CLI.DEFAULT_BEAM_SIZE);
   }
-  
+
   /**
    * Construct a StatisticalNameFinder without name factory but with dictionary features.
    *
@@ -108,6 +112,8 @@ public class StatisticalNameFinder implements NameFinder {
    */
   public StatisticalNameFinder(final String lang, final String model,
       final String features, final int beamsize, final Dictionaries dictionaries) {
+
+    nercModels = new HashMap<String, TokenNameFinderModel>();
 
     TokenNameFinderModel nerModel = loadModel(lang, model);
     nameFinderTrainer = new DictNameFinderTrainer(dictionaries, beamsize);
@@ -140,6 +146,8 @@ public class StatisticalNameFinder implements NameFinder {
    */
   public StatisticalNameFinder(final String lang, final NameFactory aNameFactory,
       final String model, final String features, final int beamsize) {
+
+    nercModels = new HashMap<String, TokenNameFinderModel>();
 
     this.nameFactory = aNameFactory;
     TokenNameFinderModel nerModel = loadModel(lang, model);
@@ -178,13 +186,15 @@ public class StatisticalNameFinder implements NameFinder {
   public StatisticalNameFinder(final String lang, final NameFactory aNameFactory,
       final String model, final String features, final int beamsize, final Dictionaries dictionaries) {
 
+    nercModels = new HashMap<String, TokenNameFinderModel>();
+
     this.nameFactory = aNameFactory;
     TokenNameFinderModel nerModel = loadModel(lang, model);
     nameFinderTrainer = new DictNameFinderTrainer(dictionaries, beamsize);
     nameFinder = new NameFinderME(nerModel,
         nameFinderTrainer.createFeatureGenerator(), beamsize);
   }
-  
+
 
   /**
    * Construct a StatisticalNameFinder with name factory and
@@ -200,7 +210,7 @@ public class StatisticalNameFinder implements NameFinder {
     this(lang, aNameFactory, model, features, CLI.DEFAULT_BEAM_SIZE, dictionaries);
   }
 
-  
+
   /**
    * Method to produce a list of the {@link Name} objects classified by the
    * probabilistic model.
@@ -283,28 +293,32 @@ public class StatisticalNameFinder implements NameFinder {
    * @return the model as a {@link TokenNameFinder} object
    */
   public final TokenNameFinderModel loadModel(final String lang, final String model) {
-    InputStream trainedModelInputStream = null;
+    InputStream trainedModel = null;
+
     try {
-      if (nercModel == null) {
+      // Load the model if it's not there yet.
+      if ( !nercModels.containsKey(lang) ) {
         if (model.equalsIgnoreCase("default")) {
-          trainedModelInputStream = getDefaultModelStream(lang, model);
+          trainedModel = getDefaultModelStream(lang, model);
         } else {
-          trainedModelInputStream = new FileInputStream(model);
+          trainedModel = new FileInputStream(model);
         }
-        nercModel = new TokenNameFinderModel(trainedModelInputStream);
+
+        nercModels.put(lang, new TokenNameFinderModel(trainedModel));
       }
     } catch (IOException e) {
       e.printStackTrace();
     } finally {
-      if (trainedModelInputStream != null) {
+      if (trainedModel != null) {
         try {
-          trainedModelInputStream.close();
+          trainedModel.close();
         } catch (IOException e) {
           System.err.println("Could not load model!");
         }
       }
     }
-    return nercModel;
+
+    return nercModels.get(lang);
   }
 
   /**
