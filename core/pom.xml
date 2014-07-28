@@ -55,15 +55,24 @@
 			<version>2.4</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.opennlp</groupId>
-			<artifactId>opennlp-tools</artifactId>
-			<version>1.5.3</version>
+			<groupId>org.vicomtech</groupId>
+  			<artifactId>opennlp-tools</artifactId>
+  			<version>custom-0.0.1</version>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+		  			<source>1.7</source>
+		  			<target>1.7</target>
+				</configuration>
+	  		</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>

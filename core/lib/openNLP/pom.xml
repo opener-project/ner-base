@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.vicomtech</groupId>
+  <artifactId>opennlp-tools</artifactId>
+  <version>custom-0.0.1</version>
+  <packaging>jar</packaging>
+
+  <name>openNLP</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.opennlp</groupId>
+      <artifactId>opennlp-tools</artifactId>
+      <version>1.5.3</version>
+    </dependency>
+    <dependency>
+	  <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.3</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+	<plugins>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>2.3.2</version>
+		<configuration>
+		  <source>1.7</source>
+		  <target>1.7</target>
+		</configuration>
+	  </plugin>
+      <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-shade-plugin</artifactId>
+		<version>2.1</version>
+		<executions>
+		  <execution>
+			<phase>package</phase>
+			<goals>
+			  <goal>shade</goal>
+			</goals>
+			<configuration>
+			  <transformers>
+				<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+			      <manifestEntries>
+		 			<Main-Class>opennlp.tools.cmdline.CLI</Main-Class>
+                  </manifestEntries>
+				</transformer>
+			  </transformers>
+			  <artifactSet>
+				<excludes></excludes>
+			  </artifactSet>
+			</configuration>
+		  </execution>
+		</executions>
+	  </plugin>
+	</plugins>
+	<extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh</artifactId>
+        <version>2.3</version>
+      </extension>
+    </extensions>
+  </build>
+  
+  <distributionManagement>
+    <repository>
+      <id>hslt-server</id>
+      <url>scp://hslt-server.vicomtech.es/home/VICOMTECH/share/maven/repository</url>
+    </repository>
+  </distributionManagement>
+  
+</project>
