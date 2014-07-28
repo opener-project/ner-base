@@ -1,6 +1,9 @@
 namespace :java do
   desc 'Builds the Java core'
   task :compile do
+    Dir.chdir('core/lib/openNLP') do
+      sh('mvn install')
+    end
     Dir.chdir('core') do
       sh('mvn package')
     end
