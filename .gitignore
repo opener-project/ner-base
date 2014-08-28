@@ -5,6 +5,7 @@
 *.so.old
 *.swp
 core/target
+core/lib/openNLP
 *.class
 *.classpath
 *.project
