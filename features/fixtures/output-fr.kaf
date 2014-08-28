@@ -830,7 +830,15 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="DATE">
+    <entity eid="e1" type="ORGANIZATION">
+      <references>
+        <!--H2O-->
+        <span>
+          <target id="t66" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e2" type="DATE">
       <references>
         <!--2014-->
         <span>
@@ -838,20 +846,12 @@
         </span>
       </references>
     </entity>
-    <entity eid="e2" type="PERSON">
+    <entity eid="e3" type="PERSON">
       <references>
         <!--Sébastien Balibar-->
         <span>
           <target id="t93" />
           <target id="t94" />
-        </span>
-      </references>
-    </entity>
-    <entity eid="e3" type="LOCATION">
-      <references>
-        <!--Ecole-->
-        <span>
-          <target id="t103" />
         </span>
       </references>
     </entity>
