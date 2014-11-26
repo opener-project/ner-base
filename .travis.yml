@@ -1,0 +1,21 @@
+---
+language: ruby
+
+script: bundle exec rake
+
+rvm:
+  - jruby
+
+notifications:
+  email:
+    recipients:
+      - development+travis-opener@olery.com
+
+    on_success: change
+    on_failure: change
+
+cache: bundler
+
+branches:
+  only:
+    - master
