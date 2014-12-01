@@ -1,5 +1,3 @@
-[![Build Status](https://drone.io/github.com/opener-project/ner-base/status.png)](https://drone.io/github.com/opener-project/ner-base/latest)
-
 # NER Base
 
 This repository contains the source code used for performing Named Entity
