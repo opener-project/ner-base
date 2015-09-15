@@ -9,7 +9,6 @@ This module uses the following APIs:
       The Apache Software Foundation (http://www.apache.org/).
 
     + JDOM Project (http://www.jdom.org/).
-    + JWNL Project (http://sourceforge.net/projects/jwordnet/)
     + argparse4j (http://argparse4j.sourceforge.net/)
 
 Note that we do not redistribute those libraries in any form (binary

@@ -2,9 +2,9 @@ require 'open3'
 require 'stringio'
 require 'nokogiri'
 
-require File.expand_path("../../../../core/target/ixa-pipe-nerc-1.1.0.jar", __FILE__)
-
 require_relative 'base/version'
+
+require File.expand_path("../../../../core/target/ixa-pipe-nerc-1.5.2.jar", __FILE__)
 
 module Opener
   module Ners
@@ -64,8 +64,6 @@ module Opener
       def initialize(options = {})
         @dictionaries      = options[:dictionaries]
         @dictionaries_path = options[:dictionaries_path]
-        @features          = options.fetch(:features, 'baseline')
-        @beamsize          = options.fetch(:beamsize, 3)
         @lexer             = options[:lexer]
         @model             = options.fetch(:model, 'default')
         @enable_time       = options.fetch(:enable_time, true)
@@ -81,13 +79,22 @@ module Opener
       def run(input)
         lang = language_from_kaf(input)
         kaf  = new_kaf_document(input)
-        args = [lang, model, features, beamsize]
 
-        if use_dictionaries?
-          args += [dictionaries, dictionaries_path, lexer]
+        properties = Java::java.util.Properties.new
+
+        properties.set_property('model', model)
+        properties.set_property('language', lang)
+
+        if lexer
+          properties.set_property('ruleBasedOption', lexer)
         end
 
-        annotator = Java::es.ehu.si.ixa.pipe.nerc.Annotate.new(*args)
+        if use_dictionaries?
+          properties.set_property('dictTag', dictionaries)
+          properties.set_property('dictPath', dictionaries_path)
+        end
+
+        annotator = Java::eus.ixa.ixa.pipe.nerc.Annotate.new(properties)
 
         annotator.annotate_kaf(enable_time, kaf)
 

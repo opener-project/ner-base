@@ -1,0 +1,10 @@
+Achilles	person
+Abraham Lincoln	person
+Aristotle	person
+Ang Lee	person
+Ayn Rand	person
+Alain Connes	person
+Allan Dwan	person
+Andre Agassi	person
+Aldous Huxley	person
+Andrei Tarkovsky	person
