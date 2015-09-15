@@ -48,6 +48,11 @@
             <version>1.4.1</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.ixa-ehu</groupId>
+            <artifactId>kaflib</artifactId>
+            <version>1.0.5</version>
+        </dependency>
     </dependencies>
 
     <distributionManagement>
@@ -180,7 +185,10 @@
                                 </transformer>
                             </transformers>
                             <artifactSet>
-                                <excludes></excludes>
+                                <excludes>
+                                    <exclude>com.github.ixa-ehu:kaflib-naf</exclude>
+                                    <exclude>org.jdom:jdom2</exclude>
+                                </excludes>
                             </artifactSet>
                         </configuration>
                     </execution>
