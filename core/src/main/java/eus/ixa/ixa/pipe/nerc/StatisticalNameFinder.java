@@ -164,7 +164,6 @@ public class StatisticalNameFinder implements NameFinder {
    * @return the model as a {@link TokenNameFinder} object
    */
   private final TokenNameFinderModel loadModel(final String lang, final String model) {
-    long lStartTime = new Date().getTime();
     try {
       synchronized(nercModels) {
         if (!nercModels.containsKey(lang)) {
@@ -174,8 +173,6 @@ public class StatisticalNameFinder implements NameFinder {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    long lEndTime = new Date().getTime();
-    long difference = lEndTime - lStartTime;
 
     return nercModels.get(lang);
   }
