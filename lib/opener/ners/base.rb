@@ -1,6 +1,7 @@
 require 'open3'
 require 'stringio'
 require 'nokogiri'
+require 'opener/core'
 
 require_relative 'base/version'
 
@@ -11,62 +12,29 @@ module Opener
     ##
     # Base NER class that supports various languages such as Dutch and English.
     #
-    # @!attribute [r] options
-    #  @return [Hash]
-    #
-    # @!attribute [r] features
-    #  @return [String]
-    #
-    # @!attribute [r] beamsize
-    #  @return [Fixnum]
-    #
-    # @!attribute [r] dictionaries
-    #  @return [String]
-    #
-    # @!attribute [r] dictionaries_path
-    #  @return [String]
-    #
-    # @!attribute [r] lexer
-    #  @return [Fixnum]
-    #
-    # @!attribute [r] model
-    #  @return [String]
-    #
-    # @!attribute [r] enable_time
-    #  @return [TrueClass|FalseClass]
-    #
     class Base
-      attr_reader :features, :beamsize, :dictionaries, :dictionaries_path,
-        :lexer, :model, :enable_time
+      MODELS_DIRECTORY = File.expand_path('../../../../models', __FILE__)
+
+      MODELS = {
+        'de' => 'de/de-nerc-perceptron-baseline-c0-b3-conll03-testa.bin',
+        'en' => 'en/en-nerc-perceptron-baseline-c0-b3-conll03-ontonotes-4.0-4-types.bin',
+        'es' => 'es/es-nerc-maxent-baseline-750-c4-b3-conll02-testa.bin',
+        'fr' => 'fr/fr-ner-all.bin',
+        'it' => 'it/it-nerc-perceptron-baseline-c0-b3-evalita07.bin',
+        'nl' => 'nl/nl-nerc-perceptron-baseline-c0-b3-conll02-testa.bin'
+      }
+
+      # @return [TrueClass|FalseClass]
+      attr_reader :enable_time
 
       ##
       # @param [Hash] options
-      #
-      # @option options [String] :features The NERC feature to use, defaults to
-      #  "baseline".
-      #
-      # @option options [Fixnum] :beamsize The beam size for decoding, defaults
-      #  to 3.
-      #
-      # @option options [String] :dictionaries The dictionary to use, if any.
-      #
-      # @option options [String] :dictionaries_path The path to the
-      #  dictionaries.
-      #
-      # @option options [Fixnum] :lexer The lexer rules to use for NERC
-      #  tagging.
-      #
-      # @option options [String] :model The model to use for NERC annotation.
       #
       # @option options [TrueClass|FalseClass] :enable_time Whether or not to
       #  enable dynamic timestamps (enabled by default).
       #
       def initialize(options = {})
-        @dictionaries      = options[:dictionaries]
-        @dictionaries_path = options[:dictionaries_path]
-        @lexer             = options[:lexer]
-        @model             = options.fetch(:model, 'default')
-        @enable_time       = options.fetch(:enable_time, true)
+        @enable_time = options.fetch(:enable_time, true)
       end
 
       ##
@@ -78,21 +46,21 @@ module Opener
       #
       def run(input)
         lang = language_from_kaf(input)
-        kaf  = new_kaf_document(input)
 
+        if MODELS[lang]
+          model = File.join(MODELS_DIRECTORY, MODELS[lang])
+        else
+          raise Core::UnsupportedLanguageError, lang
+        end
+
+        kaf        = new_kaf_document(input)
         properties = Java::java.util.Properties.new
 
         properties.set_property('model', model)
         properties.set_property('language', lang)
-
-        if lexer
-          properties.set_property('ruleBasedOption', lexer)
-        end
-
-        if use_dictionaries?
-          properties.set_property('dictTag', dictionaries)
-          properties.set_property('dictPath', dictionaries_path)
-        end
+        properties.set_property('ruleBasedOption', 'off')
+        properties.set_property('dictTag', 'off')
+        properties.set_property('dictPath', 'off')
 
         annotator = Java::eus.ixa.ixa.pipe.nerc.Annotate.new(properties)
 
@@ -110,13 +78,6 @@ module Opener
         reader   = Java::java.io.InputStreamReader.new(input_io.to_inputstream)
 
         return Java::ixa.kaflib.KAFDocument.create_from_stream(reader)
-      end
-
-      ##
-      # @return [TrueClass|FalseClass]
-      #
-      def use_dictionaries?
-        return dictionaries || dictionaries_path || features == 'dict'
       end
 
       ##
