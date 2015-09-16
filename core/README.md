@@ -46,7 +46,7 @@ ixa-pipe-nerc provides:
   **ixa-pipe-nerc was the best system** in [SemEval 2015 OTE subtask within task 12](http://alt.qcri.org/semeval2015/task12/).
 + **SuperSense Tagging** (SST) for English. The models are trained on Semcor.
 
-Every model is self-contained, that is, the prop files are not needed to use them.
+Every model is self-contained, that is, the properties files are not needed to use them.
 You will find for each model a properties file describing its training although it is
 not needed to run the model. Please see the traininParams.properties template file
 for all available training options and documentation.
@@ -59,7 +59,7 @@ To avoid duplication of efforts, we use and contribute to the API provided by th
 
 ### Features
 
-**A description of every feature is provided in the trainParams.properties properties
+**A description of every feature is provided in the trainParams.properties
 file** distributed with ixa-pipe-nerc. As the training functionality is configured in
 properties files, please do check this document. For each model distributed,
 there is a prop file which describes the training of the model, as well as a
@@ -78,7 +78,7 @@ with the [conlleval script](http://www.cnts.ua.ac.be/conll2002/ner/bin/conlleval
   + Release 1.4.0 [400MB+]: [nerc-models-1.4.0.tgz](http://ixa2.si.ehu.es/ixa-pipes/models/nerc-models-1.4.0.tgz)
   + Releases 1.3.3-1.3.6: [nerc-models-1.3.+.tgz](http://ixa2.si.ehu.es/ixa-pipes/models/nerc-models-1.3.3.tgz)
 
-Every models is trained with the averaged Perceptron algorithm as described in (Collins 2002) and as implemented
+Every model is trained with the averaged Perceptron algorithm as described in (Collins 2002) and as implemented
 in Apache OpenNLP.
 
 + **Basque**: eu-clusters model, trained on egunkaria dataset, F1 76.72 on 3 class evaluation and F1 75.40 on 4 classes.
