@@ -166,7 +166,11 @@ public class StatisticalNameFinder implements NameFinder {
   private final TokenNameFinderModel loadModel(final String lang, final String model) {
     long lStartTime = new Date().getTime();
     try {
-      nercModels.putIfAbsent(lang, new TokenNameFinderModel(new FileInputStream(model)));
+      synchronized(nercModels) {
+        if (!nercModels.containsKey(lang)) {
+          nercModels.put(lang, new TokenNameFinderModel(new FileInputStream(model)));
+        }
+      }
     } catch (IOException e) {
       e.printStackTrace();
     }
