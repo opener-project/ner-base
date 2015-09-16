@@ -279,6 +279,8 @@ public class Annotate {
         kaf.addLinguisticProcessor("entities", processor, "now", version);
     }
 
+    annotateNEs(kaf);
+
     annotateNEsToKAF(kaf);
   }
 
