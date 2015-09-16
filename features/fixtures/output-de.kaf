@@ -1377,7 +1377,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e2" type="PERSON">
+    <entity eid="e2" type="ORG">
       <references>
         <!--Giampietro Campana-->
         <span>
@@ -1386,7 +1386,15 @@
         </span>
       </references>
     </entity>
-    <entity eid="e3" type="LOCATION">
+    <entity eid="e3" type="MISC">
+      <references>
+        <!--etruskischen-->
+        <span>
+          <target id="t102" />
+        </span>
+      </references>
+    </entity>
+    <entity eid="e4" type="LOC">
       <references>
         <!--Rom-->
         <span>

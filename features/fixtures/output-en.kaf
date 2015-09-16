@@ -751,7 +751,7 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="ORGANIZATION">
+    <entity eid="e1" type="ORG">
       <references>
         <!--York University-->
         <span>
@@ -760,7 +760,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e2" type="ORGANIZATION">
+    <entity eid="e2" type="ORG">
       <references>
         <!--Claudia Lawrence-->
         <span>
@@ -769,17 +769,16 @@
         </span>
       </references>
     </entity>
-    <entity eid="e3" type="ORGANIZATION">
+    <entity eid="e3" type="LOC">
       <references>
-        <!--North Yorkshire Police-->
+        <!--North Yorkshire-->
         <span>
           <target id="t17" />
           <target id="t18" />
-          <target id="t19" />
         </span>
       </references>
     </entity>
-    <entity eid="e4" type="PERSON">
+    <entity eid="e4" type="PER">
       <references>
         <!--Peter Lawrence-->
         <span>
@@ -788,7 +787,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e5" type="PERSON">
+    <entity eid="e5" type="MISC">
       <references>
         <!--Miss Lawrence-->
         <span>

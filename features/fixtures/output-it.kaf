@@ -823,7 +823,7 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="ORGANIZATION">
+    <entity eid="e1" type="ORG">
       <references>
         <!--Università di Akron-->
         <span>

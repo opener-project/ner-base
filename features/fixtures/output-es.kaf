@@ -466,7 +466,7 @@
     </term>
   </terms>
   <entities>
-    <entity eid="e1" type="PERSON">
+    <entity eid="e1" type="PER">
       <references>
         <!--Quino-->
         <span>
@@ -476,7 +476,7 @@
     </entity>
     <entity eid="e2" type="MISC">
       <references>
-        <!--premio Príncipe de Asturias de Comunicación-->
+        <!--premio Príncipe de Asturias de Comunicación y Humanidades-->
         <span>
           <target id="t28" />
           <target id="t29" />
@@ -484,18 +484,12 @@
           <target id="t31" />
           <target id="t32" />
           <target id="t33" />
-        </span>
-      </references>
-    </entity>
-    <entity eid="e3" type="MISC">
-      <references>
-        <!--Humanidades-->
-        <span>
+          <target id="t34" />
           <target id="t35" />
         </span>
       </references>
     </entity>
-    <entity eid="e4" type="PERSON">
+    <entity eid="e3" type="PER">
       <references>
         <!--Buster Keaton-->
         <span>
@@ -504,7 +498,7 @@
         </span>
       </references>
     </entity>
-    <entity eid="e5" type="LOCATION">
+    <entity eid="e4" type="LOC">
       <references>
         <!--Buenos Aires-->
         <span>
