@@ -20,7 +20,7 @@ Gem::Specification.new do |gem|
 
   gem.executables = Dir.glob('bin/*').map { |file| File.basename(file) }
 
-  gem.add_dependency 'nokogiri'
+  gem.add_dependency 'oga'
   gem.add_dependency 'opener-core'
 
   gem.add_development_dependency 'rspec', '~> 3.0'

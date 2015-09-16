@@ -1,6 +1,5 @@
-require 'open3'
 require 'stringio'
-require 'nokogiri'
+require 'oga'
 require 'opener/core'
 
 require_relative 'base/version'
@@ -72,8 +71,15 @@ module Opener
       # @return [String]
       #
       def language_from_kaf(input)
-        document = Nokogiri::XML(input)
-        language = document.at('KAF').attr('xml:lang')
+        parser   = Oga::XML::PullParser.new(input)
+        language = nil
+
+        parser.parse do |node|
+          if node.is_a?(Oga::XML::Element) and node.name == 'KAF'
+            language = node.get('xml:lang')
+            break
+          end
+        end
 
         # Make sure nobody can _somehow_ inject a language such as "../../foo".
         unless language =~ /\A[a-zA-Z\-_]+\z/
