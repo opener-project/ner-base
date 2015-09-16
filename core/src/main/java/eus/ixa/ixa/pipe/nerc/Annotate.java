@@ -95,11 +95,6 @@ public class Annotate {
    */
   private String language;
 
-  /**
-   * The name of the model to use.
-   */
-  private String model;
-
   /** It manages the use of the three different name finders: {@code StatisticalNameFinder},
    * {@code DictionariesNameFinder} and {@code NumericNameFinder}. In particular, if --dictTag
    * option in CLI is off, statistical models are used (this is the default). If --dictTag is
@@ -120,7 +115,6 @@ public class Annotate {
     annotateOptions(properties);
 
     this.language = properties.getProperty("language");
-    this.model    = properties.getProperty("model");
   }
 
   /**
@@ -276,7 +270,7 @@ public class Annotate {
    */
   public final void annotateKAF(final boolean enable_timestamp, final KAFDocument kaf) throws IOException {
     String version   = Annotate.class.getPackage().getImplementationVersion();
-    String processor = "ixa-pipe-nerc-" + this.language + "-" + this.model;
+    String processor = "ixa-pipe-nerc-" + this.language + "-default";
 
     if ( enable_timestamp ) {
         kaf.addLinguisticProcessor("entities", processor, version);
