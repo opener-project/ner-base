@@ -261,10 +261,6 @@ public class Annotate {
   /**
    * Annotates the given KAF document and sets the linguisticProcessor details.
    *
-   * TODO: arguments such as `lang` and `model` are already given in the
-   * constructors of this class. We should probably re-use them from there if
-   * possible.
-   *
    * @param enable_timestamp Whether to include a dynamic or static timestamp.
    * @param kaf The KAF document to annotate.
    */
