@@ -83,7 +83,7 @@ public class StatisticalNameFinder implements NameFinder {
     nameFinder = new NameFinderME(nerModel);
   }
 
-  
+
   /**
    * Method to produce a list of the {@link Name} objects classified by the
    * probabilistic model.
@@ -172,8 +172,7 @@ public class StatisticalNameFinder implements NameFinder {
     }
     long lEndTime = new Date().getTime();
     long difference = lEndTime - lStartTime;
-    System.err.println("ixa-pipe-nerc model loaded in: " + difference
-        + " miliseconds ... [DONE]");
+
     return nercModels.get(lang);
   }
 }
