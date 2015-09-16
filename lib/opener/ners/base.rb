@@ -95,6 +95,7 @@ module Opener
         properties.set_property('ruleBasedOption', 'off')
         properties.set_property('dictTag', 'off')
         properties.set_property('dictPath', 'off')
+        properties.set_property('clearFeatures', 'no')
 
         properties
       end
