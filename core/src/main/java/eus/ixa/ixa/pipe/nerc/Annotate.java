@@ -268,7 +268,7 @@ public class Annotate {
    * @param enable_timestamp Whether to include a dynamic or static timestamp.
    * @param kaf The KAF document to annotate.
    */
-  public final void annotateKAF(final boolean enable_timestamp, final KAFDocument kaf) throws IOException {
+  public final String annotateKAF(final boolean enable_timestamp, final KAFDocument kaf) throws IOException {
     String version   = Annotate.class.getPackage().getImplementationVersion();
     String processor = "ixa-pipe-nerc-" + this.language + "-default";
 
@@ -281,7 +281,7 @@ public class Annotate {
 
     annotateNEs(kaf);
 
-    annotateNEsToKAF(kaf);
+    return annotateNEsToKAF(kaf);
   }
 
   /**

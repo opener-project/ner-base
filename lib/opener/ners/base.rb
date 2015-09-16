@@ -58,8 +58,6 @@ module Opener
         annotator  = Java::eus.ixa.ixa.pipe.nerc.Annotate.new(properties)
 
         annotator.annotate_kaf(enable_time, kaf)
-
-        kaf.to_string
       end
 
       ##
