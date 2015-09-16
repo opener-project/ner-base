@@ -59,7 +59,7 @@ module Opener
 
         annotator.annotate_kaf(enable_time, kaf)
 
-        return kaf.to_string
+        kaf.to_string
       end
 
       ##
@@ -70,7 +70,7 @@ module Opener
         input_io = StringIO.new(input)
         reader   = Java::java.io.InputStreamReader.new(input_io.to_inputstream)
 
-        return Java::ixa.kaflib.KAFDocument.create_from_stream(reader)
+        Java::ixa.kaflib.KAFDocument.create_from_stream(reader)
       end
 
       ##
@@ -82,7 +82,7 @@ module Opener
       def language_from_kaf(input)
         document = Nokogiri::XML(input)
 
-        return document.at('KAF').attr('xml:lang')
+        document.at('KAF').attr('xml:lang')
       end
 
       private
