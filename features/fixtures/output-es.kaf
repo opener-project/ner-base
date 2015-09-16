@@ -10,7 +10,7 @@
       <lp name="ehu-pos-es" timestamp="now" version="1.0" />
     </linguisticProcessors>
     <linguisticProcessors layer="entities">
-      <lp name="ixa-pipe-nerc-es-default" timestamp="now" version="1.1.0" />
+      <lp name="ixa-pipe-nerc-es-default" timestamp="now" version="1.5.2" />
     </linguisticProcessors>
   </kafHeader>
   <text>
