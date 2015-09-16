@@ -13,16 +13,11 @@ module Opener
     # Base NER class that supports various languages such as Dutch and English.
     #
     class Base
-      MODELS_DIRECTORY = File.expand_path('../../../../models', __FILE__)
+      # The default models directory.
+      MODELS_PATH = File.expand_path('../../../../models', __FILE__)
 
-      MODELS = {
-        'de' => 'de/de-nerc-perceptron-baseline-c0-b3-conll03-testa.bin',
-        'en' => 'en/en-nerc-perceptron-baseline-c0-b3-conll03-ontonotes-4.0-4-types.bin',
-        'es' => 'es/es-nerc-maxent-baseline-750-c4-b3-conll02-testa.bin',
-        'fr' => 'fr/fr-ner-all.bin',
-        'it' => 'it/it-nerc-perceptron-baseline-c0-b3-evalita07.bin',
-        'nl' => 'nl/nl-nerc-perceptron-baseline-c0-b3-conll02-testa.bin'
-      }
+      # @return [String]
+      attr_reader :models
 
       # @return [TrueClass|FalseClass]
       attr_reader :enable_time
@@ -34,6 +29,8 @@ module Opener
       #  enable dynamic timestamps (enabled by default).
       #
       def initialize(options = {})
+        @models = ENV['NER_BASE_MODELS_PATH'] || MODELS_PATH
+
         @enable_time = options.fetch(:enable_time, true)
       end
 
@@ -45,13 +42,10 @@ module Opener
       # @return [Array]
       #
       def run(input)
-        lang = language_from_kaf(input)
+        lang  = language_from_kaf(input)
+        model = File.join(models, "#{lang}.bin")
 
-        if MODELS[lang]
-          model = File.join(MODELS_DIRECTORY, MODELS[lang])
-        else
-          raise Core::UnsupportedLanguageError, lang
-        end
+        raise(Core::UnsupportedLanguageError, lang) unless File.file?(model)
 
         kaf        = new_kaf_document(input)
         properties = build_properties(lang, model)
@@ -79,8 +73,14 @@ module Opener
       #
       def language_from_kaf(input)
         document = Nokogiri::XML(input)
+        language = document.at('KAF').attr('xml:lang')
 
-        document.at('KAF').attr('xml:lang')
+        # Make sure nobody can _somehow_ inject a language such as "../../foo".
+        unless language =~ /\A[a-zA-Z\-_]+\z/
+          raise Core::UnsupportedLanguageError, language
+        end
+
+        language
       end
 
       private

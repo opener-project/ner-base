@@ -40,7 +40,14 @@ Using specific install:
 
 ## Usage
 
-    cat some_input_file.kaf | ner-en
+Basic usage:
+
+    cat some_input_file.kaf | ner-base
+
+This component ships a built-in set of models. If you have your own models you
+can set the environment variable `NER_BASE_MODELS_PATH` to the directory
+containing your models. Each model should be named `LANGUAGE.bin` where
+`LANGUAGE` is a 2 letter language code (`nl`. `en`, etc).
 
 ## Contributing
 
