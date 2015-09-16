@@ -54,15 +54,8 @@ module Opener
         end
 
         kaf        = new_kaf_document(input)
-        properties = Java::java.util.Properties.new
-
-        properties.set_property('model', model)
-        properties.set_property('language', lang)
-        properties.set_property('ruleBasedOption', 'off')
-        properties.set_property('dictTag', 'off')
-        properties.set_property('dictPath', 'off')
-
-        annotator = Java::eus.ixa.ixa.pipe.nerc.Annotate.new(properties)
+        properties = build_properties(lang, model)
+        annotator  = Java::eus.ixa.ixa.pipe.nerc.Annotate.new(properties)
 
         annotator.annotate_kaf(enable_time, kaf)
 
@@ -90,6 +83,22 @@ module Opener
         document = Nokogiri::XML(input)
 
         return document.at('KAF').attr('xml:lang')
+      end
+
+      private
+
+      # @param [String] language
+      # @param [String] model
+      def build_properties(language, model)
+        properties = Java::java.util.Properties.new
+
+        properties.set_property('language', language)
+        properties.set_property('model', model)
+        properties.set_property('ruleBasedOption', 'off')
+        properties.set_property('dictTag', 'off')
+        properties.set_property('dictPath', 'off')
+
+        properties
       end
     end # Base
   end # Ners
