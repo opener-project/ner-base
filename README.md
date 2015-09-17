@@ -14,6 +14,7 @@ Recognition for the following languages:
 
 * Java 1.7 or newer
 * Ruby 1.9.2 or newer
+* libarchive
 
 Development requirements:
 

@@ -3,6 +3,13 @@ language: ruby
 
 script: bundle exec rake
 
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - libarchive-dev
+
 rvm:
   - jruby
 
